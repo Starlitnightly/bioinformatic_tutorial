@@ -11,9 +11,12 @@
 
 ## 目录
 
-- [配置]: 
-- [分析1]
-- [分析2]
+- [配置]: https://starlitnightly.github.io/bioinformatic_tutorial/CONFIG/
+
+- [分析1: RNA-seq上游]: https://starlitnightly.github.io/bioinformatic_tutorial/RNASEQUP/
+
+- [分析2: RNA-seq下游]: https://starlitnightly.github.io/bioinformatic_tutorial/RNASEQ/
+
 - [分析3]
 
 ## License
