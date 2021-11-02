@@ -1,0 +1,23 @@
+# Summary
+
+* [Bioinformatics Tutorial](README.md)
+* [目录](README.md)
+* [配置：基础环境配置](CONFIG/README.md)
+    * [配置1：Python环境](CONFIG/config_1.md)
+    * [配置2：Linux环境](CONFIG/config_2.md)
+    * [配置3：R语言环境](CONFIG/config_3.md)
+* [分析1：RNA-seq上游分析](RNASEQUP/README.md)
+    * [1-1. 环境配置](RNASEQUP/rnasequp_1.md)
+    * [1-2. 上游分析全教程](RNASEQUP/rnasequp_2.md)
+* [分析2：RNA-seq下游分析](RNASEQ/README.md)
+    * [2-1. 环境配置](RNASEQ/rnaseq_1.md)
+    * [2-2. 差异表达基因(DEG)分析](RNASEQ/rnaseq_2.md)
+    * [2-3. 通路富集分析(GSEA)](RNASEQ/rnaseq_3.md)
+* [分析3：MOFA单细胞多组学因子分析](MOFA/README.md)
+    * [3-1. 环境配置](MOFA/mofa_1.md)
+    * [3-2. 单细胞样本对齐](MOFA/mofa_2.md)
+    * [3-3. scRNA-seq数据处理](MOFA/mofa_3.md)
+    * [3-4. scATAC-seq数据处理](MOFA/mofa_4.md)
+    * [3-5. MOFA模型构建](MOFA/mofa_5.md)
+    * [3-6. MOFA下游分析](MOFA/mofa_6.md)
+
