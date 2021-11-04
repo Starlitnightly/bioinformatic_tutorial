@@ -17,7 +17,9 @@
 
 - [分析2: RNA-seq下游]: https://starlitnightly.github.io/bioinformatic_tutorial/RNASEQ/
 
-- [分析3]
+- [分析3: 单细胞样本对齐]:https://starlitnightly.github.io/bioinformatic_tutorial/SCGLUE/
+
+- [分析4: MOFA单细胞多组学因子分析]:https://starlitnightly.github.io/bioinformatic_tutorial/MOFA/
 
 ## License
 
