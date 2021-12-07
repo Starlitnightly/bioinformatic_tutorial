@@ -20,17 +20,22 @@ import episcanpy.api as epi
 
 ```python
 atac_pair = anndata.read_h5ad("atac_pair.h5ad")
-new_pair=pd.read_csv('new_pair.csv')
+new_pair=pd.read_csv('mofa_pre_pair.csv')
 ```
 
 ### 1.3 配对细胞重命名
 
 ```python
-new_cell=[]
-for i in atac_pair.obs.index:
-  new_cell.append(new_pair[new_pair['scATAC']==i]['sample'].iloc[0])
-atac_pair.obs.index=new_cell
-new_cell[:5]
+#new_cell=[]
+#for i in atac_pair.obs.index:
+#  new_cell.append(new_pair[new_pair['scATAC']==i]['sample'].iloc[0])
+#atac_pair.obs.index=new_cell
+#new_cell[:5]
+
+r1=atac_pair[new_pair['scATAC']]
+r1.obs.index=new_pair.index.values
+r1.write_h5ad('atac_mofa_pre1.h5ad',compression="gzip")#必须先保存
+atac_pair=anndata.read_h5ad("atac_mofa_pre1.h5ad")
 ```
 
 ### 1.4 染色体位置重命名
@@ -160,6 +165,6 @@ epi.pl.violin(atac_pair, ['log_nb_features'])
 ```python
 epi.pp.filter_cells(atac_pair, min_features=1000)
 epi.pp.filter_cells(atac_pair, max_features=4000)
-atac_pair.write_h5ad('atac_pair_4.h5ad',compression="gzip")
+atac_pair.write_h5ad('atac_mofa.h5ad',compression="gzip")
 ```
 
