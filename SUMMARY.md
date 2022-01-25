@@ -27,4 +27,8 @@
     * [4-5. MOFA模型构建](MOFA/mofa_5.md)
     * [4-6. MOFA下游分析-R语言环节](MOFA/mofa_6.md)
     * [4-7. MOFA下游分析-Python环节](MOFA/mofa_7.md)
+* [分析5：TMT蛋白组学分析](TMT/README.md)
+    * [5-1. 环境配置](TMT/tmt_1.md)
+    * [5-2. TMT蛋白组学上游分析](TMT/tmt_2.md)
+    * [5-3. TMT蛋白组学下游分析](TMT/tmt_3.md)
 
