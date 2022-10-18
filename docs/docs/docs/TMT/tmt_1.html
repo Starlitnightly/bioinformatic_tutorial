@@ -21,6 +21,14 @@
                 
             
                 
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-cuav-chapters/cuav-chapters.css">
+                
+            
+                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -29,11 +37,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-ivoryhza/ivory.css">
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-ivoryhza/footer.css">
                 
             
         
@@ -75,16 +83,37 @@
     <body>
         
 <div class="book">
-    <div class="book-summary">
-        
-            
+	<div class="header-inner">
+		<!-- LOGO -->
+		<div class="header-inner-left">
+			<div class="logo"></div>
+			<span class="title"></span>
+		</div>
+
+		<!-- Nav -->
+		<div class="header-inner-right">
+			<ul class="header-nav">
+				<li>
+					<a href="http://..." target="_blank">HOME</a>
+				</li>
+			</ul>
+			<!-- Search -->
+			
 <div id="book-search-input" role="search">
     <input type="text" placeholder="Type to search" />
 </div>
 
-            
-                <nav role="navigation">
-                
+		</div>
+
+
+	</div>
+
+	<div class="book-summary">
+		<div class="book-summary-title">目录</div>
+		
+		
+		<nav role="navigation">
+			
 
 
 <ul class="summary">
@@ -659,16 +688,24 @@
 </ul>
 
 
-                </nav>
-            
-        
-    </div>
+		</nav>
+		
+		
+	</div>
 
-    <div class="book-body">
-        
-            <div class="body-inner">
-                
-                    
+	<!-- Content nav -->
+	<div class="book-anchor">
+		<div class="book-anchor-title">大纲</div>
+		<div class="book-anchor-body">
+
+		</div>
+	</div>
+
+	<div class="book-body">
+		
+		<div class="body-inner">
+			
+			
 
 <div class="book-header" role="navigation">
     
@@ -683,15 +720,15 @@
 
 
 
-                    <div class="page-wrapper" tabindex="-1" role="main">
-                        <div class="page-inner">
-                            
+			<div class="page-wrapper" tabindex="-1" role="main">
+				<div class="page-inner">
+					
 <div id="book-search-results">
     <div class="search-noresults">
     
-                                <section class="normal markdown-section">
-                                
-                                <h1 id="tmt&#x86CB;&#x767D;&#x7EC4;&#x5B66;-&#x73AF;&#x5883;&#x914D;&#x7F6E;">TMT&#x86CB;&#x767D;&#x7EC4;&#x5B66;. &#x73AF;&#x5883;&#x914D;&#x7F6E;</h1>
+					<section class="normal markdown-section">
+						
+						<h1 id="tmt&#x86CB;&#x767D;&#x7EC4;&#x5B66;-&#x73AF;&#x5883;&#x914D;&#x7F6E;">TMT&#x86CB;&#x767D;&#x7EC4;&#x5B66;. &#x73AF;&#x5883;&#x914D;&#x7F6E;</h1>
 <p>&#x5BF9;&#x4E8E;TMT&#x4E32;&#x8054;&#x8D28;&#x8C31;&#x5206;&#x6790;&#xFF0C;&#x6211;&#x4EEC;&#x8FD9;&#x91CC;&#x4F7F;&#x7528;MaxQuant&#x5B8C;&#x6210;&#x5BF9;raw&#x6587;&#x4EF6;&#x7684;&#x5904;&#x7406;&#xFF0C;&#x540C;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x8003;&#x8651;&#x4F7F;&#x7528;&#x670D;&#x52A1;&#x5668;&#x6765;&#x5B8C;&#x6210;&#x5904;&#x7406;&#x3002;&#x8FD9;&#x610F;&#x5473;&#x7740;&#xFF0C;&#x73AF;&#x5883;&#x6211;&#x4EEC;&#x65E2;&#x53EF;&#x4EE5;&#x9009;&#x62E9;windows&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x9009;&#x62E9;linux&#xFF0C;&#x6211;&#x4EEC;&#x9996;&#x5148;&#x4ECB;&#x7ECD;&#x4E00;&#x4E0B;windows&#x73AF;&#x5883;&#x5982;&#x4F55;&#x914D;&#x7F6E;</p>
 <h2 id="1-windows&#x73AF;&#x5883;&#x914D;&#x7F6E;">1. Windows&#x73AF;&#x5883;&#x914D;&#x7F6E;</h2>
 <p>&#x5728;Windows&#x73AF;&#x5883;&#x4E0B;&#xFF0C;&#x6211;&#x4EEC;&#x73AF;&#x5883;&#x914D;&#x7F6E;&#x5206;&#x4E3A;&#x4EE5;&#x4E0B;&#x51E0;&#x4E2A;&#x6B65;&#x9AA4;&#xFF1A;</p>
@@ -723,11 +760,13 @@ rm packages-microsoft-prod.deb
 <p>&#x6211;&#x4EEC;&#x5728;&#x7EC8;&#x7AEF;&#x8F93;&#x5165;</p>
 <pre><code class="lang-bash">sudo dotnet --version
 </code></pre>
-<p>&#x5982;&#x679C;&#x663E;&#x793A;&#x6B63;&#x786E;&#x7684;&#x7248;&#x672C;&#x53F7;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x610F;&#x5473;&#x7740;&#x5B89;&#x88C5;&#x6210;&#x529F;&#x4E86;&#x3002;</p>
-
-                                
-                                </section>
-                            
+<p>&#x5982;&#x679C;&#x663E;&#x793A;&#x6B63;&#x786E;&#x7684;&#x7248;&#x672C;&#x53F7;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x610F;&#x5473;&#x7740;&#x5B89;&#x88C5;&#x6210;&#x529F;&#x4E86;&#x3002; </p>
+<footer class="page-footer"><span class="copyright">&#x7248;&#x6743;&#x6240;&#x6709; &#xA9; Starlitnightly</span><span class="footer-modification">&#x6700;&#x540E;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2022-10-17
+</span></footer>
+						
+					</section>
+					
     </div>
     <div class="search-results">
         <div class="has-results">
@@ -744,32 +783,31 @@ rm packages-microsoft-prod.deb
     </div>
 </div>
 
-                        </div>
-                    </div>
-                
-            </div>
+				</div>
+			</div>
+			
+		</div>
 
-            
-                
-                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 分析5：TMT蛋白组学分析">
-                    <i class="fa fa-angle-left"></i>
-                </a>
-                
-                
-                <a href="tmt_2.html" class="navigation navigation-next " aria-label="Next page: 5-2. TMT蛋白组学上游分析">
-                    <i class="fa fa-angle-right"></i>
-                </a>
-                
-            
-        
-    </div>
-
-    <script>
-        var gitbook = gitbook || [];
-        gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"5-1. 环境配置","level":"1.8.1","depth":2,"next":{"title":"5-2. TMT蛋白组学上游分析","level":"1.8.2","depth":2,"path":"TMT/tmt_2.md","ref":"TMT/tmt_2.md","articles":[]},"previous":{"title":"分析5：TMT蛋白组学分析","level":"1.8","depth":1,"path":"TMT/README.md","ref":"TMT/README.md","articles":[{"title":"5-1. 环境配置","level":"1.8.1","depth":2,"path":"TMT/tmt_1.md","ref":"TMT/tmt_1.md","articles":[]},{"title":"5-2. TMT蛋白组学上游分析","level":"1.8.2","depth":2,"path":"TMT/tmt_2.md","ref":"TMT/tmt_2.md","articles":[]},{"title":"5-3. TMT蛋白组学下游分析","level":"1.8.3","depth":2,"path":"TMT/tmt_3.md","ref":"TMT/tmt_3.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","theme-comscore"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"TMT/tmt_1.md","mtime":"2022-10-18T19:10:00.133Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-18T19:11:08.078Z"},"basePath":"..","book":{"language":""}});
-        });
-    </script>
+		
+		
+		<a href="./" title="上一页" class="navigation navigation-prev " aria-label="Previous page: 分析5：TMT蛋白组学分析">
+			<i class="fa fa-angle-left"></i>
+		</a>
+		
+		
+		<a href="tmt_2.html" title="下一页" class="navigation navigation-next " aria-label="Next page: 5-2. TMT蛋白组学上游分析">
+			<i class="fa fa-angle-right"></i>
+		</a>
+		
+		
+		
+	</div>
+	<script>
+		var gitbook = gitbook || [];
+		gitbook.push(function() {
+			gitbook.page.hasChanged({"page":{"title":"5-1. 环境配置","level":"1.8.1","depth":2,"next":{"title":"5-2. TMT蛋白组学上游分析","level":"1.8.2","depth":2,"path":"TMT/tmt_2.md","ref":"TMT/tmt_2.md","articles":[]},"previous":{"title":"分析5：TMT蛋白组学分析","level":"1.8","depth":1,"path":"TMT/README.md","ref":"TMT/README.md","articles":[{"title":"5-1. 环境配置","level":"1.8.1","depth":2,"path":"TMT/tmt_1.md","ref":"TMT/tmt_1.md","articles":[]},{"title":"5-2. TMT蛋白组学上游分析","level":"1.8.2","depth":2,"path":"TMT/tmt_2.md","ref":"TMT/tmt_2.md","articles":[]},{"title":"5-3. TMT蛋白组学下游分析","level":"1.8.3","depth":2,"path":"TMT/tmt_3.md","ref":"TMT/tmt_3.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"themeIvoryhza":{"nav":[{"url":"http://...","target":"_blank","name":"HOME"}]}},"plugins":["expandable-chapters","-sharing","-fontsettings","back-to-top-button","copy-code-button","cuav-chapters","heading-anchors","theme-ivoryhza"],"pluginsConfig":{"search":{},"theme-ivoryhza":{"search-placeholder":"搜索","logo":"./logo.png","appleTouchIconPrecomposed152":"./logo.png","copyright":"版权所有 © Starlitnightly","modify_label":"最后修订时间：","modify_format":"2022-10-17"},"cuav-chapters":{"summaryMaxSize":20,"useLimitExpanded":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"heading-anchors":{},"highlight":{},"back-to-top-button":{},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"TMT/tmt_1.md","mtime":"2022-10-18T19:10:00.133Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-18T19:37:58.065Z"},"basePath":"..","book":{"language":""}});
+		});
+	</script>
 </div>
 
         
@@ -778,6 +816,26 @@ rm packages-microsoft-prod.deb
     
         
         <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-cuav-chapters/cuav-chapters.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/1.2.1/anchor.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-heading-anchors/anchor-style.js"></script>
         
     
         
@@ -797,15 +855,7 @@ rm packages-microsoft-prod.deb
         
     
         
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        <script src="../gitbook/gitbook-plugin-theme-ivoryhza/ivory.js"></script>
         
     
 

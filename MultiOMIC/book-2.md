@@ -4,6 +4,10 @@
 
 但具体的代码参照我的文件，我对教程以及我们的数据进行了配套处理，分别是`glue-0.ipynb`,`glue-1.ipynb`,`glue-2.ipynb`三个文件。
 
+- `glue-0.ipynb`: https://github.com/Starlitnightly/bioinformatic_tutorial/MultiOMIC-ipynb/glue-0.ipynb
+- `glue-1.ipynb`: https://github.com/Starlitnightly/bioinformatic_tutorial/MultiOMIC-ipynb/glue-1.ipynb
+- `glue-2.ipynb`: https://github.com/Starlitnightly/bioinformatic_tutorial/MultiOMIC-ipynb/glue-2.ipynb
+
 但值得注意的是，我们这里得到的细胞只是整合后，还没进行配对，就是使得一个细胞同时具有两个组学层，配对的方法如下，我们需要使用具有X_glue层的rna与atac文件
 
 ```python
@@ -83,5 +87,11 @@ res_pair.head()
 
 但具体的代码依旧参照我的文件，我对相关配置进行了修改处理，分别是`cellanno-1.ipynb`,`cellanno-2.ipynb`
 
+- `cellanno-1.ipynb`: https://github.com/Starlitnightly/bioinformatic_tutorial/MultiOMIC-ipynb/cellanno-1.ipynb
+- `cellanno-2.ipynb`: https://github.com/Starlitnightly/bioinformatic_tutorial/MultiOMIC-ipynb/cellanno-2.ipynb
 
+绘图代码见`figure1.ipynb`与`figure2.ipynb`文件
+
+- `figure1.ipynb`: https://github.com/Starlitnightly/bioinformatic_tutorial/MultiOMIC-ipynb/figure1.ipynb
+- `figure2.ipynb`: https://github.com/Starlitnightly/bioinformatic_tutorial/MultiOMIC-ipynb/figure2.ipynb
 
