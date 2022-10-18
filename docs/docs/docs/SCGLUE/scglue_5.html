@@ -448,7 +448,20 @@
                 <a href="../MOFA/mofa_6.html">
             
                     
-                    4-6. MOFA下游分析
+                    4-6. MOFA下游分析-R语言环节
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../MOFA/mofa_7.html">
+            
+                <a href="../MOFA/mofa_7.html">
+            
+                    
+                    4-7. MOFA下游分析-Python环节
             
                 </a>
             
@@ -519,84 +532,154 @@
 <span class="hljs-keyword">from</span> matplotlib <span class="hljs-keyword">import</span> rcParams
 </code></pre>
 <h3 id="12-&#x5BFC;&#x5165;&#x6570;&#x636E;">1.2 &#x5BFC;&#x5165;&#x6570;&#x636E;</h3>
-<pre><code>rna = anndata.read_h5ad(&quot;rna_preprocessed.h5ad&quot;)
-atac = anndata.read_h5ad(&quot;atac_preprocessed.h5ad&quot;)
-glue = scglue.models.load_model(&quot;final.dill&quot;)
-</code></pre><h2 id="2-&#x6574;&#x5408;&#x6A21;&#x578B;">2. &#x6574;&#x5408;&#x6A21;&#x578B;</h2>
+<pre><code class="lang-python">rna = anndata.read_h5ad(<span class="hljs-string">&quot;rna_preprocessed.h5ad&quot;</span>)
+atac = anndata.read_h5ad(<span class="hljs-string">&quot;atac_preprocessed.h5ad&quot;</span>)
+glue = scglue.models.load_model(<span class="hljs-string">&quot;final.dill&quot;</span>)
+</code></pre>
+<h2 id="2-&#x6574;&#x5408;&#x6A21;&#x578B;">2. &#x6574;&#x5408;&#x6A21;&#x578B;</h2>
 <h3 id="21-&#x6570;&#x636E;&#x9884;&#x5904;&#x7406;">2.1 &#x6570;&#x636E;&#x9884;&#x5904;&#x7406;</h3>
-<pre><code>rna.obs[&apos;domain&apos;]=&apos;scRNA-seq&apos;
-atac.obs[&apos;domain&apos;]=&apos;scATAC-seq&apos;
-rna.obsm[&quot;X_glue&quot;] = glue.encode_data(&quot;rna&quot;, rna)
-atac.obsm[&quot;X_glue&quot;] = glue.encode_data(&quot;atac&quot;, atac)
-</code></pre><h3 id="22-&#x5BFC;&#x51FA;&#x7EC6;&#x80DE;&#x53C2;&#x6570;">2.2 &#x5BFC;&#x51FA;&#x7EC6;&#x80DE;&#x53C2;&#x6570;</h3>
-<pre><code>rna_loc=pd.DataFrame(rna.obsm[&apos;X_glue&apos;], index=rna.obs.index)
-atac_loc=pd.DataFrame(atac.obsm[&apos;X_glue&apos;], index=atac.obs.index)
-</code></pre><h3 id="23-&#x914D;&#x5BF9;&#x7EC6;&#x80DE;">2.3 &#x914D;&#x5BF9;&#x7EC6;&#x80DE;</h3>
-<pre><code>len1=(len(rna_loc)//5000)+1
+<pre><code class="lang-python">rna.obs[<span class="hljs-string">&apos;domain&apos;</span>]=<span class="hljs-string">&apos;scRNA-seq&apos;</span>
+atac.obs[<span class="hljs-string">&apos;domain&apos;</span>]=<span class="hljs-string">&apos;scATAC-seq&apos;</span>
+rna.obsm[<span class="hljs-string">&quot;X_glue&quot;</span>] = glue.encode_data(<span class="hljs-string">&quot;rna&quot;</span>, rna)
+atac.obsm[<span class="hljs-string">&quot;X_glue&quot;</span>] = glue.encode_data(<span class="hljs-string">&quot;atac&quot;</span>, atac)
+</code></pre>
+<h3 id="22-&#x5BFC;&#x51FA;&#x7EC6;&#x80DE;&#x53C2;&#x6570;&#x7279;&#x5F81;&#x5411;&#x91CF;">2.2 &#x5BFC;&#x51FA;&#x7EC6;&#x80DE;&#x53C2;&#x6570;(&#x7279;&#x5F81;&#x5411;&#x91CF;)</h3>
+<pre><code class="lang-python">rna_loc=pd.DataFrame(rna.obsm[<span class="hljs-string">&apos;X_glue&apos;</span>], index=rna.obs.index)
+atac_loc=pd.DataFrame(atac.obsm[<span class="hljs-string">&apos;X_glue&apos;</span>], index=atac.obs.index)
+</code></pre>
+<h3 id="23-&#x914D;&#x5BF9;&#x7EC6;&#x80DE;">2.3 &#x914D;&#x5BF9;&#x7EC6;&#x80DE;</h3>
+<pre><code class="lang-python">len1=(len(rna_loc)//<span class="hljs-number">5000</span>)+<span class="hljs-number">1</span>
 xl=[]
-for j in range(len1):
+<span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(len1):
 
   c=pd.DataFrame()
-  for i in range(len1):
-    t1=rna_loc.iloc[5000*(i):5000*(i+1)]
-    t2=atac_loc.iloc[5000*(j):5000*(j+1)]
-    a=np.corrcoef(t1,t2)[len(t1):,0:len(t1)]
+  <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len1):
+    t1=rna_loc.iloc[<span class="hljs-number">5000</span>*(i):<span class="hljs-number">5000</span>*(i+<span class="hljs-number">1</span>)]
+    t2=atac_loc.iloc[<span class="hljs-number">5000</span>*(j):<span class="hljs-number">5000</span>*(j+<span class="hljs-number">1</span>)]
+    a=np.corrcoef(t1,t2)[len(t1):,<span class="hljs-number">0</span>:len(t1)]
     b=pd.DataFrame(a,index=t2.index,columns=t1.index)  
 
-    c=pd.concat([c,b],axis=1)
-    del t1
-    del t2
-    del a
-    del b
-  for i in range(len(c)):
-    xl.append(c.columns[np.where(c.iloc[i]==c.iloc[i].max())[0]].values[0])
-  del c
-  print(&apos;Now epoch is {}&apos;.format(j)) 
+    c=pd.concat([c,b],axis=<span class="hljs-number">1</span>)
+    <span class="hljs-keyword">del</span> t1
+    <span class="hljs-keyword">del</span> t2
+    <span class="hljs-keyword">del</span> a
+    <span class="hljs-keyword">del</span> b
+  <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(c)):
+    xl.append(c.columns[np.where(c.iloc[i]==c.iloc[i].max())[<span class="hljs-number">0</span>]].values[<span class="hljs-number">0</span>])
+  <span class="hljs-keyword">del</span> c
+  print(<span class="hljs-string">&apos;Now epoch is {}&apos;</span>.format(j)) 
 res=pd.DataFrame(index=atac_loc.index)
-res[&apos;pair&apos;]=xl
-res.to_csv(&apos;pair_res.csv&apos;)
-</code></pre><h2 id="3-&#x8FC7;&#x6EE4;&#x91CD;&#x590D;&#x7EC6;&#x80DE;">3. &#x8FC7;&#x6EE4;&#x91CD;&#x590D;&#x7EC6;&#x80DE;</h2>
+res[<span class="hljs-string">&apos;pair&apos;</span>]=xl
+res.to_csv(<span class="hljs-string">&apos;pair_res.csv&apos;</span>)
+</code></pre>
+<h2 id="3-&#x8FC7;&#x6EE4;&#x91CD;&#x590D;&#x7EC6;&#x80DE;">3. &#x8FC7;&#x6EE4;&#x91CD;&#x590D;&#x7EC6;&#x80DE;</h2>
 <h3 id="31-&#x5BFC;&#x5165;&#x914D;&#x5BF9;&#x6570;&#x636E;">3.1 &#x5BFC;&#x5165;&#x914D;&#x5BF9;&#x6570;&#x636E;</h3>
-<pre><code>pair=pd.read_csv(&apos;pair_res.csv&apos;)
-pair.columns=[&apos;scATAC&apos;,&apos;scRNA&apos;]
-</code></pre><h3 id="32-&#x8FC7;&#x6EE4;&#x91CD;&#x590D;&#x7EC6;&#x80DE;">3.2 &#x8FC7;&#x6EE4;&#x91CD;&#x590D;&#x7EC6;&#x80DE;</h3>
-<pre><code>rna_only_pair=list(set(pair[&apos;scRNA&apos;]))
+<pre><code class="lang-python">pair=pd.read_csv(<span class="hljs-string">&apos;pair_res.csv&apos;</span>)
+pair.columns=[<span class="hljs-string">&apos;scATAC&apos;</span>,<span class="hljs-string">&apos;scRNA&apos;</span>]
+</code></pre>
+<h3 id="32-&#x8FC7;&#x6EE4;&#x91CD;&#x590D;&#x7EC6;&#x80DE;">3.2 &#x8FC7;&#x6EE4;&#x91CD;&#x590D;&#x7EC6;&#x80DE;</h3>
+<pre><code class="lang-python">rna_only_pair=list(set(pair[<span class="hljs-string">&apos;scRNA&apos;</span>]))
 atac_only_pair=[]
-for i in rna_only_pair:
-  atac_only_pair.append(pair[pair[&apos;scRNA&apos;]==i][&apos;scATAC&apos;].iloc[0])
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> rna_only_pair:
+  atac_only_pair.append(pair[pair[<span class="hljs-string">&apos;scRNA&apos;</span>]==i][<span class="hljs-string">&apos;scATAC&apos;</span>].iloc[<span class="hljs-number">0</span>])
 new_pair=pd.DataFrame()
-new_pair[&apos;scRNA&apos;]=rna_only_pair
-new_pair[&apos;scATAC&apos;]=atac_only_pair
+new_pair[<span class="hljs-string">&apos;scRNA&apos;</span>]=rna_only_pair
+new_pair[<span class="hljs-string">&apos;scATAC&apos;</span>]=atac_only_pair
 new_name=[]
-for i in range(len(new_pair)):
-  k=&apos;cell_{0}&apos;.format(i)
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(new_pair)):
+  k=<span class="hljs-string">&apos;cell_{0}&apos;</span>.format(i)
   new_name.append(k)
-new_pair[&apos;sample&apos;]=new_name
-new_pair.to_csv(&apos;new_pair.csv&apos;)
-</code></pre><h3 id="33-&#x63D0;&#x53D6;scrna-seq&#x7684;&#x914D;&#x5BF9;&#x7EC6;&#x80DE;">3.3 &#x63D0;&#x53D6;scRNA-seq&#x7684;&#x914D;&#x5BF9;&#x7EC6;&#x80DE;</h3>
-<pre><code>delli=[]
-for i in rna.obs.index:
-  if i in rna_only_pair:
-    delli.append(&apos;tr&apos;)
-  else:
-    delli.append(&apos;fa&apos;)
-rna.obs[&apos;delli&apos;]=delli
-rna_pair=rna[rna.obs[&apos;delli&apos;]==&apos;tr&apos;]
-rna_pair.write_h5ad(&apos;rna_pair.h5ad&apos;,compression=&quot;gzip&quot;)
-</code></pre><blockquote>
+new_pair[<span class="hljs-string">&apos;sample&apos;</span>]=new_name
+new_pair.to_csv(<span class="hljs-string">&apos;new_pair.csv&apos;</span>)
+</code></pre>
+<h3 id="33-&#x63D0;&#x53D6;scrna-seq&#x7684;&#x914D;&#x5BF9;&#x7EC6;&#x80DE;">3.3 &#x63D0;&#x53D6;scRNA-seq&#x7684;&#x914D;&#x5BF9;&#x7EC6;&#x80DE;</h3>
+<pre><code class="lang-python">delli=[]
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> rna.obs.index:
+  <span class="hljs-keyword">if</span> i <span class="hljs-keyword">in</span> rna_only_pair:
+    delli.append(<span class="hljs-string">&apos;tr&apos;</span>)
+  <span class="hljs-keyword">else</span>:
+    delli.append(<span class="hljs-string">&apos;fa&apos;</span>)
+rna.obs[<span class="hljs-string">&apos;delli&apos;</span>]=delli
+rna_pair=rna[rna.obs[<span class="hljs-string">&apos;delli&apos;</span>]==<span class="hljs-string">&apos;tr&apos;</span>]
+rna_pair.write_h5ad(<span class="hljs-string">&apos;rna_pair.h5ad&apos;</span>,compression=<span class="hljs-string">&quot;gzip&quot;</span>)
+</code></pre>
+<blockquote>
 <p>View of AnnData object with n_obs &#xD7; n_vars = 23770 &#xD7; 35363   </p>
 </blockquote>
 <h3 id="34-&#x63D0;&#x53D6;scatac-seq&#x7684;&#x914D;&#x5BF9;&#x7EC6;&#x80DE;">3.4 &#x63D0;&#x53D6;scATAC-seq&#x7684;&#x914D;&#x5BF9;&#x7EC6;&#x80DE;</h3>
-<pre><code>delli=[]
-for i in atac.obs.index:
-  if i in atac_only_pair:
-    delli.append(&apos;tr&apos;)
-  else:
-    delli.append(&apos;fa&apos;)
-atac.obs[&apos;delli&apos;]=delli
-atac_pair=atac[atac.obs[&apos;delli&apos;]==&apos;tr&apos;]
-atac_pair.write_h5ad(&apos;atac_pair.h5ad&apos;,compression=&quot;gzip&quot;)
+<pre><code class="lang-python">delli=[]
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> atac.obs.index:
+  <span class="hljs-keyword">if</span> i <span class="hljs-keyword">in</span> atac_only_pair:
+    delli.append(<span class="hljs-string">&apos;tr&apos;</span>)
+  <span class="hljs-keyword">else</span>:
+    delli.append(<span class="hljs-string">&apos;fa&apos;</span>)
+atac.obs[<span class="hljs-string">&apos;delli&apos;</span>]=delli
+atac_pair=atac[atac.obs[<span class="hljs-string">&apos;delli&apos;</span>]==<span class="hljs-string">&apos;tr&apos;</span>]
+atac_pair.write_h5ad(<span class="hljs-string">&apos;atac_pair.h5ad&apos;</span>,compression=<span class="hljs-string">&quot;gzip&quot;</span>)
 </code></pre>
+<h3 id="35-scrna-seq&#x4E0E;scatac-seq&#x7684;&#x7EC6;&#x80DE;&#x7C7B;&#x578B;&#x914D;&#x5BF9;">3.5 scRNA-seq&#x4E0E;scATAC-seq&#x7684;&#x7EC6;&#x80DE;&#x7C7B;&#x578B;&#x914D;&#x5BF9;</h3>
+<p>&#x7531;&#x4E8E;&#x6211;&#x4EEC;&#x914D;&#x5BF9;&#x7684;&#x7EC6;&#x80DE;&#x4EC5;&#x4EC5;&#x662F;&#x7279;&#x5F81;&#x5411;&#x91CF;&#x76F8;&#x4F3C;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x771F;&#x6B63;&#x610F;&#x4E49;&#x4E0A;&#x7684;&#x76F8;&#x4F3C;&#xFF0C;&#x53EF;&#x80FD;&#x5B58;&#x5728;scRNA-seq&#x7684;&#x7537;&#x6027;&#x7EC6;&#x80DE;&#x4E0E;scATAC-seq&#x7684;&#x5973;&#x6027;&#x7EC6;&#x80DE;&#x6BD4;&#x8F83;&#x76F8;&#x4F3C;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x4E3A;&#x4E86;&#x907F;&#x514D;&#x6027;&#x522B;&#x4E0E;&#x8BCA;&#x65AD;&#x51FA;&#x9519;&#xFF0C;&#x6211;&#x4EEC;&#x5BF9;&#x914D;&#x5BF9;&#x540E;&#x7684;&#x7EC6;&#x80DE;&#x8FDB;&#x884C;&#x8FDB;&#x4E00;&#x6B65;&#x914D;&#x5BF9;</p>
+<h4 id="351-&#x7537;&#x5973;&#x6027;&#x522B;&#x5E73;&#x8861;">3.5.1 &#x7537;&#x5973;&#x6027;&#x522B;&#x5E73;&#x8861;</h4>
+<p>&#x7531;&#x4E8E;&#x5973;&#x6027;&#x6837;&#x672C;&#x6BD4;&#x7537;&#x6027;&#x6837;&#x672C;&#x8981;&#x591A;&#x4E24;&#x4E2A;&#xFF0C;&#x6211;&#x4EEC;&#x968F;&#x673A;&#x53BB;&#x9664;&#x4E24;&#x4E2A;&#x5973;&#x6027;&#x6837;&#x672C;&#x4F7F;&#x5F97;&#x7537;&#xFF1A;&#x5973;=1&#xFF1A;1</p>
+<pre><code class="lang-python">rna_sex=rna_pair[(rna_pair.obs[<span class="hljs-string">&apos;Sample.ID&apos;</span>]!=<span class="hljs-string">&apos;Sample-22&apos;</span>) &amp; (rna_pair.obs[<span class="hljs-string">&apos;Sample.ID&apos;</span>]!=<span class="hljs-string">&apos;Sample-27&apos;</span>)]
+rna_sex.obs.index=rna_pair.obs[(rna_pair.obs[<span class="hljs-string">&apos;Sample.ID&apos;</span>]!=<span class="hljs-string">&apos;Sample-22&apos;</span>) &amp; (rna_pair.obs[<span class="hljs-string">&apos;Sample.ID&apos;</span>]!=<span class="hljs-string">&apos;Sample-27&apos;</span>)].index.values
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> list(set(rna_sex.obs[<span class="hljs-string">&apos;cell_type&apos;</span>])):
+  print(i,len(rna_sex.obs.loc[rna_sex.obs[<span class="hljs-string">&apos;cell_type&apos;</span>]==i])/len(rna_sex.obs))
+</code></pre>
+<blockquote>
+<p>ODC 0.622879391860573 </p>
+<p>MG 0.0530731435987763 </p>
+<p>INH 0.0965977565588208 </p>
+<p>EX 0.11754890145545564 </p>
+<p>OPC 0.03680355984054881 </p>
+<p>ASC 0.06711782701399834 </p>
+<p>PER.END 0.0059794196718271995</p>
+</blockquote>
+<pre><code class="lang-python">atac_sex=atac_pair[(atac_pair.obs[<span class="hljs-string">&apos;Sample.ID&apos;</span>]!=<span class="hljs-string">&apos;Sample-22&apos;</span>) &amp; (atac_pair.obs[<span class="hljs-string">&apos;Sample.ID&apos;</span>]!=<span class="hljs-string">&apos;Sample-27&apos;</span>)]
+atac_sex.obs.index=atac_pair.obs[(atac_pair.obs[<span class="hljs-string">&apos;Sample.ID&apos;</span>]!=<span class="hljs-string">&apos;Sample-22&apos;</span>) &amp; (atac_pair.obs[<span class="hljs-string">&apos;Sample.ID&apos;</span>]!=<span class="hljs-string">&apos;Sample-27&apos;</span>)].index
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> list(set(atac_sex.obs[<span class="hljs-string">&apos;cell_type&apos;</span>])):
+  print(i,len(atac_sex.obs.loc[atac_sex.obs[<span class="hljs-string">&apos;cell_type&apos;</span>]==i])/len(atac_sex.obs))
+</code></pre>
+<blockquote>
+<p>ODC 0.6223660050712599 </p>
+<p>MG 0.05993704642825916 </p>
+<p>INH 0.10037597272011892 </p>
+<p>EX 0.10457287750284165 </p>
+<p>OPC 0.03733496546297106 </p>
+<p>ASC 0.06933636443123196 </p>
+<p>PER.END 0.006076768383317304</p>
+</blockquote>
+<pre><code>ret_sex= list(set(rna_sex.obs.index).intersection(atac_sex.obs.index))
+len(ret_sex)
+</code></pre><h4 id="352-&#x7EC6;&#x80DE;&#x7C7B;&#x578B;&#x914D;&#x5BF9;-&#x6027;&#x522B;">3.5.2 &#x7EC6;&#x80DE;&#x7C7B;&#x578B;&#x914D;&#x5BF9;-&#x6027;&#x522B;</h4>
+<pre><code>rna_sex_F=rna_sex[rna_sex.obs[&apos;Sex&apos;]==&apos;F&apos;]
+rna_sex_F.obs.index=rna_sex.obs[rna_sex.obs[&apos;Sex&apos;]==&apos;F&apos;].index
+atac_sex_F=atac_sex[atac_sex.obs[&apos;Sex&apos;]==&apos;F&apos;]
+atac_sex_F.obs.index=atac_sex.obs[atac_sex.obs[&apos;Sex&apos;]==&apos;F&apos;].index
+ret_F=list(set(rna_sex_F.obs.index).intersection(atac_sex_F.obs.index))
+
+rna_sex_M=rna_sex[rna_sex.obs[&apos;Sex&apos;]==&apos;M&apos;]
+rna_sex_M.obs.index=rna_sex.obs[rna_sex.obs[&apos;Sex&apos;]==&apos;M&apos;].index
+atac_sex_M=atac_sex[atac_sex.obs[&apos;Sex&apos;]==&apos;M&apos;]
+atac_sex_M.obs.index=atac_sex.obs[atac_sex.obs[&apos;Sex&apos;]==&apos;M&apos;].index
+ret_M=list(set(rna_sex_M.obs.index).intersection(atac_sex_M.obs.index))
+</code></pre><h4 id="353-&#x7EC6;&#x80DE;&#x7C7B;&#x578B;&#x914D;&#x5BF9;-&#x8BCA;&#x65AD;">3.5.3 &#x7EC6;&#x80DE;&#x7C7B;&#x578B;&#x914D;&#x5BF9;-&#x8BCA;&#x65AD;</h4>
+<pre><code>rna_sex_ad=rna_sex[ret_M+ret_F][rna_sex[ret_M+ret_F].obs[&apos;Diagnosis&apos;]==&apos;AD&apos;]
+atac_sex_ad=atac_sex[ret_M+ret_F][atac_sex[ret_M+ret_F].obs[&apos;Diagnosis&apos;]==&apos;AD&apos;]
+ret_ad=list(set(rna_sex_ad.obs.index).intersection(atac_sex_ad.obs.index))
+
+rna_sex_ctrl=rna_sex[ret_M+ret_F][rna_sex[ret_M+ret_F].obs[&apos;Diagnosis&apos;]==&apos;Control&apos;]
+atac_sex_ctrl=atac_sex[ret_M+ret_F][atac_sex[ret_M+ret_F].obs[&apos;Diagnosis&apos;]==&apos;Control&apos;]
+ret_ctrl=list(set(rna_sex_ctrl.obs.index).intersection(atac_sex_ctrl.obs.index))
+</code></pre><h3 id="36-&#x4FDD;&#x5B58;&#x65B0;&#x914D;&#x5BF9;&#x5217;&#x8868;">3.6 &#x4FDD;&#x5B58;&#x65B0;&#x914D;&#x5BF9;&#x5217;&#x8868;</h3>
+<pre><code class="lang-python">pair=pd.read_csv(<span class="hljs-string">&apos;new_pair.csv&apos;</span>)
+pair.set_index(pair.columns[<span class="hljs-number">0</span>],inplace=<span class="hljs-keyword">True</span>)
+pair.set_index(pair.columns[<span class="hljs-number">2</span>],inplace=<span class="hljs-keyword">True</span>)
+<span class="hljs-comment">#pair.columns=[&apos;scATAC&apos;,&apos;scRNA&apos;]</span>
+pair.loc[ret_ad+ret_ctrl].to_csv(<span class="hljs-string">&apos;mofa_pre_pair.csv&apos;</span>)
+!cp /content/mofa_pre_pair.csv /content/drive/MyDrive/mofa_gse174367
+</code></pre>
+
                                 
                                 </section>
                             
@@ -639,7 +722,7 @@ atac_pair.write_h5ad(&apos;atac_pair.h5ad&apos;,compression=&quot;gzip&quot;)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"3-5. 对齐细胞","level":"1.6.5","depth":2,"next":{"title":"分析4：MOFA单细胞多组学因子分析","level":"1.7","depth":1,"path":"MOFA/README.md","ref":"MOFA/README.md","articles":[{"title":"4-1. 环境配置","level":"1.7.1","depth":2,"path":"MOFA/mofa_1.md","ref":"MOFA/mofa_1.md","articles":[]},{"title":"4-2. 单细胞样本对齐","level":"1.7.2","depth":2,"path":"MOFA/mofa_2.md","ref":"MOFA/mofa_2.md","articles":[]},{"title":"4-3. scRNA-seq数据处理","level":"1.7.3","depth":2,"path":"MOFA/mofa_3.md","ref":"MOFA/mofa_3.md","articles":[]},{"title":"4-4. scATAC-seq数据处理","level":"1.7.4","depth":2,"path":"MOFA/mofa_4.md","ref":"MOFA/mofa_4.md","articles":[]},{"title":"4-5. MOFA模型构建","level":"1.7.5","depth":2,"path":"MOFA/mofa_5.md","ref":"MOFA/mofa_5.md","articles":[]},{"title":"4-6. MOFA下游分析","level":"1.7.6","depth":2,"path":"MOFA/mofa_6.md","ref":"MOFA/mofa_6.md","articles":[]}]},"previous":{"title":"3-4. 模型训练","level":"1.6.4","depth":2,"path":"SCGLUE/scglue_4.md","ref":"SCGLUE/scglue_4.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"SCGLUE/scglue_5.md","mtime":"2021-11-04T04:40:18.728Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-11-04T05:59:16.797Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"3-5. 对齐细胞","level":"1.6.5","depth":2,"next":{"title":"分析4：MOFA单细胞多组学因子分析","level":"1.7","depth":1,"path":"MOFA/README.md","ref":"MOFA/README.md","articles":[{"title":"4-1. 环境配置","level":"1.7.1","depth":2,"path":"MOFA/mofa_1.md","ref":"MOFA/mofa_1.md","articles":[]},{"title":"4-2. 单细胞样本对齐","level":"1.7.2","depth":2,"path":"MOFA/mofa_2.md","ref":"MOFA/mofa_2.md","articles":[]},{"title":"4-3. scRNA-seq数据处理","level":"1.7.3","depth":2,"path":"MOFA/mofa_3.md","ref":"MOFA/mofa_3.md","articles":[]},{"title":"4-4. scATAC-seq数据处理","level":"1.7.4","depth":2,"path":"MOFA/mofa_4.md","ref":"MOFA/mofa_4.md","articles":[]},{"title":"4-5. MOFA模型构建","level":"1.7.5","depth":2,"path":"MOFA/mofa_5.md","ref":"MOFA/mofa_5.md","articles":[]},{"title":"4-6. MOFA下游分析-R语言环节","level":"1.7.6","depth":2,"path":"MOFA/mofa_6.md","ref":"MOFA/mofa_6.md","articles":[]},{"title":"4-7. MOFA下游分析-Python环节","level":"1.7.7","depth":2,"path":"MOFA/mofa_7.md","ref":"MOFA/mofa_7.md","articles":[]}]},"previous":{"title":"3-4. 模型训练","level":"1.6.4","depth":2,"path":"SCGLUE/scglue_4.md","ref":"SCGLUE/scglue_4.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"SCGLUE/scglue_5.md","mtime":"2021-12-07T02:59:01.277Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-07T08:49:01.522Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

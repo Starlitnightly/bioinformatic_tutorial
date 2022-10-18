@@ -448,7 +448,20 @@
                 <a href="../MOFA/mofa_6.html">
             
                     
-                    4-6. MOFA下游分析
+                    4-6. MOFA下游分析-R语言环节
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../MOFA/mofa_7.html">
+            
+                <a href="../MOFA/mofa_7.html">
+            
+                    
+                    4-7. MOFA下游分析-Python环节
             
                 </a>
             
@@ -542,7 +555,10 @@ adata.obs[<span class="hljs-string">&quot;cell_type&quot;</span>] = xl
 
 adata=adata[adata.obs[<span class="hljs-string">&apos;cell_type&apos;</span>]!=<span class="hljs-string">&apos;Nan&apos;</span>]
 
-Cell=[]
+rna=adata
+</code></pre>
+<h3 id="24-&#x5355;&#x7EC6;&#x80DE;obs&#x7C7B;&#x578B;&#x8BBE;&#x7F6E;">2.4 &#x5355;&#x7EC6;&#x80DE;obs&#x7C7B;&#x578B;&#x8BBE;&#x7F6E;</h3>
+<pre><code class="lang-python">Cell=[]
 Sample=[]
 Batch=[]
 Age=[]
@@ -576,6 +592,8 @@ RIN=[]
     Plaque.append(<span class="hljs-string">&apos;Nan&apos;</span>)
     Diagnosis.append(<span class="hljs-string">&apos;Nan&apos;</span>)
     RIN.append(<span class="hljs-string">&apos;Nan&apos;</span>)
+
+
 rna.obs[<span class="hljs-string">&quot;cell_type&quot;</span>] = Cell
 rna.obs[<span class="hljs-string">&quot;Sample.ID&quot;</span>] = Sample
 rna.obs[<span class="hljs-string">&quot;Batch&quot;</span>] = Batch
@@ -586,8 +604,21 @@ rna.obs[<span class="hljs-string">&quot;Tangle.Stage&quot;</span>] = Tangle
 rna.obs[<span class="hljs-string">&quot;Plaque.Stage&quot;</span>] = Plaque
 rna.obs[<span class="hljs-string">&quot;Diagnosis&quot;</span>] = Diagnosis
 rna.obs[<span class="hljs-string">&quot;RIN&quot;</span>] = RIN
+
+rna.obs.astype({
+    <span class="hljs-string">&apos;cell_type&apos;</span>:<span class="hljs-string">&apos;category&apos;</span>,
+    <span class="hljs-string">&apos;Sample.ID&apos;</span>:<span class="hljs-string">&apos;category&apos;</span>,
+    <span class="hljs-string">&apos;Batch&apos;</span>:<span class="hljs-string">&apos;category&apos;</span>,
+    <span class="hljs-string">&apos;Age&apos;</span>:<span class="hljs-string">&apos;category&apos;</span>,
+    <span class="hljs-string">&apos;Sex&apos;</span>:<span class="hljs-string">&apos;category&apos;</span>,
+    <span class="hljs-string">&apos;PMI&apos;</span>:<span class="hljs-string">&apos;category&apos;</span>,
+    <span class="hljs-string">&apos;Tangle.Stage&apos;</span>:<span class="hljs-string">&apos;category&apos;</span>,
+    <span class="hljs-string">&apos;Plague.Stage&apos;</span>:<span class="hljs-string">&apos;category&apos;</span>,
+    <span class="hljs-string">&apos;Diagnosis&apos;</span>:<span class="hljs-string">&apos;category&apos;</span>,
+    <span class="hljs-string">&apos;RIN&apos;</span>:<span class="hljs-string">&apos;category&apos;</span>,
+})
 </code></pre>
-<h3 id="24-&#x4FDD;&#x5B58;&#x6570;&#x636E;">2.4 &#x4FDD;&#x5B58;&#x6570;&#x636E;</h3>
+<h3 id="25-&#x4FDD;&#x5B58;&#x6570;&#x636E;">2.5 &#x4FDD;&#x5B58;&#x6570;&#x636E;</h3>
 <pre><code class="lang-python">rna.write_h5ad(<span class="hljs-string">&apos;GSE174367rna_61472.h5ad&apos;</span>,compression=<span class="hljs-string">&quot;gzip&quot;</span>)
 </code></pre>
 <h2 id="3-atac-seq&#x6570;&#x636E;&#x9884;&#x5904;&#x7406;">3. ATAC-seq&#x6570;&#x636E;&#x9884;&#x5904;&#x7406;</h2>
@@ -667,6 +698,19 @@ atacdata.obs[<span class="hljs-string">&quot;Plaque.Stage&quot;</span>] = Plaque
 atacdata.obs[<span class="hljs-string">&quot;Diagnosis&quot;</span>] = Diagnosis
 atacdata.obs[<span class="hljs-string">&quot;RIN&quot;</span>] = RIN
 atacdata.obs.head()
+
+atacdata.obs.astype({
+    <span class="hljs-string">&apos;cell_type&apos;</span>:<span class="hljs-string">&apos;category&apos;</span>,
+    <span class="hljs-string">&apos;Sample.ID&apos;</span>:<span class="hljs-string">&apos;category&apos;</span>,
+    <span class="hljs-string">&apos;Batch&apos;</span>:<span class="hljs-string">&apos;category&apos;</span>,
+    <span class="hljs-string">&apos;Age&apos;</span>:<span class="hljs-string">&apos;category&apos;</span>,
+    <span class="hljs-string">&apos;Sex&apos;</span>:<span class="hljs-string">&apos;category&apos;</span>,
+    <span class="hljs-string">&apos;PMI&apos;</span>:<span class="hljs-string">&apos;category&apos;</span>,
+    <span class="hljs-string">&apos;Tangle.Stage&apos;</span>:<span class="hljs-string">&apos;category&apos;</span>,
+    <span class="hljs-string">&apos;Plague.Stage&apos;</span>:<span class="hljs-string">&apos;category&apos;</span>,
+    <span class="hljs-string">&apos;Diagnosis&apos;</span>:<span class="hljs-string">&apos;category&apos;</span>,
+    <span class="hljs-string">&apos;RIN&apos;</span>:<span class="hljs-string">&apos;category&apos;</span>,
+})
 </code></pre>
 <h3 id="36-&#x8FC7;&#x6EE4;&#x7EC6;&#x80DE;">3.6 &#x8FC7;&#x6EE4;&#x7EC6;&#x80DE;</h3>
 <p>&#x7531;&#x4E8E;ATAC-seq&#x6709;130418&#x4E2A;&#x7EC6;&#x80DE;&#xFF0C;&#x800C;RNA-seq&#x53EA;&#x6709;61472&#x4E2A;&#x7EC6;&#x80DE;&#xFF0C;&#x4E8E;&#x662F;&#x6211;&#x4EEC;&#x5C31;&#x9700;&#x8981;&#x968F;&#x673A;&#x53BB;&#x9664;ATAC-seq&#x91CC;&#x9762;&#x591A;&#x7684;&#x7EC6;&#x80DE;&#xFF0C;&#x540C;&#x65F6;&#x8981;&#x4FDD;&#x8BC1;&#x7EC6;&#x80DE;&#x7C7B;&#x578B;&#x7684;&#x6BD4;&#x4F8B;&#x4E0D;&#x53D8;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x6309;&#x7C7B;&#x968F;&#x673A;&#x53BB;&#x9664;&#x7EC6;&#x80DE;</p>
@@ -731,7 +775,7 @@ atacdata1
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"3-2. 数据预处理","level":"1.6.2","depth":2,"next":{"title":"3-3. 模型准备","level":"1.6.3","depth":2,"path":"SCGLUE/scglue_3.md","ref":"SCGLUE/scglue_3.md","articles":[]},"previous":{"title":"3-1. 环境配置","level":"1.6.1","depth":2,"path":"SCGLUE/scglue_1.md","ref":"SCGLUE/scglue_1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"SCGLUE/scglue_2.md","mtime":"2021-11-03T07:46:32.359Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-11-04T05:59:16.797Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"3-2. 数据预处理","level":"1.6.2","depth":2,"next":{"title":"3-3. 模型准备","level":"1.6.3","depth":2,"path":"SCGLUE/scglue_3.md","ref":"SCGLUE/scglue_3.md","articles":[]},"previous":{"title":"3-1. 环境配置","level":"1.6.1","depth":2,"path":"SCGLUE/scglue_1.md","ref":"SCGLUE/scglue_1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"SCGLUE/scglue_2.md","mtime":"2021-12-07T02:25:21.605Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-07T08:49:01.522Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

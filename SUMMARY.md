@@ -31,4 +31,12 @@
     * [5-1. 环境配置](TMT/tmt_1.md)
     * [5-2. TMT蛋白组学上游分析](TMT/tmt_2.md)
     * [5-3. TMT蛋白组学下游分析](TMT/tmt_3.md)
+* [分析6：多组学分析](TMT/README.md)
+    * [6-1. 数据准备](MultiOMIC/book-1.md)
+    * [6-2. GLUE多组学整合](MultiOMIC/book-2.md)
+    * [6-3. 细胞亚群分析](MultiOMIC/book-3.md)
+    * [6-4. 差异表达分析](MultiOMIC/book-4.md)
+    * [6-5. 细胞通讯分析](MultiOMIC/book-5.md)
+    * [6-6. 动态调控分析](MultiOMIC/book-6.md)
+    * [6-7. 转录因子网络](MultiOMIC/book-7.md)
 
