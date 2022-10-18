@@ -764,7 +764,7 @@ epi.pp.coverage_cells(atac_pair, binary=<span class="hljs-keyword">True</span>, 
 epi.pp.coverage_cells(atac_pair, binary=<span class="hljs-keyword">True</span>, log=<span class="hljs-number">10</span>, bins=<span class="hljs-number">50</span>,
                threshold=min_features, save=<span class="hljs-string">&apos;Buenrostro_bulk_peaks_coverage_cells_log10.png&apos;</span>)
 </code></pre>
-<p><img src="https://raw.githubusercontent.com/Starlitnightly/bioinformatic_galaxy/master/img/do9.png" alt="do9"></p>
+<p><img src="mofa_4.assets/do9-6120084.png" alt="do9"></p>
 <p><img src="https://raw.githubusercontent.com/Starlitnightly/bioinformatic_galaxy/master/img/do10.png" alt="do10"></p>
 <h3 id="24-&#x8BBE;&#x7F6E;&#x6BCF;&#x4E2A;feature&#x5B58;&#x5728;&#x4E8E;&#x6700;&#x5C0F;&#x7684;&#x7EC6;&#x80DE;&#x6570;">2.4 &#x8BBE;&#x7F6E;&#x6BCF;&#x4E2A;feature&#x5B58;&#x5728;&#x4E8E;&#x6700;&#x5C0F;&#x7684;&#x7EC6;&#x80DE;&#x6570;</h3>
 <pre><code class="lang-python"><span class="hljs-comment"># minimum number of cells sharing a feature</span>
@@ -774,8 +774,8 @@ epi.pp.coverage_features(atac_pair, binary=<span class="hljs-keyword">True</span
 epi.pp.coverage_features(atac_pair, binary=<span class="hljs-keyword">True</span>, log=<span class="hljs-keyword">True</span>, 
                         threshold=min_cells, save=<span class="hljs-string">&apos;Buenrostro_bulk_peaks_coverage_peaks_log10.png&apos;</span>)
 </code></pre>
-<p><img src="https://raw.githubusercontent.com/Starlitnightly/bioinformatic_galaxy/master/img/do11.png" alt="do11"></p>
-<p><img src="https://raw.githubusercontent.com/Starlitnightly/bioinformatic_galaxy/master/img/do12.png" alt="do12"></p>
+<p><img src="mofa_4.assets/do11-6120091.png" alt="do11"></p>
+<p><img src="mofa_4.assets/do12-6120093.png" alt="do12"></p>
 <h3 id="25-&#x8FC7;&#x6EE4;&#x7EC6;&#x80DE;&#x4E0E;feature">2.5 &#x8FC7;&#x6EE4;&#x7EC6;&#x80DE;&#x4E0E;feature</h3>
 <pre><code class="lang-python">min_features = <span class="hljs-number">400</span>
 epi.pp.filter_cells(atac_pair, min_features=min_features)
@@ -793,8 +793,8 @@ epi.pl.variability_features(atac_pair,log=<span class="hljs-string">&apos;log10&
                      min_score=min_score_value, nb_features=nb_feature_selected,
                      save=<span class="hljs-string">&apos;variability_features_plot_bonemarrow_peakmatrix_log10.png&apos;</span>)
 </code></pre>
-<p><img src="C:\Users\FernandoZeng\Desktop\biobook\MOFA\mofa_4.assets\do13.png" alt="do13"></p>
-<p><img src="C:\Users\FernandoZeng\Desktop\biobook\MOFA\mofa_4.assets\do14.png" alt="do14"></p>
+<p><img src="mofa_4.assets/do13.png" alt="do13"></p>
+<p><img src="mofa_4.assets/do14.png" alt="do14"></p>
 <h2 id="3-&#x8FC7;&#x6EE4;&#x9AD8;&#x53D8;feature&#x7684;cell">3. &#x8FC7;&#x6EE4;&#x9AD8;&#x53D8;feature&#x7684;cell</h2>
 <pre><code class="lang-python">atac_pair.raw=atac_pair
 <span class="hljs-comment"># create a new AnnData containing only the most variable features</span>
@@ -802,8 +802,8 @@ atac_pair = epi.pp.select_var_feature(atac_pair,nb_features=nb_feature_selected,
 epi.pl.violin(atac_pair, [<span class="hljs-string">&apos;nb_features&apos;</span>])
 epi.pl.violin(atac_pair, [<span class="hljs-string">&apos;log_nb_features&apos;</span>])
 </code></pre>
-<p><img src="C:\Users\FernandoZeng\Desktop\biobook\MOFA\mofa_4.assets\do15.png" alt="do15"></p>
-<p><img src="C:\Users\FernandoZeng\Desktop\biobook\MOFA\mofa_4.assets\do16-1636004475065.png" alt="do16"></p>
+<p><img src="mofa_4.assets/do15.png" alt="do15"></p>
+<p><img src="mofa_4.assets/do16-1636004475065.png" alt="do16"></p>
 <pre><code class="lang-python">epi.pp.filter_cells(atac_pair, min_features=<span class="hljs-number">1000</span>)
 epi.pp.filter_cells(atac_pair, max_features=<span class="hljs-number">4000</span>)
 atac_pair.write_h5ad(<span class="hljs-string">&apos;atac_mofa.h5ad&apos;</span>,compression=<span class="hljs-string">&quot;gzip&quot;</span>)
@@ -851,7 +851,7 @@ atac_pair.write_h5ad(<span class="hljs-string">&apos;atac_mofa.h5ad&apos;</span>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"4-4. scATAC-seq数据处理","level":"1.7.4","depth":2,"next":{"title":"4-5. MOFA模型构建","level":"1.7.5","depth":2,"path":"MOFA/mofa_5.md","ref":"MOFA/mofa_5.md","articles":[]},"previous":{"title":"4-3. scRNA-seq数据处理","level":"1.7.3","depth":2,"path":"MOFA/mofa_3.md","ref":"MOFA/mofa_3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","theme-comscore"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"MOFA/mofa_4.md","mtime":"2022-10-18T18:22:29.170Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-18T18:57:57.553Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"4-4. scATAC-seq数据处理","level":"1.7.4","depth":2,"next":{"title":"4-5. MOFA模型构建","level":"1.7.5","depth":2,"path":"MOFA/mofa_5.md","ref":"MOFA/mofa_5.md","articles":[]},"previous":{"title":"4-3. scRNA-seq数据处理","level":"1.7.3","depth":2,"path":"MOFA/mofa_3.md","ref":"MOFA/mofa_3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","theme-comscore"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"MOFA/mofa_4.md","mtime":"2022-10-18T19:08:38.060Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-18T19:11:08.078Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

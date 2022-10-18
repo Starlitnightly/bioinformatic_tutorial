@@ -31,7 +31,7 @@
     * [5-1. 环境配置](TMT/tmt_1.md)
     * [5-2. TMT蛋白组学上游分析](TMT/tmt_2.md)
     * [5-3. TMT蛋白组学下游分析](TMT/tmt_3.md)
-* [分析6：多组学分析](TMT/README.md)
+* [分析6：多组学分析](MultiOMIC/README.md)
     * [6-1. 数据准备](MultiOMIC/book-1.md)
     * [6-2. GLUE多组学整合](MultiOMIC/book-2.md)
     * [6-3. 细胞亚群分析](MultiOMIC/book-3.md)

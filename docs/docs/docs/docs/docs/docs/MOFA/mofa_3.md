@@ -20,17 +20,23 @@ import numpy as np
 ```python
 rna_pair = anndata.read_h5ad("rna_pair.h5ad")
 #atac_pair = anndata.read_h5ad("atac_pair.h5ad")
-new_pair=pd.read_csv('new_pair.csv')
+new_pair=pd.read_csv('mofa_pre_pair.csv')
 ```
 
 ### 1.3 配对细胞重命名
 
 ```python
-new_cell=[]
-for i in rna_pair.obs.index:
-  new_cell.append(new_pair[new_pair['scRNA']==i]['sample'].iloc[0])
-rna_pair.obs.index=new_cell
-new_cell[:5]
+#new_cell=[]
+#for i in rna_pair.obs.index:
+#  new_cell.append(new_pair[new_pair['scRNA']==i]['sample'].iloc[0])
+#rna_pair.obs.index=new_cell
+#new_cell[:5]
+
+r1=rna_pair[new_pair['scRNA']]
+r1.obs.index=new_pair.index.values
+r1.write_h5ad('rna_mofa_pre1.h5ad',compression="gzip")#必须先保存
+rna_pair=anndata.read_h5ad("rna_mofa_pre1.h5ad")
+
 ```
 
 ## 2. 单细胞数据质控
@@ -86,6 +92,6 @@ rna_pair = rna_pair[:, rna_pair.var.highly_variable]
 ```python
 sc.pp.regress_out(rna_pair, ['total_counts', 'pct_counts_mt'])
 sc.pp.scale(rna_pair, max_value=10)
-rna_pair.write_h5ad('rna_pair_4.h5ad',compression='gzip')
+rna_pair.write_h5ad('rna_mofa.h5ad',compression='gzip')
 ```
 

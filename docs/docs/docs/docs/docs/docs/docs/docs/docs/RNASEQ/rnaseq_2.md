@@ -283,7 +283,7 @@ plt.title('NHDF/NHDF+EV',fontsize=15)
 plt.savefig("NHDF_volcano.png",dpi=300,bbox_inches = 'tight')
 ```
 
-![NHDF_volcano](https://raw.githubusercontent.com/Starlitnightly/bioinformatic_galaxy/master/img/NHDF_volcano-1635819681870.png)
+<img src="https://raw.githubusercontent.com/Starlitnightly/bioinformatic_galaxy/master/img/NHDF_volcano-1635819681870.png" alt="NHDF_volcano" style="zoom: 33%;" />
 
 ## 4. 差异表达热图
 
@@ -390,4 +390,4 @@ plt.savefig("NHDF_heatmap.png",dpi=300,bbox_inches = 'tight')
 
 结果如图所示
 
-![NHDF_heatmap](https://raw.githubusercontent.com/Starlitnightly/bioinformatic_galaxy/master/img/NHDF_heatmap.png)
+<img src="https://raw.githubusercontent.com/Starlitnightly/bioinformatic_galaxy/master/img/NHDF_heatmap.png" alt="NHDF_heatmap" style="zoom:33%;" />

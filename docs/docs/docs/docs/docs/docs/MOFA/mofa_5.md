@@ -19,8 +19,8 @@ import numpy as np
 ### 1.2 导入数据
 
 ```python
-rna=anndata.read_h5ad("rna_pair_4.h5ad")
-atac=anndata.read_h5ad("atac_pair_4.h5ad")
+rna=anndata.read_h5ad("rna_mofa.h5ad")
+atac=anndata.read_h5ad("atac_mofa.h5ad")
 ```
 
 ### 1.3 计算多组学公共list
@@ -86,7 +86,7 @@ ent1.set_data_matrix(data_mat, likelihoods = ["gaussian","gaussian"],
 
 ```python
 ent1.set_model_options(
-    factors = 100, 
+    factors = 20, 
     spikeslab_weights = True, 
     ard_factors = True,
     ard_weights = True
@@ -112,7 +112,14 @@ ent1.build()
 ent1.run()
 
 # Save the output
-ent1.save(outfile='mofa_100sfactor.hdf5')
+ent1.save(outfile='mofa_factor.hdf5')
 ```
 
 ![image-20211104134822671](C:\Users\FernandoZeng\Desktop\biobook\MOFA\mofa_5.assets\image-20211104134822671.png)
+
+### 2.6 meta数据导出
+
+```
+rna[ret3].obs.to_csv('mofa_meta.csv')
+```
+
