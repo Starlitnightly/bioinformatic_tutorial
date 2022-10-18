@@ -12,7 +12,7 @@
 - Set reference channels：这个是TMT串联质谱必须要设置的参数，使得标记可以被分离
 - Set parameter group：如果你的实验有多个组别可以设置，但一般多组别会分开跑
 
-![image-20220126013900416](https://raw.githubusercontent.com/Starlitnightly/bioinformatic_galaxy/master/img/image-20220126013900416.png)
+![image-20220126013900416](tmt_2.assets/image-20220126013900416-6120205.png)
 
 ### 1.2 组特定参数窗格
 

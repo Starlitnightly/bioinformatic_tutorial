@@ -148,7 +148,7 @@ def plot_high_weight(res,n_feature=10):
 plot_high_weight(res1,10)
 ```
 
-![下载 (3)](C:\Users\FernandoZeng\Desktop\biobook\MOFA\mofa_7.assets\下载 (3).png)
+![下载 (3)](mofa_7.assets\下载 (3).png)
 
 ### 1.8 Var跟Cor数据导入
 
@@ -176,7 +176,7 @@ cbar.ax.tick_params(labelsize=15)
 
 ```
 
-![下载 (4)](C:\Users\FernandoZeng\Desktop\biobook\MOFA\mofa_7.assets\下载 (4).png)
+![下载 (4)](mofa_7.assets\下载 (4).png)
 
 ### 1.10 Cor可视化
 
@@ -193,7 +193,7 @@ cbar = g.collections[0].colorbar
 cbar.ax.tick_params(labelsize=15)
 ```
 
-![下载 (5)](C:\Users\FernandoZeng\Desktop\biobook\MOFA\mofa_7.assets\下载 (5).png)
+![下载 (5)](mofa_7.assets\下载 (5).png)
 
 ## 2. 单细胞环节
 
@@ -291,7 +291,7 @@ cbar.ax.tick_params(labelsize=15)
 plt.savefig("fig1_b_corr.png",dpi=300,bbox_inches = 'tight')
 ```
 
-<img src="C:\Users\FernandoZeng\Desktop\biobook\MOFA\mofa_7.assets\下载 (6).png" alt="下载 (6)" style="zoom:50%;" />
+<img src="mofa_7.assets\下载 (6).png" alt="下载 (6)" style="zoom:50%;" />
 
 ### 2.3 scRNA-seq的AD与Ctrl组聚类
 
@@ -336,7 +336,7 @@ sc.pl.umap(res_ad,color=["cell_type","factor1","factor2","factor4"], wspace=0.2,
       cmap='coolwarm',vmin=-5,vmax=5,frameon=False,add_outline=True,outline_color=('white','white'))
 ```
 
-![下载 (7)](C:\Users\FernandoZeng\Desktop\biobook\MOFA\mofa_7.assets\下载 (7).png)
+![下载 (7)](mofa_7.assets\下载 (7).png)
 
 #### 2.3.5 Ctrl组绘图
 
@@ -348,4 +348,4 @@ sc.pl.umap(res_ctrl,color=["cell_type","factor1","factor2","factor4"], wspace=0.
       cmap='coolwarm',vmin=-5,vmax=5,frameon=False,add_outline=True,outline_color=('white','white'))
 ```
 
-![下载 (8)](C:\Users\FernandoZeng\Desktop\biobook\MOFA\mofa_7.assets\下载 (8).png)
+![下载 (8)](mofa_7.assets\下载 (8).png)

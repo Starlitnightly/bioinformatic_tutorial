@@ -51,6 +51,12 @@ adata.obs["cell_type"] = xl
 
 adata=adata[adata.obs['cell_type']!='Nan']
 
+rna=adata
+```
+
+### 2.4 单细胞obs类型设置
+
+```python
 Cell=[]
 Sample=[]
 Batch=[]
@@ -85,6 +91,8 @@ for i in rna.obs.index:
     Plaque.append('Nan')
     Diagnosis.append('Nan')
     RIN.append('Nan')
+    
+
 rna.obs["cell_type"] = Cell
 rna.obs["Sample.ID"] = Sample
 rna.obs["Batch"] = Batch
@@ -95,9 +103,22 @@ rna.obs["Tangle.Stage"] = Tangle
 rna.obs["Plaque.Stage"] = Plaque
 rna.obs["Diagnosis"] = Diagnosis
 rna.obs["RIN"] = RIN
+
+rna.obs.astype({
+    'cell_type':'category',
+    'Sample.ID':'category',
+    'Batch':'category',
+    'Age':'category',
+    'Sex':'category',
+    'PMI':'category',
+    'Tangle.Stage':'category',
+    'Plague.Stage':'category',
+    'Diagnosis':'category',
+    'RIN':'category',
+})
 ```
 
-### 2.4 保存数据
+### 2.5 保存数据
 
 ```python
 rna.write_h5ad('GSE174367rna_61472.h5ad',compression="gzip")
@@ -198,6 +219,19 @@ atacdata.obs["Plaque.Stage"] = Plaque
 atacdata.obs["Diagnosis"] = Diagnosis
 atacdata.obs["RIN"] = RIN
 atacdata.obs.head()
+
+atacdata.obs.astype({
+    'cell_type':'category',
+    'Sample.ID':'category',
+    'Batch':'category',
+    'Age':'category',
+    'Sex':'category',
+    'PMI':'category',
+    'Tangle.Stage':'category',
+    'Plague.Stage':'category',
+    'Diagnosis':'category',
+    'RIN':'category',
+})
 ```
 
 ### 3.6 过滤细胞

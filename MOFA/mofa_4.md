@@ -103,7 +103,7 @@ epi.pp.coverage_cells(atac_pair, binary=True, log=10, bins=50,
                threshold=min_features, save='Buenrostro_bulk_peaks_coverage_cells_log10.png')
 ```
 
-![do9](https://raw.githubusercontent.com/Starlitnightly/bioinformatic_galaxy/master/img/do9.png)
+![do9](mofa_4.assets/do9-6120084.png)
 
 ![do10](https://raw.githubusercontent.com/Starlitnightly/bioinformatic_galaxy/master/img/do10.png)
 
@@ -118,9 +118,9 @@ epi.pp.coverage_features(atac_pair, binary=True, log=True,
                         threshold=min_cells, save='Buenrostro_bulk_peaks_coverage_peaks_log10.png')
 ```
 
-![do11](https://raw.githubusercontent.com/Starlitnightly/bioinformatic_galaxy/master/img/do11.png)
+![do11](mofa_4.assets/do11-6120091.png)
 
-![do12](https://raw.githubusercontent.com/Starlitnightly/bioinformatic_galaxy/master/img/do12.png)
+![do12](mofa_4.assets/do12-6120093.png)
 
 ### 2.5 过滤细胞与feature
 
@@ -145,9 +145,9 @@ epi.pl.variability_features(atac_pair,log='log10',
                      save='variability_features_plot_bonemarrow_peakmatrix_log10.png')
 ```
 
-![do13](C:\Users\FernandoZeng\Desktop\biobook\MOFA\mofa_4.assets\do13.png)
+![do13](mofa_4.assets\do13.png)
 
-![do14](C:\Users\FernandoZeng\Desktop\biobook\MOFA\mofa_4.assets\do14.png)
+![do14](mofa_4.assets\do14.png)
 
 ## 3. 过滤高变feature的cell
 
@@ -158,9 +158,9 @@ atac_pair = epi.pp.select_var_feature(atac_pair,nb_features=nb_feature_selected,
 epi.pl.violin(atac_pair, ['nb_features'])
 epi.pl.violin(atac_pair, ['log_nb_features'])
 ```
-![do15](C:\Users\FernandoZeng\Desktop\biobook\MOFA\mofa_4.assets\do15.png)
+![do15](mofa_4.assets\do15.png)
 
-![do16](C:\Users\FernandoZeng\Desktop\biobook\MOFA\mofa_4.assets\do16-1636004475065.png)
+![do16](mofa_4.assets\do16-1636004475065.png)
 
 ```python
 epi.pp.filter_cells(atac_pair, min_features=1000)

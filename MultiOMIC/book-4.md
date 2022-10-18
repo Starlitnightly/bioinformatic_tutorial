@@ -223,7 +223,7 @@ sc.pl.violin(deg_rna[deg_rna.obs['B_celltype']!=b_cell_type],
              deg_b.loc[deg_b['sig']!='normal'].index.tolist(), groupby='Type',size=3,palette=['#C65A50','#9B7170'])
 ```
 
-<img src="/Users/fernandozeng/Desktop/brca_new/book/book-4.assets/image-20221019012328268.png" alt="image-20221019012328268" style="zoom:50%;" />
+<img src="book-4.assets/image-20221019012328268-6120000.png" alt="image-20221019012328268" style="zoom:50%;" />
 
 ```python
 #在gene-activity中
@@ -233,7 +233,7 @@ sc.pl.violin(deg_atac_act[deg_atac_act.obs['B_celltype']!=b_cell_type],
             title=deg_b.loc[deg_b['sig']!='normal'].index.tolist(),stripplot=True)
 ```
 
-<img src="/Users/fernandozeng/Desktop/brca_new/book/book-4.assets/image-20221019012404062.png" alt="image-20221019012404062" style="zoom:50%;" />
+<img src="book-4.assets/image-20221019012404062-6120003.png" alt="image-20221019012404062" style="zoom:50%;" />
 
 我们接下来绘制本小节最关键的图，差异表达图
 
@@ -324,6 +324,6 @@ plt.xticks(np.linspace(-1, 0.5, 1))
 plt.savefig("deg/deg_{}.png".format(b_cell_type),dpi=300,bbox_inches = 'tight')
 ```
 
-<img src="/Users/fernandozeng/Desktop/brca_new/book/book-4.assets/image-20221019012503861.png" alt="image-20221019012503861" style="zoom:50%;" />
+<img src="book-4.assets/image-20221019012503861-6120007.png" alt="image-20221019012503861" style="zoom:50%;" />
 
 我们可以使用同样的方法，绘制出其他5种不同的B细胞亚群的基因分布图

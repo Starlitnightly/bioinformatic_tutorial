@@ -10,7 +10,7 @@
 
 在本教程中，我们使用的MaxQuant对应的版本为1.6.7.10，这个版本要求的.Net框架为2.0。于是，我们从微软官网下载：https://dotnet.microsoft.com/en-us/download/dotnet/2.1 
 
-![image-20220126012940259](https://raw.githubusercontent.com/Starlitnightly/bioinformatic_galaxy/master/img/image-20220126012940259.png)
+![image-20220126012940259](tmt_1.assets/image-20220126012940259-6120196.png)
 
 ### 1.2 MaxQuant安装
 

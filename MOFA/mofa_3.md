@@ -57,7 +57,7 @@ sc.pl.violin(rna_pair, ['n_genes_by_counts', 'total_counts', 'pct_counts_mt'],
              jitter=0.4, multi_panel=True)
 ```
 
-![do3](https://raw.githubusercontent.com/Starlitnightly/bioinformatic_galaxy/master/img/do4.png)
+![do3](mofa_3.assets/do4-6120066.png)
 
 ### 2.3 观察分布
 
@@ -66,7 +66,7 @@ sc.pl.scatter(rna_pair, x='total_counts', y='pct_counts_mt')
 sc.pl.scatter(rna_pair, x='total_counts', y='n_genes_by_counts')
 ```
 
-![do5](https://raw.githubusercontent.com/Starlitnightly/bioinformatic_galaxy/master/img/do5.png)![do4](https://raw.githubusercontent.com/Starlitnightly/bioinformatic_galaxy/master/img/do4.png)
+![do5](mofa_3.assets/do5-6120069.png)![do4](mofa_3.assets/do4-20221019030752121.png)
 
 ### 2.4 根据分布过滤细胞
 

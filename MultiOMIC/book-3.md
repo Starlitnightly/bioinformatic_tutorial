@@ -94,7 +94,7 @@ computing UMAP
     'X_umap', UMAP coordinates (adata.obsm) (0:00:05)
 ```
 
-<img src="/Users/fernandozeng/Desktop/brca_new/book/book-3.assets/image-20221019004245874.png" alt="image-20221019004245874" style="zoom:50%;" />
+<img src="book-3.assets/image-20221019004245874-6119960.png" alt="image-20221019004245874" style="zoom:50%;" />
 
 
 
@@ -126,7 +126,7 @@ computing velocity embedding
     'velocity_umap', embedded velocity vectors (adata.obsm)
 ```
 
-<img src="/Users/fernandozeng/Desktop/brca_new/book/book-3.assets/image-20221019004442469.png" alt="image-20221019004442469" style="zoom:50%;" />
+<img src="book-3.assets/image-20221019004442469-6119965.png" alt="image-20221019004442469" style="zoom:50%;" />
 
 我们接着计算拟时序
 
@@ -148,7 +148,7 @@ computing latent time using root_cells as prior
     'latent_time', shared time (adata.obs)
 ```
 
-<img src="/Users/fernandozeng/Desktop/brca_new/book/book-3.assets/image-20221019004556158.png" alt="image-20221019004556158" style="zoom:50%;" />
+<img src="book-3.assets/image-20221019004556158-6119968.png" alt="image-20221019004556158" style="zoom:50%;" />
 
 然后，我们使用B细胞的字典，来对B细胞的细胞类型进行标注，并且使用t-test找出每一类leiden的marker基因用于辅助注释
 
@@ -180,7 +180,7 @@ categories: 0, 1, 2, etc.
 var_group_labels: naïve B cell, memory B cell, Pre-B cell, etc.
 ```
 
-<img src="/Users/fernandozeng/Desktop/brca_new/book/book-3.assets/image-20221019004807328.png" alt="image-20221019004807328" style="zoom:50%;" />
+<img src="book-3.assets/image-20221019004807328-6119971.png" alt="image-20221019004807328" style="zoom:50%;" />
 
 ```python
 #注意，这里也可以使用cosg来寻找marker基因
@@ -199,7 +199,7 @@ WARNING: It seems you use rank_genes_groups on the raw count data. Please logari
     finished (0:00:00)
 ```
 
-<img src="/Users/fernandozeng/Desktop/brca_new/book/book-3.assets/image-20221019004930306.png" alt="image-20221019004930306" style="zoom:50%;" />
+<img src="book-3.assets/image-20221019004930306-6119974.png" alt="image-20221019004930306" style="zoom:50%;" />
 
 最后，我们标注leiden对应的细胞类型，并上色
 
@@ -243,7 +243,7 @@ ax=scv.pl.velocity_embedding_stream(adata, basis='umap',color=['major_celltype',
 plt.savefig("prop/cell_type.png",dpi=300,bbox_inches = 'tight')
 ```
 
-<img src="/Users/fernandozeng/Desktop/brca_new/book/book-3.assets/image-20221019005115998.png" alt="image-20221019005115998" style="zoom:50%;" />
+<img src="book-3.assets/image-20221019005115998-6119977.png" alt="image-20221019005115998" style="zoom:50%;" />
 
 然后，为了分析阴性淋巴结跟阳性淋巴结的细胞比例差异，我们计算了两种淋巴结中的细胞比例
 
@@ -268,7 +268,7 @@ plt.savefig("prop/pos_prop.png",dpi=300,bbox_inches = 'tight')
 
 ```
 
-<img src="/Users/fernandozeng/Desktop/brca_new/book/book-3.assets/image-20221019005254018.png" alt="image-20221019005254018" style="zoom:50%;" />
+<img src="book-3.assets/image-20221019005254018-6119981.png" alt="image-20221019005254018" style="zoom:50%;" />
 
 ```python
 #阴性淋巴结
@@ -293,7 +293,7 @@ plt.savefig("prop/neg_prop.png",dpi=300,bbox_inches = 'tight')
 
 ```
 
-<img src="/Users/fernandozeng/Desktop/brca_new/book/book-3.assets/image-20221019005328419.png" alt="image-20221019005328419" style="zoom:50%;" />
+<img src="book-3.assets/image-20221019005328419-6119984.png" alt="image-20221019005328419" style="zoom:50%;" />
 
 除了使用扇形图外，我们还能用柱状图更加直观的感受细胞类型的比例，我们先构建一个pandas表格用于绘制柱状图
 
@@ -353,7 +353,7 @@ sns.move_legend(ax, "upper left", bbox_to_anchor=(1, 1))
 plt.savefig("prop/prop.png",dpi=300,bbox_inches = 'tight')
 ```
 
-<img src="/Users/fernandozeng/Desktop/brca_new/book/book-3.assets/image-20221019005554337.png" alt="image-20221019005554337" style="zoom:50%;" />
+<img src="book-3.assets/image-20221019005554337-6119988.png" alt="image-20221019005554337" style="zoom:50%;" />
 
 除此之外，我们还可以分析细胞亚群的演变过程
 
@@ -373,7 +373,7 @@ running PAGA
     'paga/transitions_confidence', velocity transitions (adata.uns)
 ```
 
-<img src="/Users/fernandozeng/Desktop/brca_new/book/book-3.assets/image-20221019005740026.png" alt="image-20221019005740026" style="zoom:50%;" />
+<img src="book-3.assets/image-20221019005740026-6119990.png" alt="image-20221019005740026" style="zoom:50%;" />
 
 到此，细胞亚群注释及相关的图表，我们就绘制完成了，我们保存一下
 

@@ -124,7 +124,7 @@ plt.setp(labels, fontsize=8)
 plt.savefig("time/time_neg.png",dpi=300,bbox_inches = 'tight')
 ```
 
-​	<img src="/Users/fernandozeng/Desktop/brca_new/book/book-6.assets/image-20221019020116601.png" alt="image-20221019020116601" style="zoom:50%;" />
+​	<img src="book-6.assets/image-20221019020116601-6120031.png" alt="image-20221019020116601" style="zoom:50%;" />
 
 ```python
 #阳性淋巴结
@@ -139,7 +139,7 @@ plt.setp(labels, fontsize=8)
 plt.savefig("time/time_pos.png",dpi=300,bbox_inches = 'tight')
 ```
 
-<img src="/Users/fernandozeng/Desktop/brca_new/book/book-6.assets/image-20221019020147975.png" alt="image-20221019020147975" style="zoom:50%;" />
+<img src="book-6.assets/image-20221019020147975-6120034.png" alt="image-20221019020147975" style="zoom:50%;" />
 
 热图其实并不直观看见差异，但能看见基因具体处于动态调控的哪个位置，所以我们使用Venn图更为直观看见差异的基因,我们先计算了差异基因的list
 
@@ -209,4 +209,4 @@ plt.savefig("time/time_pos_neg_venn.png",dpi=300,bbox_inches = 'tight')
 #plt.savefig("asc_venn.png",dpi=300,bbox_inches = 'tight')
 ```
 
-<img src="/Users/fernandozeng/Desktop/brca_new/book/book-6.assets/image-20221019020412203.png" alt="image-20221019020412203" style="zoom:50%;" />
+<img src="book-6.assets/image-20221019020412203-6120038.png" alt="image-20221019020412203" style="zoom:50%;" />

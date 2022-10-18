@@ -63,7 +63,7 @@ for i in list(set(rna_auc_adata.obs['Type'])):
 regulons.head()
 ```
 
-<img src="/Users/fernandozeng/Desktop/brca_new/book/book-7.assets/image-20221019021043508.png" alt="image-20221019021043508" style="zoom:50%;" />
+<img src="book-7.assets/image-20221019021043508-6120043.png" alt="image-20221019021043508" style="zoom:50%;" />
 
 我们使用Pos减去Neg，得到阳性与阴性的转录因子离散度
 
@@ -113,7 +113,7 @@ plt.ylabel('Regulon Activity',fontsize=12)
 plt.savefig("grn/pos_neg_T.png",dpi=300,bbox_inches = 'tight')
 ```
 
-<img src="/Users/fernandozeng/Desktop/brca_new/book/book-7.assets/image-20221019021239322.png" alt="image-20221019021239322" style="zoom:50%;" />
+<img src="book-7.assets/image-20221019021239322-6120046.png" alt="image-20221019021239322" style="zoom:50%;" />
 
 进一步的，我们找到了ESR2与JUN两个转录因子，我们需要绘制其背后具体的调控关系，我们首先导入GLUE生成的调控网络
 
@@ -167,6 +167,6 @@ plot_sub_nodes(grn,goal_node)
 plt.savefig("grn/sub_grn_{}.png".format(goal_node),dpi=300,bbox_inches = 'tight')
 ```
 
-<img src="/Users/fernandozeng/Desktop/brca_new/book/book-7.assets/image-20221019021513334.png" alt="image-20221019021513334" style="zoom:50%;" />
+<img src="book-7.assets/image-20221019021513334-6120051.png" alt="image-20221019021513334" style="zoom:50%;" />
 
 到这里，本次B细胞亚群的分析流程就结束了，祝你学有所成

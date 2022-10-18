@@ -143,7 +143,7 @@ sig_means=pd.read_csv('../cellphonedb/Bcell_pos/significant_means.txt',sep='\t')
 sig_means.head()
 ```
 
-<img src="/Users/fernandozeng/Desktop/brca_new/book/book-5.assets/image-20221019014049480.png" alt="image-20221019014049480" style="zoom:50%;" />
+<img src="book-5.assets/image-20221019014049480-6120013.png" alt="image-20221019014049480" style="zoom:50%;" />
 
 ```python
 de=pd.read_csv('../cellphonedb/Bcell_pos/deconvoluted.txt',sep='\t')
@@ -210,7 +210,7 @@ plt.title('Pos Cellphone',fontsize=12)
 #plt.savefig("cellphonedb/pos_cellphone.png",dpi=300,bbox_inches = 'tight')
 ```
 
-<img src="/Users/fernandozeng/Desktop/brca_new/book/book-5.assets/image-20221019014313452.png" alt="image-20221019014313452" style="zoom:50%;" />
+<img src="book-5.assets/image-20221019014313452-6120017.png" alt="image-20221019014313452" style="zoom:50%;" />
 
 #### 4.3.4 细胞通讯可视化-受配体关系
 
@@ -277,7 +277,7 @@ ylabs=ax.get_axes()[0].get_yticklabels()
 ax.get_axes()[0].set_yticklabels(ylabs,fontsize=12)
 ```
 
-<img src="/Users/fernandozeng/Desktop/brca_new/book/book-5.assets/image-20221019014538577.png" alt="image-20221019014538577" style="zoom:50%;" />
+<img src="book-5.assets/image-20221019014538577-6120020.png" alt="image-20221019014538577" style="zoom:50%;" />
 
 这图看起来不是很美观，我们稍微美化一下，将生成两张图，最后再用PS合并，首先是受体图
 
@@ -297,7 +297,7 @@ ax.savefig("cellphonedb/figure_pos_rec.png",dpi=300,bbox_inches = 'tight')
 ax
 ```
 
-<img src="/Users/fernandozeng/Desktop/brca_new/book/book-5.assets/image-20221019014718599.png" alt="image-20221019014718599" style="zoom:50%;" />
+<img src="book-5.assets/image-20221019014718599-6120022.png" alt="image-20221019014718599" style="zoom:50%;" />
 
 其次是配体图
 
@@ -329,4 +329,4 @@ ax
 
 ```
 
-<img src="/Users/fernandozeng/Desktop/brca_new/book/book-5.assets/image-20221019014912052.png" alt="image-20221019014912052" style="zoom:50%;" />
+<img src="book-5.assets/image-20221019014912052-6120025.png" alt="image-20221019014912052" style="zoom:50%;" />
