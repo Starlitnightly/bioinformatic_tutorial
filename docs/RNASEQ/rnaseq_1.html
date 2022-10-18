@@ -21,6 +21,14 @@
                 
             
                 
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-cuav-chapters/cuav-chapters.css">
+                
+            
+                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -29,11 +37,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-ivoryhza/ivory.css">
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-ivoryhza/footer.css">
                 
             
         
@@ -75,16 +83,37 @@
     <body>
         
 <div class="book">
-    <div class="book-summary">
-        
-            
+	<div class="header-inner">
+		<!-- LOGO -->
+		<div class="header-inner-left">
+			<div class="logo"></div>
+			<span class="title"></span>
+		</div>
+
+		<!-- Nav -->
+		<div class="header-inner-right">
+			<ul class="header-nav">
+				<li>
+					<a href="http://..." target="_blank">HOME</a>
+				</li>
+			</ul>
+			<!-- Search -->
+			
 <div id="book-search-input" role="search">
     <input type="text" placeholder="Type to search" />
 </div>
 
-            
-                <nav role="navigation">
-                
+		</div>
+
+
+	</div>
+
+	<div class="book-summary">
+		<div class="book-summary-title">目录</div>
+		
+		
+		<nav role="navigation">
+			
 
 
 <ul class="summary">
@@ -659,16 +688,24 @@
 </ul>
 
 
-                </nav>
-            
-        
-    </div>
+		</nav>
+		
+		
+	</div>
 
-    <div class="book-body">
-        
-            <div class="body-inner">
-                
-                    
+	<!-- Content nav -->
+	<div class="book-anchor">
+		<div class="book-anchor-title">大纲</div>
+		<div class="book-anchor-body">
+
+		</div>
+	</div>
+
+	<div class="book-body">
+		
+		<div class="body-inner">
+			
+			
 
 <div class="book-header" role="navigation">
     
@@ -683,15 +720,15 @@
 
 
 
-                    <div class="page-wrapper" tabindex="-1" role="main">
-                        <div class="page-inner">
-                            
+			<div class="page-wrapper" tabindex="-1" role="main">
+				<div class="page-inner">
+					
 <div id="book-search-results">
     <div class="search-noresults">
     
-                                <section class="normal markdown-section">
-                                
-                                <h1 id="rna-seq&#x5206;&#x6790;--&#x73AF;&#x5883;&#x914D;&#x7F6E;">RNA-seq&#x5206;&#x6790;:  &#x73AF;&#x5883;&#x914D;&#x7F6E;</h1>
+					<section class="normal markdown-section">
+						
+						<h1 id="rna-seq&#x5206;&#x6790;--&#x73AF;&#x5883;&#x914D;&#x7F6E;">RNA-seq&#x5206;&#x6790;:  &#x73AF;&#x5883;&#x914D;&#x7F6E;</h1>
 <p>&#x5BF9;&#x4E8E;RNA-seq&#x76F8;&#x5173;&#x7684;&#x5206;&#x6790;&#xFF0C;&#x4E00;&#x5171;&#x5206;&#x4E3A;python&#x8DDF;R&#x4E24;&#x90E8;&#x5206;&#x3002;</p>
 <p>&#x6211;&#x4EEC;&#x8FD9;&#x91CC;&#x5904;&#x7406;&#x7684;&#x662F;counts&#x77E9;&#x9635;&#xFF0C;count&#x77E9;&#x9635;&#x7B80;&#x5355;&#x6765;&#x8BF4;&#xFF0C;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x6210;&#x6A2A;&#x5750;&#x6807;&#x4E3A;&#x57FA;&#x56E0;&#xFF0C;&#x7EB5;&#x5750;&#x6807;&#x4E3A;&#x6837;&#x672C;&#x7684;&#x77E9;&#x9635;&#xFF0C;&#x5982;&#x4E0B;&#x8868;&#x6240;&#x793A;</p>
 <table>
@@ -733,10 +770,12 @@ pip install mygene
 
 BiocManager::install(<span class="hljs-string">&quot;DESeq2&quot;</span>)
 </code></pre>
-
-                                
-                                </section>
-                            
+<footer class="page-footer"><span class="copyright">&#x7248;&#x6743;&#x6240;&#x6709; &#xA9; Starlitnightly</span><span class="footer-modification">&#x6700;&#x540E;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2022-10-17
+</span></footer>
+						
+					</section>
+					
     </div>
     <div class="search-results">
         <div class="has-results">
@@ -753,32 +792,31 @@ BiocManager::install(<span class="hljs-string">&quot;DESeq2&quot;</span>)
     </div>
 </div>
 
-                        </div>
-                    </div>
-                
-            </div>
+				</div>
+			</div>
+			
+		</div>
 
-            
-                
-                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 分析2：RNA-seq下游分析">
-                    <i class="fa fa-angle-left"></i>
-                </a>
-                
-                
-                <a href="rnaseq_2.html" class="navigation navigation-next " aria-label="Next page: 2-2. 差异表达基因(DEG)分析">
-                    <i class="fa fa-angle-right"></i>
-                </a>
-                
-            
-        
-    </div>
-
-    <script>
-        var gitbook = gitbook || [];
-        gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"2-1. 环境配置","level":"1.5.1","depth":2,"next":{"title":"2-2. 差异表达基因(DEG)分析","level":"1.5.2","depth":2,"path":"RNASEQ/rnaseq_2.md","ref":"RNASEQ/rnaseq_2.md","articles":[]},"previous":{"title":"分析2：RNA-seq下游分析","level":"1.5","depth":1,"path":"RNASEQ/README.md","ref":"RNASEQ/README.md","articles":[{"title":"2-1. 环境配置","level":"1.5.1","depth":2,"path":"RNASEQ/rnaseq_1.md","ref":"RNASEQ/rnaseq_1.md","articles":[]},{"title":"2-2. 差异表达基因(DEG)分析","level":"1.5.2","depth":2,"path":"RNASEQ/rnaseq_2.md","ref":"RNASEQ/rnaseq_2.md","articles":[]},{"title":"2-3. 通路富集分析(GSEA)","level":"1.5.3","depth":2,"path":"RNASEQ/rnaseq_3.md","ref":"RNASEQ/rnaseq_3.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","theme-comscore"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"RNASEQ/rnaseq_1.md","mtime":"2022-10-18T18:22:29.173Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-18T19:11:08.078Z"},"basePath":"..","book":{"language":""}});
-        });
-    </script>
+		
+		
+		<a href="./" title="上一页" class="navigation navigation-prev " aria-label="Previous page: 分析2：RNA-seq下游分析">
+			<i class="fa fa-angle-left"></i>
+		</a>
+		
+		
+		<a href="rnaseq_2.html" title="下一页" class="navigation navigation-next " aria-label="Next page: 2-2. 差异表达基因(DEG)分析">
+			<i class="fa fa-angle-right"></i>
+		</a>
+		
+		
+		
+	</div>
+	<script>
+		var gitbook = gitbook || [];
+		gitbook.push(function() {
+			gitbook.page.hasChanged({"page":{"title":"2-1. 环境配置","level":"1.5.1","depth":2,"next":{"title":"2-2. 差异表达基因(DEG)分析","level":"1.5.2","depth":2,"path":"RNASEQ/rnaseq_2.md","ref":"RNASEQ/rnaseq_2.md","articles":[]},"previous":{"title":"分析2：RNA-seq下游分析","level":"1.5","depth":1,"path":"RNASEQ/README.md","ref":"RNASEQ/README.md","articles":[{"title":"2-1. 环境配置","level":"1.5.1","depth":2,"path":"RNASEQ/rnaseq_1.md","ref":"RNASEQ/rnaseq_1.md","articles":[]},{"title":"2-2. 差异表达基因(DEG)分析","level":"1.5.2","depth":2,"path":"RNASEQ/rnaseq_2.md","ref":"RNASEQ/rnaseq_2.md","articles":[]},{"title":"2-3. 通路富集分析(GSEA)","level":"1.5.3","depth":2,"path":"RNASEQ/rnaseq_3.md","ref":"RNASEQ/rnaseq_3.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"themeIvoryhza":{"nav":[{"url":"http://...","target":"_blank","name":"HOME"}]}},"plugins":["expandable-chapters","-sharing","-fontsettings","back-to-top-button","copy-code-button","cuav-chapters","heading-anchors","theme-ivoryhza"],"pluginsConfig":{"search":{},"theme-ivoryhza":{"search-placeholder":"搜索","logo":"./logo.png","appleTouchIconPrecomposed152":"./logo.png","copyright":"版权所有 © Starlitnightly","modify_label":"最后修订时间：","modify_format":"2022-10-17"},"cuav-chapters":{"summaryMaxSize":20,"useLimitExpanded":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"heading-anchors":{},"highlight":{},"back-to-top-button":{},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"RNASEQ/rnaseq_1.md","mtime":"2022-10-18T18:22:29.173Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-18T19:37:58.065Z"},"basePath":"..","book":{"language":""}});
+		});
+	</script>
 </div>
 
         
@@ -787,6 +825,26 @@ BiocManager::install(<span class="hljs-string">&quot;DESeq2&quot;</span>)
     
         
         <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-cuav-chapters/cuav-chapters.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/1.2.1/anchor.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-heading-anchors/anchor-style.js"></script>
         
     
         
@@ -806,15 +864,7 @@ BiocManager::install(<span class="hljs-string">&quot;DESeq2&quot;</span>)
         
     
         
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        <script src="../gitbook/gitbook-plugin-theme-ivoryhza/ivory.js"></script>
         
     
 

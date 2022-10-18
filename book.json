@@ -1,1 +1,39 @@
-{"plugins":["expandable-chapters","theme-comscore"]}
+{
+    "plugins":["expandable-chapters",
+    "-sharing",
+    "-fontsettings",
+    "back-to-top-button",
+    "copy-code-button",
+    "cuav-chapters",
+    "heading-anchors",
+    "theme-ivoryhza"
+],
+
+    "variables": {
+        "themeIvoryhza":{
+            "nav":[
+                {
+                    "url":"http://...",
+                    "target":"_blank",
+                    "name": "HOME"
+                }
+            ]
+        }
+    },
+    "pluginsConfig": {
+        "theme-ivoryhza":{
+
+            "search-placeholder":"搜索", 
+            "logo":"./logo.png",
+            "appleTouchIconPrecomposed152":"./logo.png",
+            "copyright":"版权所有 © Starlitnightly",
+            "modify_label": "最后修订时间：",
+            "modify_format": "2022-10-17"
+
+            
+        }
+    }
+
+    
+}
+

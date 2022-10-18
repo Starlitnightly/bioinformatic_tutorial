@@ -967,14 +967,14 @@ deg_b.loc[deg_b[<span class="hljs-string">&apos;sig&apos;</span>]!=<span class="
 sc.pl.violin(deg_rna[deg_rna.obs[<span class="hljs-string">&apos;B_celltype&apos;</span>]!=b_cell_type], 
              deg_b.loc[deg_b[<span class="hljs-string">&apos;sig&apos;</span>]!=<span class="hljs-string">&apos;normal&apos;</span>].index.tolist(), groupby=<span class="hljs-string">&apos;Type&apos;</span>,size=<span class="hljs-number">3</span>,palette=[<span class="hljs-string">&apos;#C65A50&apos;</span>,<span class="hljs-string">&apos;#9B7170&apos;</span>])
 </code></pre>
-<p><img src="../Users/fernandozeng/Desktop/brca_new/book/book-4.assets/image-20221019012328268.png" alt="image-20221019012328268" style="zoom:50%;"></p>
+<p><img src="book-4.assets/image-20221019012328268-6120000.png" alt="image-20221019012328268" style="zoom:50%;"></p>
 <pre><code class="lang-python"><span class="hljs-comment">#&#x5728;gene-activity&#x4E2D;</span>
 sc.pl.violin(deg_atac_act[deg_atac_act.obs[<span class="hljs-string">&apos;B_celltype&apos;</span>]!=b_cell_type], 
              deg_b.loc[deg_b[<span class="hljs-string">&apos;sig&apos;</span>]!=<span class="hljs-string">&apos;normal&apos;</span>].index.tolist(), 
              groupby=<span class="hljs-string">&apos;Type&apos;</span>,size=<span class="hljs-number">3</span>,palette=[<span class="hljs-string">&apos;#C65A50&apos;</span>,<span class="hljs-string">&apos;#9B7170&apos;</span>],
             title=deg_b.loc[deg_b[<span class="hljs-string">&apos;sig&apos;</span>]!=<span class="hljs-string">&apos;normal&apos;</span>].index.tolist(),stripplot=<span class="hljs-keyword">True</span>)
 </code></pre>
-<p><img src="../Users/fernandozeng/Desktop/brca_new/book/book-4.assets/image-20221019012404062.png" alt="image-20221019012404062" style="zoom:50%;"></p>
+<p><img src="book-4.assets/image-20221019012404062-6120003.png" alt="image-20221019012404062" style="zoom:50%;"></p>
 <p>&#x6211;&#x4EEC;&#x63A5;&#x4E0B;&#x6765;&#x7ED8;&#x5236;&#x672C;&#x5C0F;&#x8282;&#x6700;&#x5173;&#x952E;&#x7684;&#x56FE;&#xFF0C;&#x5DEE;&#x5F02;&#x8868;&#x8FBE;&#x56FE;</p>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> adjustText <span class="hljs-keyword">import</span> adjust_text
 plt.figure(figsize=(<span class="hljs-number">3</span>, <span class="hljs-number">3</span>))
@@ -1061,7 +1061,7 @@ plt.xticks(np.linspace(<span class="hljs-number">-1</span>, <span class="hljs-nu
 
 plt.savefig(<span class="hljs-string">&quot;deg/deg_{}.png&quot;</span>.format(b_cell_type),dpi=<span class="hljs-number">300</span>,bbox_inches = <span class="hljs-string">&apos;tight&apos;</span>)
 </code></pre>
-<p><img src="../Users/fernandozeng/Desktop/brca_new/book/book-4.assets/image-20221019012503861.png" alt="image-20221019012503861" style="zoom:50%;"></p>
+<p><img src="book-4.assets/image-20221019012503861-6120007.png" alt="image-20221019012503861" style="zoom:50%;"></p>
 <p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x540C;&#x6837;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x7ED8;&#x5236;&#x51FA;&#x5176;&#x4ED6;5&#x79CD;&#x4E0D;&#x540C;&#x7684;B&#x7EC6;&#x80DE;&#x4E9A;&#x7FA4;&#x7684;&#x57FA;&#x56E0;&#x5206;&#x5E03;&#x56FE;</p>
 
                                 
@@ -1106,7 +1106,7 @@ plt.savefig(<span class="hljs-string">&quot;deg/deg_{}.png&quot;</span>.format(b
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"6-4. 差异表达分析","level":"1.9.4","depth":2,"next":{"title":"6-5. 细胞通讯分析","level":"1.9.5","depth":2,"path":"MultiOMIC/book-5.md","ref":"MultiOMIC/book-5.md","articles":[]},"previous":{"title":"6-3. 细胞亚群分析","level":"1.9.3","depth":2,"path":"MultiOMIC/book-3.md","ref":"MultiOMIC/book-3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","theme-comscore"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"MultiOMIC/book-4.md","mtime":"2022-10-18T17:25:42.432Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-18T18:57:57.553Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"6-4. 差异表达分析","level":"1.9.4","depth":2,"next":{"title":"6-5. 细胞通讯分析","level":"1.9.5","depth":2,"path":"MultiOMIC/book-5.md","ref":"MultiOMIC/book-5.md","articles":[]},"previous":{"title":"6-3. 细胞亚群分析","level":"1.9.3","depth":2,"path":"MultiOMIC/book-3.md","ref":"MultiOMIC/book-3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","theme-comscore"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"MultiOMIC/book-4.md","mtime":"2022-10-18T19:06:48.293Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-18T19:11:08.078Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

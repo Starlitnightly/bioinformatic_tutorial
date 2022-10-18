@@ -1,0 +1,49 @@
+//  #   Page
+//      Defines styles for the book's page
+
+// 	*******************************************************
+// 	## 	Variables
+// 	*******************************************************
+
+//  The color of the page background
+$page-background              : white !default;
+// 	Styling for book body div
+$page-map							: () !default;
+// 	Styling for book body div
+$page-inner-map						: (
+										background: $page-background,
+										max-width: 800px,
+										margin: 0px auto,
+										padding: $spacing-unit*3 $spacing-unit*2
+									) !default;
+
+
+//  *******************************************************
+//  ##  Page divs
+//  *******************************************************
+
+.page-wrapper
+{
+    position: relative;
+    outline: none;
+
+    @include print( $page-map );
+}
+
+.page-inner
+{
+    position: relative;
+
+    @include print( $page-inner-map );
+}
+
+//  *******************************************************
+//  ##  Page elements
+//  *******************************************************
+
+.page-inner .btn-group .btn
+{
+    border-radius: 0px;
+    background: #eee;
+    border: 0px;
+}

@@ -806,7 +806,7 @@ type_color_B={
 <pre><code class="lang-python">sig_means=pd.read_csv(<span class="hljs-string">&apos;../cellphonedb/Bcell_pos/significant_means.txt&apos;</span>,sep=<span class="hljs-string">&apos;\t&apos;</span>)
 sig_means.head()
 </code></pre>
-<p><img src="../Users/fernandozeng/Desktop/brca_new/book/book-5.assets/image-20221019014049480.png" alt="image-20221019014049480" style="zoom:50%;"></p>
+<p><img src="book-5.assets/image-20221019014049480-6120013.png" alt="image-20221019014049480" style="zoom:50%;"></p>
 <pre><code class="lang-python">de=pd.read_csv(<span class="hljs-string">&apos;../cellphonedb/Bcell_pos/deconvoluted.txt&apos;</span>,sep=<span class="hljs-string">&apos;\t&apos;</span>)
 de.columns[:]
 </code></pre>
@@ -864,7 +864,7 @@ plt.ylim(<span class="hljs-number">-2</span>,<span class="hljs-number">1.5</span
 plt.title(<span class="hljs-string">&apos;Pos Cellphone&apos;</span>,fontsize=<span class="hljs-number">12</span>)
 <span class="hljs-comment">#plt.savefig(&quot;cellphonedb/pos_cellphone.png&quot;,dpi=300,bbox_inches = &apos;tight&apos;)</span>
 </code></pre>
-<p><img src="../Users/fernandozeng/Desktop/brca_new/book/book-5.assets/image-20221019014313452.png" alt="image-20221019014313452" style="zoom:50%;"></p>
+<p><img src="book-5.assets/image-20221019014313452-6120017.png" alt="image-20221019014313452" style="zoom:50%;"></p>
 <h4 id="434-&#x7EC6;&#x80DE;&#x901A;&#x8BAF;&#x53EF;&#x89C6;&#x5316;-&#x53D7;&#x914D;&#x4F53;&#x5173;&#x7CFB;">4.3.4 &#x7EC6;&#x80DE;&#x901A;&#x8BAF;&#x53EF;&#x89C6;&#x5316;-&#x53D7;&#x914D;&#x4F53;&#x5173;&#x7CFB;</h4>
 <p>&#x9996;&#x5148;&#x4F9D;&#x7136;&#x662F;&#x5BFC;&#x5165;&#x6570;&#x636E;</p>
 <pre><code class="lang-python">sig_means1=sig_means.copy()
@@ -965,7 +965,7 @@ ax.get_axes()[<span class="hljs-number">0</span>].set_xticklabels(xlabs,fontsize
 ylabs=ax.get_axes()[<span class="hljs-number">0</span>].get_yticklabels()
 ax.get_axes()[<span class="hljs-number">0</span>].set_yticklabels(ylabs,fontsize=<span class="hljs-number">12</span>)
 </code></pre>
-<p><img src="../Users/fernandozeng/Desktop/brca_new/book/book-5.assets/image-20221019014538577.png" alt="image-20221019014538577" style="zoom:50%;"></p>
+<p><img src="book-5.assets/image-20221019014538577-6120020.png" alt="image-20221019014538577" style="zoom:50%;"></p>
 <p>&#x8FD9;&#x56FE;&#x770B;&#x8D77;&#x6765;&#x4E0D;&#x662F;&#x5F88;&#x7F8E;&#x89C2;&#xFF0C;&#x6211;&#x4EEC;&#x7A0D;&#x5FAE;&#x7F8E;&#x5316;&#x4E00;&#x4E0B;&#xFF0C;&#x5C06;&#x751F;&#x6210;&#x4E24;&#x5F20;&#x56FE;&#xFF0C;&#x6700;&#x540E;&#x518D;&#x7528;PS&#x5408;&#x5E76;&#xFF0C;&#x9996;&#x5148;&#x662F;&#x53D7;&#x4F53;&#x56FE;</p>
 <pre><code class="lang-python"><span class="hljs-comment">#&#x53BB;&#x9664;&#x914D;&#x4F53;</span>
 [i.set_text(i.get_text().split(<span class="hljs-string">&apos;|&apos;</span>)[<span class="hljs-number">1</span>].replace(<span class="hljs-string">&apos;Vil-&apos;</span>,<span class="hljs-string">&apos;&apos;</span>)) <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> xlabs]
@@ -981,7 +981,7 @@ ax.get_axes()[<span class="hljs-number">0</span>].tick_params(axis=<span class="
 ax.savefig(<span class="hljs-string">&quot;cellphonedb/figure_pos_rec.png&quot;</span>,dpi=<span class="hljs-number">300</span>,bbox_inches = <span class="hljs-string">&apos;tight&apos;</span>)
 ax
 </code></pre>
-<p><img src="../Users/fernandozeng/Desktop/brca_new/book/book-5.assets/image-20221019014718599.png" alt="image-20221019014718599" style="zoom:50%;"></p>
+<p><img src="book-5.assets/image-20221019014718599-6120022.png" alt="image-20221019014718599" style="zoom:50%;"></p>
 <p>&#x5176;&#x6B21;&#x662F;&#x914D;&#x4F53;&#x56FE;</p>
 <pre><code class="lang-python">new_keys = {<span class="hljs-string">&apos;item_key&apos;</span>: <span class="hljs-string">&apos;Pair&apos;</span>,<span class="hljs-string">&apos;group_key&apos;</span>: <span class="hljs-string">&apos;Type&apos;</span>,<span class="hljs-string">&apos;sizes_key&apos;</span>: <span class="hljs-string">&apos;p-value&apos;</span>,<span class="hljs-string">&apos;color_key&apos;</span>: <span class="hljs-string">&apos;means&apos;</span>}
 dp = dotplot.DotPlot.parse_from_tidy_data(plot_data3, **new_keys)
@@ -1008,7 +1008,7 @@ ax.get_axes()[<span class="hljs-number">0</span>].tick_params(axis=<span class="
 ax.savefig(<span class="hljs-string">&quot;cellphonedb/figure_pos_li.png&quot;</span>,dpi=<span class="hljs-number">300</span>,bbox_inches = <span class="hljs-string">&apos;tight&apos;</span>)
 ax
 </code></pre>
-<p><img src="../Users/fernandozeng/Desktop/brca_new/book/book-5.assets/image-20221019014912052.png" alt="image-20221019014912052" style="zoom:50%;"></p>
+<p><img src="book-5.assets/image-20221019014912052-6120025.png" alt="image-20221019014912052" style="zoom:50%;"></p>
 
                                 
                                 </section>
@@ -1052,7 +1052,7 @@ ax
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"6-5. 细胞通讯分析","level":"1.9.5","depth":2,"next":{"title":"6-6. 动态调控分析","level":"1.9.6","depth":2,"path":"MultiOMIC/book-6.md","ref":"MultiOMIC/book-6.md","articles":[]},"previous":{"title":"6-4. 差异表达分析","level":"1.9.4","depth":2,"path":"MultiOMIC/book-4.md","ref":"MultiOMIC/book-4.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","theme-comscore"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"MultiOMIC/book-5.md","mtime":"2022-10-18T17:49:16.285Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-18T18:57:57.553Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"6-5. 细胞通讯分析","level":"1.9.5","depth":2,"next":{"title":"6-6. 动态调控分析","level":"1.9.6","depth":2,"path":"MultiOMIC/book-6.md","ref":"MultiOMIC/book-6.md","articles":[]},"previous":{"title":"6-4. 差异表达分析","level":"1.9.4","depth":2,"path":"MultiOMIC/book-4.md","ref":"MultiOMIC/book-4.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","theme-comscore"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"MultiOMIC/book-5.md","mtime":"2022-10-18T19:07:07.610Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-18T19:11:08.078Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

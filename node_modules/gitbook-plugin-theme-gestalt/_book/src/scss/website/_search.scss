@@ -1,0 +1,65 @@
+//      # Search
+//      Search input and results, works in sync with the "search" plugin
+
+
+//  *******************************************************
+//  ##  Variables
+//  *******************************************************
+
+
+// The wrapper div around the search input
+$search-input-wrapper-map           : ( 
+                                        background: #fff,
+                                        border-bottom: 1px solid $color-border
+                                    ) !default;
+// The input for search
+$search-input-map                   : (
+                                        background: transparent,
+                                        border: 1px solid transparent,
+                                        padding: $sidebar-padding-unit 0
+                                    ) !default;
+
+// Styles the page title for search results
+$search-results-title-map           : ( margin-bottom: 35px ) !default;
+// Styles the title for search result items
+$search-results-item-title-map      : () !default;
+// Styles the copy blurb for search result items
+$search-results-item-blurb-map      : () !default;
+
+
+
+//  *******************************************************
+//  ## Search Input
+//  *******************************************************
+
+#book-search-input
+{
+    padding: $sidebar-padding-v*0.25 $sidebar-padding-h;
+    transition: top 0.5s ease;
+
+    @include print( $search-input-wrapper-map );
+
+    input, input:focus, input:hover
+    {
+        width: 100%;
+        box-shadow: none;
+        outline: none;
+
+        @include print( $search-input-map );
+    }
+}
+
+//  *******************************************************
+//  ## Search Results
+//  *******************************************************
+
+.search-results-title { @include print( $search-results-title-map ); }
+.search-results-item h3 { @include print( $search-results-item-title-map ); }
+.search-results-item p { @include print( $search-results-item-blurb-map ); }
+
+//  *******************************************************
+//  ## Other
+//  *******************************************************
+
+// When search is enabled, we hide the navigation left/right
+body.with-search .navigation { display: none; }

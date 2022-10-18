@@ -1,0 +1,3 @@
+
+// Prints all CSS rules from a map
+@mixin print($map) { @each $key, $value in $map { #{$key} : $value; } }

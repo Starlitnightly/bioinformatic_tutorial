@@ -1,0 +1,117 @@
+//  #   Header
+//      Defines styles for the book's header
+
+//  *******************************************************
+//  ##  Variables
+//  *******************************************************
+
+//  ### Header styling
+//  The height of the header
+$header-height                          : 50px !default;
+// Styling for the header div
+$header-map                             : (
+                                            padding: 0px $spacing-unit / 2,
+                                            color: $color-text,
+                                            background: transparent
+                                        ) !default;
+
+//  ### Header buttons
+// Styling for icon buttons
+$header-button-map                      : ( color: $color-button ) !default;
+// Styling for icon buttons on hover
+$header-button-hover-map                : ( color: $color-button-hover ) !default;
+
+//  ### Header title
+// Permanently hides/shows the title in the header
+$header-show-title                      : false !default;
+//  Styling for the title
+$header-title-map                       : (
+                                            font-size: 1.25rem,
+                                            font-weight: 200
+                                        ) !default;
+
+//  *******************************************************
+//  ## The header
+//  *******************************************************
+
+.book-header
+{
+    font-family: $font-family-sans;
+
+    overflow: visible;
+    height: $header-height;
+    z-index: 2;
+
+    @include print( $header-map );
+}
+
+//  *******************************************************
+//  ## Header buttons
+//  *******************************************************
+
+.book-header .btn
+{
+    display: block;
+    height: $header-height;
+    padding: 0px 15px;
+    border-bottom: none;
+    text-transform: uppercase;
+    line-height: $header-height;
+    box-shadow: none !important;
+    position:relative;
+    font-size: $font-size-base;
+
+    @include print( $header-button-map );
+}
+
+.book-header .btn:hover
+{
+    position: relative;
+    text-decoration: none;
+
+    @include print( $header-button-hover-map );
+}
+
+.book-header .btn:focus { outline: none; }
+
+//  *******************************************************
+//  ## The current page title
+//  *******************************************************
+
+// Permanently hides/shows the title in the header
+.book-header h1 { @if $header-show-title == false { display: none; } }
+
+.book-header h1
+{
+    margin: 0px;
+    text-align: center;
+    line-height: $header-height;
+    opacity: 0;
+    transition : opacity ease 0.4s;
+
+    padding-left: 200px;
+    padding-right: 200px;
+    transition : opacity 0.2s ease;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    @include print( $header-title-map );
+
+    @media (max-width: 1000px) { display: none; }
+}
+
+.book-header h1 a, 
+.book-header h1 a:hover
+{
+    color: inherit;
+    text-decoration: none;
+}
+
+.book-header h1 i { display: none; }
+
+.book-header:hover h1 { opacity: 1; }
+
+.book.is-loading .book-header h1 i { display: inline-block; }
+.book.is-loading .book-header h1 a { display: none; }

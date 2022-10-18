@@ -1,0 +1,98 @@
+//	# 	Variables
+// 		Definitions for variables used throughout the app
+
+// 	*******************************************************
+// 	## Paths
+// 		Files paths to various assets
+// 	*******************************************************
+
+// Path to static assets
+$path-to-assets 					: "/assets" !default;
+$path-font-awesome 					: "./gitbook/fonts/fontawesome" !default;
+
+// 	*******************************************************
+// 	## 	Colors
+// 		Definitions for colors used throughout the app
+// 	*******************************************************
+
+// 	###	Brand colors
+// 	The primary accent color 
+$color-primary 						: #ff4f4f !default;
+
+
+// 	###	Gray colors
+$color-gray-darkest					: darken( white, 90% ) !default;
+$color-gray-darker					: darken( white, 80% ) !default;
+$color-gray-dark					: darken( white, 70% ) !default;
+$color-gray							: darken( white, 60% ) !default;
+$color-gray-light					: darken( white, 40% ) !default;
+$color-gray-lighter					: darken( white, 20% ) !default;
+$color-gray-lightest				: darken( white, 5% )  !default;
+
+
+// 	###	Graphic colors
+// 	The color of borders
+$color-border						: $color-gray-lightest !default;
+// 	The text color of buttons
+$color-button						: $color-gray-lighter;
+// 	The text color of buttons on hover
+$color-button-hover					: $color-gray-dark;
+
+// 	*******************************************************
+// 	## 	Structure		*
+// 		...
+// 	*******************************************************
+
+// The increment of padding used throughout the app
+$spacing-unit						: 10px;
+// Anything above this width is no longer targetted for mobile styling
+$mobileMaxWidth 					: 1240px !default;
+// Breakpoint to target mobile styling
+$mobile-breakpoint                 : 600px !default;
+
+
+// 	*******************************************************
+// 	## 	Typography
+// 		Defines styles for typography
+// 	*******************************************************
+
+// 	###	Text colors
+// 	The color of body text
+$color-text 						: $color-gray !default;
+// 	A muted color for body text
+$color-text-muted					: $color-gray-light !default;
+// 	The color of headings (H1-H6, titles)
+$color-headings						: $color-gray-darkest !default;
+
+// 	###	Font sizes
+$font-size-base 					: 16px !default;
+$font-size-large					: 1.2rem !default;
+$font-size-small 					: 0.8rem !default;
+
+// Heading sizes
+$font-size-h1						: 2rem;
+$font-size-h2						: 1.6rem;
+$font-size-h3						: 1.2rem;
+$font-size-h4						: 1rem;
+$font-size-h5						: 0.9rem;
+$font-size-h6						: 0.8rem;
+
+// Line height
+$line-height-base 					: 1.5 !default;
+
+// 	###	Fonts
+$font-family-serif 					: Georgia, serif !default;
+$font-family-sans 					: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-mono 					: Consolas, "Liberation Mono", Menlo, Courier, monospace !default;
+$font-family-base                   : $font-family-sans !default;
+$font-family-headings              	: $font-family-serif !default;
+
+
+// 	###	Defintions for "Font Settings" dropdown in header
+
+$font-size-0 						: 0.8rem !default;
+$font-size-1 						: 1.0rem !default;
+$font-size-2 						: 1.2rem !default;
+$font-size-3 						: 1.6rem !default;
+$font-size-4 						: 2.4rem !default;
+
