@@ -740,7 +740,7 @@ rna_auc_adata.uns=rna.uns
     regulons.loc[i]=rna_auc_adata[rna_auc_adata.obs[<span class="hljs-string">&apos;Type&apos;</span>]==i].X.mean(axis=<span class="hljs-number">0</span>)
 regulons.head()
 </code></pre>
-<p><img src="../Users/fernandozeng/Desktop/brca_new/book/book-7.assets/image-20221019021043508.png" alt="image-20221019021043508" style="zoom:50%;"></p>
+<p><img src="book-7.assets/image-20221019021043508-6120043.png" alt="image-20221019021043508" style="zoom:50%;"></p>
 <p>&#x6211;&#x4EEC;&#x4F7F;&#x7528;Pos&#x51CF;&#x53BB;Neg&#xFF0C;&#x5F97;&#x5230;&#x9633;&#x6027;&#x4E0E;&#x9634;&#x6027;&#x7684;&#x8F6C;&#x5F55;&#x56E0;&#x5B50;&#x79BB;&#x6563;&#x5EA6;</p>
 <pre><code class="lang-python">regulons_d=regulons.loc[<span class="hljs-string">&apos;Pos&apos;</span>]-regulons.loc[<span class="hljs-string">&apos;Neg&apos;</span>]
 regulons_d=regulons_d.sort_values()
@@ -783,7 +783,7 @@ plt.text(len(regulons_d)+<span class="hljs-number">1</span>,<span class="hljs-nu
 plt.ylabel(<span class="hljs-string">&apos;Regulon Activity&apos;</span>,fontsize=<span class="hljs-number">12</span>)
 plt.savefig(<span class="hljs-string">&quot;grn/pos_neg_T.png&quot;</span>,dpi=<span class="hljs-number">300</span>,bbox_inches = <span class="hljs-string">&apos;tight&apos;</span>)
 </code></pre>
-<p><img src="../Users/fernandozeng/Desktop/brca_new/book/book-7.assets/image-20221019021239322.png" alt="image-20221019021239322" style="zoom:50%;"></p>
+<p><img src="book-7.assets/image-20221019021239322-6120046.png" alt="image-20221019021239322" style="zoom:50%;"></p>
 <p>&#x8FDB;&#x4E00;&#x6B65;&#x7684;&#xFF0C;&#x6211;&#x4EEC;&#x627E;&#x5230;&#x4E86;ESR2&#x4E0E;JUN&#x4E24;&#x4E2A;&#x8F6C;&#x5F55;&#x56E0;&#x5B50;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x7ED8;&#x5236;&#x5176;&#x80CC;&#x540E;&#x5177;&#x4F53;&#x7684;&#x8C03;&#x63A7;&#x5173;&#x7CFB;&#xFF0C;&#x6211;&#x4EEC;&#x9996;&#x5148;&#x5BFC;&#x5165;GLUE&#x751F;&#x6210;&#x7684;&#x8C03;&#x63A7;&#x7F51;&#x7EDC;</p>
 <pre><code>import scglue
 grn = scglue.genomics.read_ctx_grn(&quot;../glue_true/pruned_grn.csv&quot;)
@@ -825,7 +825,7 @@ grn = scglue.genomics.read_ctx_grn(&quot;../glue_true/pruned_grn.csv&quot;)
 plot_sub_nodes(grn,goal_node)
 plt.savefig(<span class="hljs-string">&quot;grn/sub_grn_{}.png&quot;</span>.format(goal_node),dpi=<span class="hljs-number">300</span>,bbox_inches = <span class="hljs-string">&apos;tight&apos;</span>)
 </code></pre>
-<p><img src="../Users/fernandozeng/Desktop/brca_new/book/book-7.assets/image-20221019021513334.png" alt="image-20221019021513334" style="zoom:50%;"></p>
+<p><img src="book-7.assets/image-20221019021513334-6120051.png" alt="image-20221019021513334" style="zoom:50%;"></p>
 <p>&#x5230;&#x8FD9;&#x91CC;&#xFF0C;&#x672C;&#x6B21;B&#x7EC6;&#x80DE;&#x4E9A;&#x7FA4;&#x7684;&#x5206;&#x6790;&#x6D41;&#x7A0B;&#x5C31;&#x7ED3;&#x675F;&#x4E86;&#xFF0C;&#x795D;&#x4F60;&#x5B66;&#x6709;&#x6240;&#x6210;</p>
 
                                 
@@ -866,7 +866,7 @@ plt.savefig(<span class="hljs-string">&quot;grn/sub_grn_{}.png&quot;</span>.form
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"6-7. 转录因子网络","level":"1.9.7","depth":2,"previous":{"title":"6-6. 动态调控分析","level":"1.9.6","depth":2,"path":"MultiOMIC/book-6.md","ref":"MultiOMIC/book-6.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","theme-comscore"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"MultiOMIC/book-7.md","mtime":"2022-10-18T18:16:01.377Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-18T18:57:57.553Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"6-7. 转录因子网络","level":"1.9.7","depth":2,"previous":{"title":"6-6. 动态调控分析","level":"1.9.6","depth":2,"path":"MultiOMIC/book-6.md","ref":"MultiOMIC/book-6.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","theme-comscore"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"MultiOMIC/book-7.md","mtime":"2022-10-18T19:07:34.852Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-18T19:11:08.078Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

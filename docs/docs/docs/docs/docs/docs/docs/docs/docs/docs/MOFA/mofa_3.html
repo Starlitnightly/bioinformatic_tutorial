@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>3-3. scRNA-seq数据处理 · GitBook</title>
+        <title>4-3. scRNA-seq数据处理 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -280,12 +280,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6" data-path="./">
+        <li class="chapter " data-level="1.6" data-path="../SCGLUE/">
             
-                <a href="./">
+                <a href="../SCGLUE/">
             
                     
-                    分析3：MOFA单细胞多组学因子分析
+                    分析3：单细胞样本对齐
             
                 </a>
             
@@ -294,9 +294,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1" data-path="mofa_1.html">
+        <li class="chapter " data-level="1.6.1" data-path="../SCGLUE/scglue_1.html">
             
-                <a href="mofa_1.html">
+                <a href="../SCGLUE/scglue_1.html">
             
                     
                     3-1. 环境配置
@@ -307,12 +307,96 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.2" data-path="mofa_2.html">
+        <li class="chapter " data-level="1.6.2" data-path="../SCGLUE/scglue_2.html">
+            
+                <a href="../SCGLUE/scglue_2.html">
+            
+                    
+                    3-2. 数据预处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../SCGLUE/scglue_3.html">
+            
+                <a href="../SCGLUE/scglue_3.html">
+            
+                    
+                    3-3. 模型准备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../SCGLUE/scglue_4.html">
+            
+                <a href="../SCGLUE/scglue_4.html">
+            
+                    
+                    3-4. 模型训练
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../SCGLUE/scglue_5.html">
+            
+                <a href="../SCGLUE/scglue_5.html">
+            
+                    
+                    3-5. 对齐细胞
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    分析4：MOFA单细胞多组学因子分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="mofa_1.html">
+            
+                <a href="mofa_1.html">
+            
+                    
+                    4-1. 环境配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="mofa_2.html">
             
                 <a href="mofa_2.html">
             
                     
-                    3-2. 单细胞样本对齐
+                    4-2. 单细胞样本对齐
             
                 </a>
             
@@ -320,12 +404,12 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.6.3" data-path="mofa_3.html">
+        <li class="chapter active" data-level="1.7.3" data-path="mofa_3.html">
             
                 <a href="mofa_3.html">
             
                     
-                    3-3. scRNA-seq数据处理
+                    4-3. scRNA-seq数据处理
             
                 </a>
             
@@ -333,12 +417,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.4" data-path="mofa_4.html">
+        <li class="chapter " data-level="1.7.4" data-path="mofa_4.html">
             
                 <a href="mofa_4.html">
             
                     
-                    3-4. scATAC-seq数据处理
+                    4-4. scATAC-seq数据处理
             
                 </a>
             
@@ -346,12 +430,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.5" data-path="mofa_5.html">
+        <li class="chapter " data-level="1.7.5" data-path="mofa_5.html">
             
                 <a href="mofa_5.html">
             
                     
-                    3-5. MOFA模型构建
+                    4-5. MOFA模型构建
             
                 </a>
             
@@ -359,12 +443,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.6" data-path="mofa_6.html">
+        <li class="chapter " data-level="1.7.6" data-path="mofa_6.html">
             
                 <a href="mofa_6.html">
             
                     
-                    3-6. MOFA下游分析
+                    4-6. MOFA下游分析
             
                 </a>
             
@@ -407,7 +491,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >3-3. scRNA-seq数据处理</a>
+        <a href=".." >4-3. scRNA-seq数据处理</a>
     </h1>
 </div>
 
@@ -422,7 +506,63 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="2-3-scrna-seq&#x6570;&#x636E;&#x5904;&#x7406;">2-3. scRNA-seq&#x6570;&#x636E;&#x5904;&#x7406;</h1>
+                                <h1 id="mofa&#x5206;&#x6790;&#xFF1A;-scrna-seq&#x6570;&#x636E;&#x5904;&#x7406;">MOFA&#x5206;&#x6790;&#xFF1A; scRNA-seq&#x6570;&#x636E;&#x5904;&#x7406;</h1>
+<p>&#x7531;&#x4E8E;&#x5355;&#x7EC6;&#x80DE;&#x539F;&#x59CB;&#x77E9;&#x9635;&#x8F83;&#x5927;&#xFF0C;&#x6211;&#x4EEC;&#x8FDB;&#x884C;mofa&#x5206;&#x6790;&#x65F6;&#x5F80;&#x5F80;&#x9700;&#x8981;&#x5BF9;scRNA-seq&#x6570;&#x636E;&#x8FDB;&#x884C;&#x9884;&#x5904;&#x7406;</p>
+<h2 id="1-&#x6570;&#x636E;&#x51C6;&#x5907;">1. &#x6570;&#x636E;&#x51C6;&#x5907;</h2>
+<h3 id="11-&#x5BFC;&#x5165;&#x5305;">1.1 &#x5BFC;&#x5165;&#x5305;</h3>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> anndata
+<span class="hljs-keyword">import</span> networkx <span class="hljs-keyword">as</span> nx
+<span class="hljs-keyword">import</span> scanpy <span class="hljs-keyword">as</span> sc
+<span class="hljs-keyword">from</span> matplotlib <span class="hljs-keyword">import</span> rcParams
+<span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd
+<span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
+</code></pre>
+<h3 id="12-&#x5BFC;&#x5165;&#x6570;&#x636E;">1.2 &#x5BFC;&#x5165;&#x6570;&#x636E;</h3>
+<pre><code class="lang-python">rna_pair = anndata.read_h5ad(<span class="hljs-string">&quot;rna_pair.h5ad&quot;</span>)
+<span class="hljs-comment">#atac_pair = anndata.read_h5ad(&quot;atac_pair.h5ad&quot;)</span>
+new_pair=pd.read_csv(<span class="hljs-string">&apos;new_pair.csv&apos;</span>)
+</code></pre>
+<h3 id="13-&#x914D;&#x5BF9;&#x7EC6;&#x80DE;&#x91CD;&#x547D;&#x540D;">1.3 &#x914D;&#x5BF9;&#x7EC6;&#x80DE;&#x91CD;&#x547D;&#x540D;</h3>
+<pre><code class="lang-python">new_cell=[]
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> rna_pair.obs.index:
+  new_cell.append(new_pair[new_pair[<span class="hljs-string">&apos;scRNA&apos;</span>]==i][<span class="hljs-string">&apos;sample&apos;</span>].iloc[<span class="hljs-number">0</span>])
+rna_pair.obs.index=new_cell
+new_cell[:<span class="hljs-number">5</span>]
+</code></pre>
+<h2 id="2-&#x5355;&#x7EC6;&#x80DE;&#x6570;&#x636E;&#x8D28;&#x63A7;">2. &#x5355;&#x7EC6;&#x80DE;&#x6570;&#x636E;&#x8D28;&#x63A7;</h2>
+<h3 id="21-&#x8FC7;&#x6EE4;&#x7EC6;&#x80DE;&#x4E0E;&#x57FA;&#x56E0;">2.1 &#x8FC7;&#x6EE4;&#x7EC6;&#x80DE;&#x4E0E;&#x57FA;&#x56E0;</h3>
+<pre><code class="lang-python">sc.pp.filter_cells(rna_pair, min_genes=<span class="hljs-number">2000</span>)
+sc.pp.filter_genes(rna_pair, min_cells=<span class="hljs-number">150</span>)
+</code></pre>
+<h3 id="22-&#x8FC7;&#x6EE4;&#x7EBF;&#x7C92;&#x4F53;&#x57FA;&#x56E0;">2.2 &#x8FC7;&#x6EE4;&#x7EBF;&#x7C92;&#x4F53;&#x57FA;&#x56E0;</h3>
+<pre><code class="lang-python">rna_pair.var[<span class="hljs-string">&apos;mt&apos;</span>] = rna_pair.var_names.str.startswith(<span class="hljs-string">&apos;MT-&apos;</span>)  <span class="hljs-comment"># annotate the group of mitochondrial genes as &apos;mt&apos;</span>
+sc.pp.calculate_qc_metrics(rna_pair, qc_vars=[<span class="hljs-string">&apos;mt&apos;</span>], percent_top=<span class="hljs-keyword">None</span>, log1p=<span class="hljs-keyword">False</span>, inplace=<span class="hljs-keyword">True</span>)
+sc.pl.violin(rna_pair, [<span class="hljs-string">&apos;n_genes_by_counts&apos;</span>, <span class="hljs-string">&apos;total_counts&apos;</span>, <span class="hljs-string">&apos;pct_counts_mt&apos;</span>],
+             jitter=<span class="hljs-number">0.4</span>, multi_panel=<span class="hljs-keyword">True</span>)
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/Starlitnightly/bioinformatic_galaxy/master/img/do4.png" alt="do3"></p>
+<h3 id="23-&#x89C2;&#x5BDF;&#x5206;&#x5E03;">2.3 &#x89C2;&#x5BDF;&#x5206;&#x5E03;</h3>
+<pre><code class="lang-python">sc.pl.scatter(rna_pair, x=<span class="hljs-string">&apos;total_counts&apos;</span>, y=<span class="hljs-string">&apos;pct_counts_mt&apos;</span>)
+sc.pl.scatter(rna_pair, x=<span class="hljs-string">&apos;total_counts&apos;</span>, y=<span class="hljs-string">&apos;n_genes_by_counts&apos;</span>)
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/Starlitnightly/bioinformatic_galaxy/master/img/do5.png" alt="do5"><img src="https://raw.githubusercontent.com/Starlitnightly/bioinformatic_galaxy/master/img/do4.png" alt="do4"></p>
+<h3 id="24-&#x6839;&#x636E;&#x5206;&#x5E03;&#x8FC7;&#x6EE4;&#x7EC6;&#x80DE;">2.4 &#x6839;&#x636E;&#x5206;&#x5E03;&#x8FC7;&#x6EE4;&#x7EC6;&#x80DE;</h3>
+<pre><code class="lang-python">rna_pair = rna_pair[rna_pair.obs.n_genes_by_counts &lt; <span class="hljs-number">3500</span>, :]
+rna_pair = rna_pair[rna_pair.obs.pct_counts_mt &lt; <span class="hljs-number">1</span>, :]
+</code></pre>
+<h3 id="25-&#x9AD8;&#x53D8;&#x57FA;&#x56E0;&#x8BA1;&#x7B97;">2.5 &#x9AD8;&#x53D8;&#x57FA;&#x56E0;&#x8BA1;&#x7B97;</h3>
+<pre><code class="lang-python">sc.pp.normalize_total(rna_pair, target_sum=<span class="hljs-number">1e4</span>)
+sc.pp.log1p(rna_pair)
+sc.pp.highly_variable_genes(rna_pair, min_mean=<span class="hljs-number">0.0125</span>, max_mean=<span class="hljs-number">3</span>, min_disp=<span class="hljs-number">0.5</span>)
+sc.pl.highly_variable_genes(rna_pair)
+rna_pair = rna_pair[:, rna_pair.var.highly_variable]
+</code></pre>
+<p><img src="mofa_3.assets/do6.png" alt="do6"></p>
+<h3 id="26-&#x56DE;&#x5F52;">2.6 &#x56DE;&#x5F52;</h3>
+<pre><code class="lang-python">sc.pp.regress_out(rna_pair, [<span class="hljs-string">&apos;total_counts&apos;</span>, <span class="hljs-string">&apos;pct_counts_mt&apos;</span>])
+sc.pp.scale(rna_pair, max_value=<span class="hljs-number">10</span>)
+rna_pair.write_h5ad(<span class="hljs-string">&apos;rna_pair_4.h5ad&apos;</span>,compression=<span class="hljs-string">&apos;gzip&apos;</span>)
+</code></pre>
 
                                 
                                 </section>
@@ -450,12 +590,12 @@
 
             
                 
-                <a href="mofa_2.html" class="navigation navigation-prev " aria-label="Previous page: 3-2. 单细胞样本对齐">
+                <a href="mofa_2.html" class="navigation navigation-prev " aria-label="Previous page: 4-2. 单细胞样本对齐">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="mofa_4.html" class="navigation navigation-next " aria-label="Next page: 3-4. scATAC-seq数据处理">
+                <a href="mofa_4.html" class="navigation navigation-next " aria-label="Next page: 4-4. scATAC-seq数据处理">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -466,7 +606,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"3-3. scRNA-seq数据处理","level":"1.6.3","depth":2,"next":{"title":"3-4. scATAC-seq数据处理","level":"1.6.4","depth":2,"path":"MOFA/mofa_4.md","ref":"MOFA/mofa_4.md","articles":[]},"previous":{"title":"3-2. 单细胞样本对齐","level":"1.6.2","depth":2,"path":"MOFA/mofa_2.md","ref":"MOFA/mofa_2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"MOFA/mofa_3.md","mtime":"2021-11-01T14:10:07.099Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-11-02T07:53:56.843Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"4-3. scRNA-seq数据处理","level":"1.7.3","depth":2,"next":{"title":"4-4. scATAC-seq数据处理","level":"1.7.4","depth":2,"path":"MOFA/mofa_4.md","ref":"MOFA/mofa_4.md","articles":[]},"previous":{"title":"4-2. 单细胞样本对齐","level":"1.7.2","depth":2,"path":"MOFA/mofa_2.md","ref":"MOFA/mofa_2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"MOFA/mofa_3.md","mtime":"2021-11-04T05:53:32.234Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-11-04T05:54:22.123Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
