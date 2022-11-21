@@ -32,6 +32,10 @@
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
                 
             
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
         
 
     
@@ -532,6 +536,116 @@
             
         </li>
     
+        <li class="chapter " data-level="1.9" data-path="../TMT/">
+            
+                <a href="../TMT/">
+            
+                    
+                    分析6：多组学分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../MultiOMIC/book-1.html">
+            
+                <a href="../MultiOMIC/book-1.html">
+            
+                    
+                    6-1. 数据准备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../MultiOMIC/book-2.html">
+            
+                <a href="../MultiOMIC/book-2.html">
+            
+                    
+                    6-2. GLUE多组学整合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../MultiOMIC/book-3.html">
+            
+                <a href="../MultiOMIC/book-3.html">
+            
+                    
+                    6-3. 细胞亚群分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../MultiOMIC/book-4.html">
+            
+                <a href="../MultiOMIC/book-4.html">
+            
+                    
+                    6-4. 差异表达分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../MultiOMIC/book-5.html">
+            
+                <a href="../MultiOMIC/book-5.html">
+            
+                    
+                    6-5. 细胞通讯分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../MultiOMIC/book-6.html">
+            
+                <a href="../MultiOMIC/book-6.html">
+            
+                    
+                    6-6. 动态调控分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="../MultiOMIC/book-7.html">
+            
+                <a href="../MultiOMIC/book-7.html">
+            
+                    
+                    6-7. 转录因子网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
     
 
@@ -738,7 +852,7 @@ def plot_high_weight(res,n_feature=10):
   ax.set_xlabel(&apos;Weights&apos;,font1)
 
 plot_high_weight(res1,10)
-</code></pre><p><img src="C:\Users\FernandoZeng\Desktop\biobook\MOFA\mofa_7.assets\&#x4E0B;&#x8F7D; (3" alt="&#x4E0B;&#x8F7D; (3)">.png)</p>
+</code></pre><p><img src="mofa_7.assets/&#x4E0B;&#x8F7D; (3" alt="&#x4E0B;&#x8F7D; (3)">.png)</p>
 <h3 id="18-var&#x8DDF;cor&#x6570;&#x636E;&#x5BFC;&#x5165;">1.8 Var&#x8DDF;Cor&#x6570;&#x636E;&#x5BFC;&#x5165;</h3>
 <pre><code>variance=pd.read_csv(&apos;/content/drive/MyDrive/GSE174367/ad/variance_explained.csv&apos;)
 corr=pd.read_csv(&apos;/content/drive/MyDrive/GSE174367/ad/correlate_factors.csv&apos;)
@@ -756,7 +870,7 @@ g.set_yticklabels(g.get_ymajorticklabels(), fontsize = 15)
 cbar = g.collections[0].colorbar
 # here set the labelsize by 20
 cbar.ax.tick_params(labelsize=15)
-</code></pre><p><img src="C:\Users\FernandoZeng\Desktop\biobook\MOFA\mofa_7.assets\&#x4E0B;&#x8F7D; (4" alt="&#x4E0B;&#x8F7D; (4)">.png)</p>
+</code></pre><p><img src="mofa_7.assets/&#x4E0B;&#x8F7D; (4" alt="&#x4E0B;&#x8F7D; (4)">.png)</p>
 <h3 id="110-cor&#x53EF;&#x89C6;&#x5316;">1.10 Cor&#x53EF;&#x89C6;&#x5316;</h3>
 <pre><code class="lang-python">fig, ax = plt.subplots(figsize=(<span class="hljs-number">3</span>,<span class="hljs-number">6</span>))         <span class="hljs-comment"># Sample figsize in inches</span>
 g=sns.heatmap(corr,
@@ -769,7 +883,7 @@ cbar = g.collections[<span class="hljs-number">0</span>].colorbar
 <span class="hljs-comment"># here set the labelsize by 20</span>
 cbar.ax.tick_params(labelsize=<span class="hljs-number">15</span>)
 </code></pre>
-<p><img src="C:\Users\FernandoZeng\Desktop\biobook\MOFA\mofa_7.assets\&#x4E0B;&#x8F7D; (5" alt="&#x4E0B;&#x8F7D; (5)">.png)</p>
+<p><img src="mofa_7.assets/&#x4E0B;&#x8F7D; (5" alt="&#x4E0B;&#x8F7D; (5)">.png)</p>
 <h2 id="2-&#x5355;&#x7EC6;&#x80DE;&#x73AF;&#x8282;">2. &#x5355;&#x7EC6;&#x80DE;&#x73AF;&#x8282;</h2>
 <h3 id="21-&#x5BFC;&#x5165;&#x6570;&#x636E;">2.1 &#x5BFC;&#x5165;&#x6570;&#x636E;</h3>
 <pre><code>rna=anndata.read_h5ad(&quot;rna_pair_mofa.h5ad&quot;)
@@ -909,7 +1023,7 @@ cbar = g.collections[0].colorbar
 # here set the labelsize by 20
 cbar.ax.tick_params(labelsize=15)
 plt.savefig(&quot;fig1_b_corr.png&quot;,dpi=300,bbox_inches = &apos;tight&apos;)
-</code></pre><p><img src="C:\Users\FernandoZeng\Desktop\biobook\MOFA\mofa_7.assets\&#x4E0B;&#x8F7D; (6).png" alt="&#x4E0B;&#x8F7D; (6)" style="zoom:50%;"></p>
+</code></pre><p><img src="mofa_7.assets/&#x4E0B;&#x8F7D; (6).png" alt="&#x4E0B;&#x8F7D; (6)" style="zoom:50%;"></p>
 <h3 id="23-scrna-seq&#x7684;ad&#x4E0E;ctrl&#x7EC4;&#x805A;&#x7C7B;">2.3 scRNA-seq&#x7684;AD&#x4E0E;Ctrl&#x7EC4;&#x805A;&#x7C7B;</h3>
 <h4 id="231-&#x5BFC;&#x5165;&#x6570;&#x636E;">2.3.1 &#x5BFC;&#x5165;&#x6570;&#x636E;</h4>
 <pre><code>ad_meta=pd.read_csv(&apos;/content/drive/MyDrive/GSE174367/mofa_sex_ad_meta.csv&apos;)
@@ -936,14 +1050,14 @@ sc.tl.umap(res_ad,random_state=41822099)
 sc.settings.set_figure_params(dpi=80, facecolor=&apos;white&apos;,figsize=[4,4])
 sc.pl.umap(res_ad,color=[&quot;cell_type&quot;,&quot;factor1&quot;,&quot;factor2&quot;,&quot;factor4&quot;], wspace=0.2, palette=scnmt,
       cmap=&apos;coolwarm&apos;,vmin=-5,vmax=5,frameon=False,add_outline=True,outline_color=(&apos;white&apos;,&apos;white&apos;))
-</code></pre><p><img src="C:\Users\FernandoZeng\Desktop\biobook\MOFA\mofa_7.assets\&#x4E0B;&#x8F7D; (7" alt="&#x4E0B;&#x8F7D; (7)">.png)</p>
+</code></pre><p><img src="mofa_7.assets/&#x4E0B;&#x8F7D; (7" alt="&#x4E0B;&#x8F7D; (7)">.png)</p>
 <h4 id="235-ctrl&#x7EC4;&#x7ED8;&#x56FE;">2.3.5 Ctrl&#x7EC4;&#x7ED8;&#x56FE;</h4>
 <pre><code>sc.pp.neighbors(res_ctrl, metric=&quot;cosine&quot;)
 sc.tl.umap(res_ctrl,random_state=41822099)
 sc.settings.set_figure_params(dpi=80, facecolor=&apos;white&apos;,figsize=[4,4])
 sc.pl.umap(res_ctrl,color=[&quot;cell_type&quot;,&quot;factor1&quot;,&quot;factor2&quot;,&quot;factor4&quot;], wspace=0.2, palette=scnmt,
       cmap=&apos;coolwarm&apos;,vmin=-5,vmax=5,frameon=False,add_outline=True,outline_color=(&apos;white&apos;,&apos;white&apos;))
-</code></pre><p><img src="C:\Users\FernandoZeng\Desktop\biobook\MOFA\mofa_7.assets\&#x4E0B;&#x8F7D; (8" alt="&#x4E0B;&#x8F7D; (8)">.png)</p>
+</code></pre><p><img src="mofa_7.assets/&#x4E0B;&#x8F7D; (8" alt="&#x4E0B;&#x8F7D; (8)">.png)</p>
 
                                 
                                 </section>
@@ -987,7 +1101,7 @@ sc.pl.umap(res_ctrl,color=[&quot;cell_type&quot;,&quot;factor1&quot;,&quot;facto
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"4-7. MOFA下游分析-Python环节","level":"1.7.7","depth":2,"next":{"title":"分析5：TMT蛋白组学分析","level":"1.8","depth":1,"path":"TMT/README.md","ref":"TMT/README.md","articles":[{"title":"5-1. 环境配置","level":"1.8.1","depth":2,"path":"TMT/tmt_1.md","ref":"TMT/tmt_1.md","articles":[]},{"title":"5-2. TMT蛋白组学上游分析","level":"1.8.2","depth":2,"path":"TMT/tmt_2.md","ref":"TMT/tmt_2.md","articles":[]},{"title":"5-3. TMT蛋白组学下游分析","level":"1.8.3","depth":2,"path":"TMT/tmt_3.md","ref":"TMT/tmt_3.md","articles":[]}]},"previous":{"title":"4-6. MOFA下游分析-R语言环节","level":"1.7.6","depth":2,"path":"MOFA/mofa_6.md","ref":"MOFA/mofa_6.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"MOFA/mofa_7.md","mtime":"2021-12-07T08:48:33.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-25T18:30:13.852Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"4-7. MOFA下游分析-Python环节","level":"1.7.7","depth":2,"next":{"title":"分析5：TMT蛋白组学分析","level":"1.8","depth":1,"path":"TMT/README.md","ref":"TMT/README.md","articles":[{"title":"5-1. 环境配置","level":"1.8.1","depth":2,"path":"TMT/tmt_1.md","ref":"TMT/tmt_1.md","articles":[]},{"title":"5-2. TMT蛋白组学上游分析","level":"1.8.2","depth":2,"path":"TMT/tmt_2.md","ref":"TMT/tmt_2.md","articles":[]},{"title":"5-3. TMT蛋白组学下游分析","level":"1.8.3","depth":2,"path":"TMT/tmt_3.md","ref":"TMT/tmt_3.md","articles":[]}]},"previous":{"title":"4-6. MOFA下游分析-R语言环节","level":"1.7.6","depth":2,"path":"MOFA/mofa_6.md","ref":"MOFA/mofa_6.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","theme-comscore"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"MOFA/mofa_7.md","mtime":"2022-10-18T19:09:21.660Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-18T19:11:08.078Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1022,6 +1136,10 @@ sc.pl.umap(res_ctrl,color=[&quot;cell_type&quot;,&quot;factor1&quot;,&quot;facto
     
         
         <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
         
     
 

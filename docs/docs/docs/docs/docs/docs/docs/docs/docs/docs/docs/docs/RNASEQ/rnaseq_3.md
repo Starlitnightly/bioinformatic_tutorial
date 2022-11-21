@@ -155,7 +155,7 @@ gseaplot(rank_metric=pre_res.ranking, term=terms[0], **pre_res.results[terms[0]]
 
 我们想观察每一个通路具体的富集情况，可以通过gseaplot绘制相关函数
 
-![NOD-like receptor signaling pathway.prerank](https://raw.githubusercontent.com/Starlitnightly/bioinformatic_galaxy/master/img/NOD-like%20receptor%20signaling%20pathway.prerank.png)
+<img src="https://raw.githubusercontent.com/Starlitnightly/bioinformatic_galaxy/master/img/NOD-like%20receptor%20signaling%20pathway.prerank.png" alt="NOD-like receptor signaling pathway.prerank" style="zoom:33%;" />
 
 ### 2.4 多通路可视化
 

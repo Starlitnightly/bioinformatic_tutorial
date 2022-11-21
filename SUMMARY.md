@@ -39,4 +39,6 @@
     * [6-5. 细胞通讯分析](MultiOMIC/book-5.md)
     * [6-6. 动态调控分析](MultiOMIC/book-6.md)
     * [6-7. 转录因子网络](MultiOMIC/book-7.md)
+* [绘图：Python可视化](PLOT/README.md)
+    * [1-1. 火山图](PLOT/plot_1.md)
 

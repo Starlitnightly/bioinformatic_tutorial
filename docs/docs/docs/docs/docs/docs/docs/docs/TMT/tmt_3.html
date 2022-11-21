@@ -1,0 +1,848 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>5-3. TMT蛋白组学下游分析 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="./" />
+    
+    
+    <link rel="prev" href="tmt_2.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Bioinformatics Tutorial
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../CONFIG/">
+            
+                <a href="../CONFIG/">
+            
+                    
+                    配置：基础环境配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../CONFIG/config_1.html">
+            
+                <a href="../CONFIG/config_1.html">
+            
+                    
+                    配置1：Python环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../CONFIG/config_2.html">
+            
+                <a href="../CONFIG/config_2.html">
+            
+                    
+                    配置2：Linux环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../CONFIG/config_3.html">
+            
+                <a href="../CONFIG/config_3.html">
+            
+                    
+                    配置3：R语言环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../RNASEQUP/">
+            
+                <a href="../RNASEQUP/">
+            
+                    
+                    分析1：RNA-seq上游分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../RNASEQUP/rnasequp_1.html">
+            
+                <a href="../RNASEQUP/rnasequp_1.html">
+            
+                    
+                    1-1. 环境配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../RNASEQUP/rnasequp_2.html">
+            
+                <a href="../RNASEQUP/rnasequp_2.html">
+            
+                    
+                    1-2. 上游分析全教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../RNASEQ/">
+            
+                <a href="../RNASEQ/">
+            
+                    
+                    分析2：RNA-seq下游分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../RNASEQ/rnaseq_1.html">
+            
+                <a href="../RNASEQ/rnaseq_1.html">
+            
+                    
+                    2-1. 环境配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../RNASEQ/rnaseq_2.html">
+            
+                <a href="../RNASEQ/rnaseq_2.html">
+            
+                    
+                    2-2. 差异表达基因(DEG)分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../RNASEQ/rnaseq_3.html">
+            
+                <a href="../RNASEQ/rnaseq_3.html">
+            
+                    
+                    2-3. 通路富集分析(GSEA)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../SCGLUE/">
+            
+                <a href="../SCGLUE/">
+            
+                    
+                    分析3：单细胞样本对齐
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../SCGLUE/scglue_1.html">
+            
+                <a href="../SCGLUE/scglue_1.html">
+            
+                    
+                    3-1. 环境配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../SCGLUE/scglue_2.html">
+            
+                <a href="../SCGLUE/scglue_2.html">
+            
+                    
+                    3-2. 数据预处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../SCGLUE/scglue_3.html">
+            
+                <a href="../SCGLUE/scglue_3.html">
+            
+                    
+                    3-3. 模型准备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../SCGLUE/scglue_4.html">
+            
+                <a href="../SCGLUE/scglue_4.html">
+            
+                    
+                    3-4. 模型训练
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../SCGLUE/scglue_5.html">
+            
+                <a href="../SCGLUE/scglue_5.html">
+            
+                    
+                    3-5. 对齐细胞
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../MOFA/">
+            
+                <a href="../MOFA/">
+            
+                    
+                    分析4：MOFA单细胞多组学因子分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../MOFA/mofa_1.html">
+            
+                <a href="../MOFA/mofa_1.html">
+            
+                    
+                    4-1. 环境配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../MOFA/mofa_2.html">
+            
+                <a href="../MOFA/mofa_2.html">
+            
+                    
+                    4-2. 单细胞样本对齐
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../MOFA/mofa_3.html">
+            
+                <a href="../MOFA/mofa_3.html">
+            
+                    
+                    4-3. scRNA-seq数据处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../MOFA/mofa_4.html">
+            
+                <a href="../MOFA/mofa_4.html">
+            
+                    
+                    4-4. scATAC-seq数据处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../MOFA/mofa_5.html">
+            
+                <a href="../MOFA/mofa_5.html">
+            
+                    
+                    4-5. MOFA模型构建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../MOFA/mofa_6.html">
+            
+                <a href="../MOFA/mofa_6.html">
+            
+                    
+                    4-6. MOFA下游分析-R语言环节
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../MOFA/mofa_7.html">
+            
+                <a href="../MOFA/mofa_7.html">
+            
+                    
+                    4-7. MOFA下游分析-Python环节
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    分析5：TMT蛋白组学分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="tmt_1.html">
+            
+                <a href="tmt_1.html">
+            
+                    
+                    5-1. 环境配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="tmt_2.html">
+            
+                <a href="tmt_2.html">
+            
+                    
+                    5-2. TMT蛋白组学上游分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8.3" data-path="tmt_3.html">
+            
+                <a href="tmt_3.html">
+            
+                    
+                    5-3. TMT蛋白组学下游分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    分析6：多组学分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../MultiOMIC/book-1.html">
+            
+                <a href="../MultiOMIC/book-1.html">
+            
+                    
+                    6-1. 数据准备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../MultiOMIC/book-2.html">
+            
+                <a href="../MultiOMIC/book-2.html">
+            
+                    
+                    6-2. GLUE多组学整合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../MultiOMIC/book-3.html">
+            
+                <a href="../MultiOMIC/book-3.html">
+            
+                    
+                    6-3. 细胞亚群分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../MultiOMIC/book-4.html">
+            
+                <a href="../MultiOMIC/book-4.html">
+            
+                    
+                    6-4. 差异表达分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../MultiOMIC/book-5.html">
+            
+                <a href="../MultiOMIC/book-5.html">
+            
+                    
+                    6-5. 细胞通讯分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../MultiOMIC/book-6.html">
+            
+                <a href="../MultiOMIC/book-6.html">
+            
+                    
+                    6-6. 动态调控分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="../MultiOMIC/book-7.html">
+            
+                <a href="../MultiOMIC/book-7.html">
+            
+                    
+                    6-7. 转录因子网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >5-3. TMT蛋白组学下游分析</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="tmt&#x86CB;&#x767D;&#x7EC4;&#x5B66;&#xFF1A;&#x4E0B;&#x6E38;&#x5206;&#x6790;">TMT&#x86CB;&#x767D;&#x7EC4;&#x5B66;&#xFF1A;&#x4E0B;&#x6E38;&#x5206;&#x6790;</h1>
+<p>&#x5728;&#x524D;&#x9762;&#x7684;&#x5206;&#x6790;&#xFF0C;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x5F97;&#x5230;&#x4E86;&#x86CB;&#x767D;&#x7EC4;&#x5B66;&#x7684;&#x641C;&#x5E93;&#x7ED3;&#x679C;&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x600E;&#x4E48;&#x624D;&#x80FD;&#x5C06;&#x5176;&#x5206;&#x6790;&#x51FA;&#x5177;&#x6709;&#x751F;&#x7269;&#x5B66;&#x610F;&#x4E49;&#x7684;&#x4E1C;&#x897F;&#x5462;&#xFF1F;</p>
+<p>&#x5728;&#x7ED3;&#x679C;&#x7684;&#x8DEF;&#x5F84;&#x4E0B;&#xFF0C;&#x6709;&#x4E00;&#x4E2A;Combined&#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x91CC;&#x9762;&#x7684;txt&#x6587;&#x4EF6;&#x5939;&#x5B58;&#x653E;&#x4E86;&#x6211;&#x4EEC;&#x7684;&#x641C;&#x5E93;&#x7ED3;&#x679C;&#xFF0C;&#x5176;&#x4E2D;&#x7684;evidence.txt&#x8DDF;proteinGroup.txt&#x4E3A;&#x6700;&#x91CD;&#x8981;&#x7684;&#x4E24;&#x4E2A;&#xFF0C;&#x5728;&#x8FD9;&#x91CC;&#xFF0C;&#x6211;&#x4EEC;&#x4F7F;&#x7528;R&#x5305;proteusTMT&#x8FDB;&#x884C;&#x4E0B;&#x6E38;&#x5206;&#x6790;&#x3002;</p>
+<h2 id="1-&#x5B89;&#x88C5;&#x4F9D;&#x8D56;">1. &#x5B89;&#x88C5;&#x4F9D;&#x8D56;</h2>
+<p>Proteus can be installed directly from GitHub. First, you need to install BioConductor and limma:</p>
+<pre><code>install.packages(&quot;BiocManager&quot;)
+BiocManager::install()
+BiocManager::install(&quot;limma&quot;)
+</code></pre><p>You also need devtools:</p>
+<pre><code>install.packages(&quot;devtools&quot;)
+</code></pre><p>In order to run examples or vignette code, additional packages with example data need to be installed:</p>
+<pre><code>devtools::install_github(&quot;bartongroup/proteusLabelFree&quot;)
+devtools::install_github(&quot;bartongroup/proteusTMT&quot;)
+devtools::install_github(&quot;bartongroup/proteusSILAC&quot;)
+</code></pre><p>Finally, you can install proteus:</p>
+<pre><code>devtools::install_github(&quot;bartongroup/Proteus&quot;, build_opts= c(&quot;--no-resave-data&quot;, &quot;--no-manual&quot;), build_vignettes=TRUE)
+</code></pre><p>Note: use <code>build_vignettes = FALSE</code> if you run into problems with vignettes installation.</p>
+<h2 id="2-meta&#x6587;&#x4EF6;&#x51C6;&#x5907;">2. meta&#x6587;&#x4EF6;&#x51C6;&#x5907;</h2>
+<p>&#x5BF9;&#x4E8E;Proteus&#xFF0C;&#x5176;&#x4E2D;&#x6700;&#x4E3A;&#x91CD;&#x8981;&#x7684;&#x662F;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5BF9;TMT6plex&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x6807;&#x8BB0;&#x8FDB;&#x884C;&#x6807;&#x6CE8;&#x6E05;&#x695A;&#xFF0C;&#x5728;&#x8FD9;&#x91CC;&#xFF0C;&#x6211;&#x4EEC;&#x51C6;&#x5907;&#x4E00;&#x4E2A;&#x6A21;&#x677F;&#x4F5C;&#x4E3A;&#x53C2;&#x8003;</p>
+<ul>
+<li>experiment&#xFF1A;&#x8FD9;&#x4E2A;&#x662F;&#x4F60;&#x5728;&#x4E0A;&#x6E38;&#x5206;&#x6790;&#x641C;&#x5E93;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5BF9;&#x6BCF;&#x4E00;&#x4E2A;raw&#x8BBE;&#x7F6E;&#x7684;experiment&#x60C5;&#x51B5;&#xFF0C;&#x6BD4;&#x5982;Ctrl1.raw&#x6587;&#x4EF6;&#x91CC;&#x9762;&#xFF0C;&#x5305;&#x542B;&#x4E86;6&#x4E2A;TMT&#x6807;&#x8BB0;&#xFF0C;&#x5176;&#x4E2D;&#x6BCF;&#x4E00;&#x4E2A;&#x6807;&#x8BB0;&#x4EE3;&#x8868;&#x4E0D;&#x540C;&#x7684;&#x6837;&#x672C;&#xFF0C;&#x6BD4;&#x5982;Ctrl1&#x5305;&#x62EC;&#x4E86;WT1-1&#xFF0C;WT2-1&#xFF0C;WT3-1&#xFF0C;SHED1-1&#xFF0C;SHED2-1&#xFF0C;SHED3-1&#xFF0C;WT1-1&#x6307;&#x7684;&#x662F;&#x91CE;&#x751F;&#x578B;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x91CD;&#x590D;</li>
+<li>measure&#xFF1A;TMT6plex&#x5C06;&#x8FD4;&#x56DE;6&#x4E2A;Reporter intensity&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;&#x5BF9;&#x5E94;&#x4E0A;&#x8FF0;&#x7684;&#x4E00;&#x4E2A;sample</li>
+<li>sample&#xFF1A;&#x8868;&#x793A;TMT6plex&#x91CC;&#x90FD;&#x6709;&#x54EA;&#x516D;&#x4E2A;&#x6837;&#x672C;</li>
+<li>condition&#xFF1A;&#x6837;&#x672C;&#x5206;&#x7EC4;&#x60C5;&#x51B5;</li>
+<li>replicate&#xFF1A;&#x91CD;&#x590D;&#x6B21;&#x6570;</li>
+</ul>
+<p><img src="tmt_3.assets/image-20220126021021714.png" alt="image-20220126021021714"></p>
+<h2 id="3-proteus&#x5206;&#x6790;">3. Proteus&#x5206;&#x6790;</h2>
+<h3 id="31-&#x52A0;&#x8F7D;&#x4F9D;&#x8D56;">3.1 &#x52A0;&#x8F7D;&#x4F9D;&#x8D56;</h3>
+<pre><code>library(proteusTMT)
+library(proteus)
+</code></pre><h3 id="32-&#x5BFC;&#x5165;&#x6570;&#x636E;">3.2 &#x5BFC;&#x5165;&#x6570;&#x636E;</h3>
+<h4 id="321-&#x5217;&#x540D;&#x8BBE;&#x7F6E;">3.2.1 &#x5217;&#x540D;&#x8BBE;&#x7F6E;</h4>
+<p>The default <code>measure.cols</code> object is designed for label-free data. For TMT data we need to specify all reporter intensity columns. In out example we have 10 reporter columns, numbered from 1 to 6:</p>
+<pre><code>measCols &lt;- paste0(&quot;Reporter intensity &quot;, 1:6)
+names(measCols) &lt;- paste0(&quot;reporter_&quot;, 1:6)
+</code></pre><p>&#x610F;&#x5473;&#x7740;&#x6211;&#x4EEC;&#x5C06;Reporter intensity 1&#x91CD;&#x547D;&#x540D;&#x4E3A;reporter_1</p>
+<h4 id="322-&#x5BFC;&#x5165;evidence&#x548C;meta">3.2.2 &#x5BFC;&#x5165;evidence&#x548C;meta</h4>
+<pre><code>evi &lt;- readEvidenceFile(&apos;txt/evidence.txt&apos;, measure.cols=measCols)
+meta &lt;- read.delim(&apos;meta.txt&apos;, header=TRUE, sep=&quot;\t&quot;)
+</code></pre><h4 id="323-&#x521B;&#x5EFA;peptide&#x6570;&#x636E;&#x96C6;">3.2.3 &#x521B;&#x5EFA;peptide&#x6570;&#x636E;&#x96C6;</h4>
+<pre><code>pepdat &lt;- makePeptideTable(evi, meta, measure.cols=measCols, aggregate.fun=aggregateMedian, experiment.type=&quot;TMT&quot;)
+plotCount(pepdat)
+</code></pre><p><img src="tmt_3.assets/image-20220126022018085.png" alt="image-20220126022018085"></p>
+<h3 id="33-&#x86CB;&#x767D;&#x7ED3;&#x679C;&#x6570;&#x636E;">3.3 &#x86CB;&#x767D;&#x7ED3;&#x679C;&#x6570;&#x636E;</h3>
+<h4 id="331-&#x521B;&#x5EFA;&#x86CB;&#x767D;&#x7ED3;&#x679C;&#x6570;&#x636E;">3.3.1 &#x521B;&#x5EFA;&#x86CB;&#x767D;&#x7ED3;&#x679C;&#x6570;&#x636E;</h4>
+<p>We create protein data using the high-flyer method.</p>
+<pre><code>prodat &lt;- makeProteinTable(pepdat, aggregate.fun=aggregateHifly, hifly=3)
+</code></pre><h4 id="332-normalization">3.3.2 Normalization</h4>
+<p>For TMT data we recommend using CONSTANd normalization <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4974351/pdf/zjw2779.pdf" target="_blank">Maes et al. 2016</a>.</p>
+<pre><code>prodat.norm &lt;- normalizeTMT(prodat)
+write.csv(prodat.norm[[&quot;tab&quot;]],file=&apos;prodat.csv&apos;)
+</code></pre><p>These two figures show reporter intensity distributions before and after normalization.</p>
+<pre><code>plotSampleDistributions(prodat, fill=&quot;replicate&quot;)
+</code></pre><p><img src="tmt_3.assets/image-20220126022234665.png" alt="image-20220126022234665"></p>
+<pre><code>plotSampleDistributions(prodat.norm, log.scale=FALSE, fill=&quot;replicate&quot;)
+</code></pre><p><img src="tmt_3.assets/image-20220126022304695.png" alt="image-20220126022304695"></p>
+<h4 id="333-clustering">3.3.3 Clustering</h4>
+<p>We can use the same function <code>plotClustering()</code> to see the dendrogram for the proteins.</p>
+<pre><code>plotClustering(prodat.norm)
+</code></pre><p><img src="tmt_3.assets/image-20220126022354890.png" alt="image-20220126022354890"></p>
+<h3 id="34-&#x5DEE;&#x5F02;&#x8868;&#x8FBE;&#x5206;&#x6790;">3.4 &#x5DEE;&#x5F02;&#x8868;&#x8FBE;&#x5206;&#x6790;</h3>
+<p>&#x6211;&#x4EEC;&#x60F3;&#x6BD4;&#x8F83;SHED&#x7EC4;&#x8DDF;WT&#x7EC4;&#x7684;&#x5DEE;&#x5F02;&#x60C5;&#x51B5;&#xFF0C;&#x4E8E;&#x662F;</p>
+<pre><code>res &lt;- limmaDE(prodat.norm, conditions=c(&quot;WT&quot;, &quot;SHED&quot;))
+write.csv(res,file=&apos;WT_SHED_result.csv&apos;)
+</code></pre><p>&#x5F97;&#x5230;&#x7684;csv&#x6587;&#x4EF6;&#x4E0E;&#x524D;&#x9762;&#x7684;prodat.csv&#x6587;&#x4EF6;&#xFF0C;&#x5373;&#x53EF;&#x53C2;&#x8003;RNA-seq&#x7684;&#x4E0B;&#x6E38;&#x5206;&#x6790;&#x8FDB;&#x884C;&#xFF0C;&#x8FD9;&#x91CC;&#x4E0D;&#x505A;&#x8FC7;&#x591A;&#x7684;&#x9610;&#x8FF0;</p>
+<p>RNA-seq&#x4E0B;&#x6E38;&#x5206;&#x6790;&#x6559;&#x7A0B;&#xFF1A;<a href="https://starlitnightly.github.io/bioinformatic_tutorial/RNASEQ/rnaseq_2.html" target="_blank">https://starlitnightly.github.io/bioinformatic_tutorial/RNASEQ/rnaseq_2.html</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="tmt_2.html" class="navigation navigation-prev " aria-label="Previous page: 5-2. TMT蛋白组学上游分析">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="./" class="navigation navigation-next " aria-label="Next page: 分析6：多组学分析">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"5-3. TMT蛋白组学下游分析","level":"1.8.3","depth":2,"next":{"title":"分析6：多组学分析","level":"1.9","depth":1,"path":"TMT/README.md","ref":"TMT/README.md","articles":[{"title":"6-1. 数据准备","level":"1.9.1","depth":2,"path":"MultiOMIC/book-1.md","ref":"MultiOMIC/book-1.md","articles":[]},{"title":"6-2. GLUE多组学整合","level":"1.9.2","depth":2,"path":"MultiOMIC/book-2.md","ref":"MultiOMIC/book-2.md","articles":[]},{"title":"6-3. 细胞亚群分析","level":"1.9.3","depth":2,"path":"MultiOMIC/book-3.md","ref":"MultiOMIC/book-3.md","articles":[]},{"title":"6-4. 差异表达分析","level":"1.9.4","depth":2,"path":"MultiOMIC/book-4.md","ref":"MultiOMIC/book-4.md","articles":[]},{"title":"6-5. 细胞通讯分析","level":"1.9.5","depth":2,"path":"MultiOMIC/book-5.md","ref":"MultiOMIC/book-5.md","articles":[]},{"title":"6-6. 动态调控分析","level":"1.9.6","depth":2,"path":"MultiOMIC/book-6.md","ref":"MultiOMIC/book-6.md","articles":[]},{"title":"6-7. 转录因子网络","level":"1.9.7","depth":2,"path":"MultiOMIC/book-7.md","ref":"MultiOMIC/book-7.md","articles":[]}]},"previous":{"title":"5-2. TMT蛋白组学上游分析","level":"1.8.2","depth":2,"path":"TMT/tmt_2.md","ref":"TMT/tmt_2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","theme-comscore"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"TMT/tmt_3.md","mtime":"2022-10-18T18:22:29.188Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-18T18:57:57.553Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

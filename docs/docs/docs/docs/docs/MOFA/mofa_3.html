@@ -21,6 +21,14 @@
                 
             
                 
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-cuav-chapters/cuav-chapters.css">
+                
+            
+                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -29,11 +37,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-ivoryhza/ivory.css">
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-ivoryhza/footer.css">
                 
             
         
@@ -75,16 +83,37 @@
     <body>
         
 <div class="book">
-    <div class="book-summary">
-        
-            
+	<div class="header-inner">
+		<!-- LOGO -->
+		<div class="header-inner-left">
+			<div class="logo"></div>
+			<span class="title"></span>
+		</div>
+
+		<!-- Nav -->
+		<div class="header-inner-right">
+			<ul class="header-nav">
+				<li>
+					<a href="http://..." target="_blank">HOME</a>
+				</li>
+			</ul>
+			<!-- Search -->
+			
 <div id="book-search-input" role="search">
     <input type="text" placeholder="Type to search" />
 </div>
 
-            
-                <nav role="navigation">
-                
+		</div>
+
+
+	</div>
+
+	<div class="book-summary">
+		<div class="book-summary-title">目录</div>
+		
+		
+		<nav role="navigation">
+			
 
 
 <ul class="summary">
@@ -536,9 +565,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9" data-path="../TMT/">
+        <li class="chapter " data-level="1.9" data-path="../MultiOMIC/">
             
-                <a href="../TMT/">
+                <a href="../MultiOMIC/">
             
                     
                     分析6：多组学分析
@@ -659,16 +688,24 @@
 </ul>
 
 
-                </nav>
-            
-        
-    </div>
+		</nav>
+		
+		
+	</div>
 
-    <div class="book-body">
-        
-            <div class="body-inner">
-                
-                    
+	<!-- Content nav -->
+	<div class="book-anchor">
+		<div class="book-anchor-title">大纲</div>
+		<div class="book-anchor-body">
+
+		</div>
+	</div>
+
+	<div class="book-body">
+		
+		<div class="body-inner">
+			
+			
 
 <div class="book-header" role="navigation">
     
@@ -683,15 +720,15 @@
 
 
 
-                    <div class="page-wrapper" tabindex="-1" role="main">
-                        <div class="page-inner">
-                            
+			<div class="page-wrapper" tabindex="-1" role="main">
+				<div class="page-inner">
+					
 <div id="book-search-results">
     <div class="search-noresults">
     
-                                <section class="normal markdown-section">
-                                
-                                <h1 id="mofa&#x5206;&#x6790;&#xFF1A;-scrna-seq&#x6570;&#x636E;&#x5904;&#x7406;">MOFA&#x5206;&#x6790;&#xFF1A; scRNA-seq&#x6570;&#x636E;&#x5904;&#x7406;</h1>
+					<section class="normal markdown-section">
+						
+						<h1 id="mofa&#x5206;&#x6790;&#xFF1A;-scrna-seq&#x6570;&#x636E;&#x5904;&#x7406;">MOFA&#x5206;&#x6790;&#xFF1A; scRNA-seq&#x6570;&#x636E;&#x5904;&#x7406;</h1>
 <p>&#x7531;&#x4E8E;&#x5355;&#x7EC6;&#x80DE;&#x539F;&#x59CB;&#x77E9;&#x9635;&#x8F83;&#x5927;&#xFF0C;&#x6211;&#x4EEC;&#x8FDB;&#x884C;mofa&#x5206;&#x6790;&#x65F6;&#x5F80;&#x5F80;&#x9700;&#x8981;&#x5BF9;scRNA-seq&#x6570;&#x636E;&#x8FDB;&#x884C;&#x9884;&#x5904;&#x7406;</p>
 <h2 id="1-&#x6570;&#x636E;&#x51C6;&#x5907;">1. &#x6570;&#x636E;&#x51C6;&#x5907;</h2>
 <h3 id="11-&#x5BFC;&#x5165;&#x5305;">1.1 &#x5BFC;&#x5165;&#x5305;</h3>
@@ -753,10 +790,12 @@ rna_pair = rna_pair[:, rna_pair.var.highly_variable]
 sc.pp.scale(rna_pair, max_value=<span class="hljs-number">10</span>)
 rna_pair.write_h5ad(<span class="hljs-string">&apos;rna_mofa.h5ad&apos;</span>,compression=<span class="hljs-string">&apos;gzip&apos;</span>)
 </code></pre>
-
-                                
-                                </section>
-                            
+<footer class="page-footer"><span class="copyright">&#x7248;&#x6743;&#x6240;&#x6709; &#xA9; Starlitnightly</span><span class="footer-modification">&#x6700;&#x540E;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2022-10-17
+</span></footer>
+						
+					</section>
+					
     </div>
     <div class="search-results">
         <div class="has-results">
@@ -773,32 +812,31 @@ rna_pair.write_h5ad(<span class="hljs-string">&apos;rna_mofa.h5ad&apos;</span>,c
     </div>
 </div>
 
-                        </div>
-                    </div>
-                
-            </div>
+				</div>
+			</div>
+			
+		</div>
 
-            
-                
-                <a href="mofa_2.html" class="navigation navigation-prev " aria-label="Previous page: 4-2. 单细胞样本对齐">
-                    <i class="fa fa-angle-left"></i>
-                </a>
-                
-                
-                <a href="mofa_4.html" class="navigation navigation-next " aria-label="Next page: 4-4. scATAC-seq数据处理">
-                    <i class="fa fa-angle-right"></i>
-                </a>
-                
-            
-        
-    </div>
-
-    <script>
-        var gitbook = gitbook || [];
-        gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"4-3. scRNA-seq数据处理","level":"1.7.3","depth":2,"next":{"title":"4-4. scATAC-seq数据处理","level":"1.7.4","depth":2,"path":"MOFA/mofa_4.md","ref":"MOFA/mofa_4.md","articles":[]},"previous":{"title":"4-2. 单细胞样本对齐","level":"1.7.2","depth":2,"path":"MOFA/mofa_2.md","ref":"MOFA/mofa_2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","theme-comscore"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"MOFA/mofa_3.md","mtime":"2022-10-18T19:07:56.583Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-18T19:11:08.078Z"},"basePath":"..","book":{"language":""}});
-        });
-    </script>
+		
+		
+		<a href="mofa_2.html" title="上一页" class="navigation navigation-prev " aria-label="Previous page: 4-2. 单细胞样本对齐">
+			<i class="fa fa-angle-left"></i>
+		</a>
+		
+		
+		<a href="mofa_4.html" title="下一页" class="navigation navigation-next " aria-label="Next page: 4-4. scATAC-seq数据处理">
+			<i class="fa fa-angle-right"></i>
+		</a>
+		
+		
+		
+	</div>
+	<script>
+		var gitbook = gitbook || [];
+		gitbook.push(function() {
+			gitbook.page.hasChanged({"page":{"title":"4-3. scRNA-seq数据处理","level":"1.7.3","depth":2,"next":{"title":"4-4. scATAC-seq数据处理","level":"1.7.4","depth":2,"path":"MOFA/mofa_4.md","ref":"MOFA/mofa_4.md","articles":[]},"previous":{"title":"4-2. 单细胞样本对齐","level":"1.7.2","depth":2,"path":"MOFA/mofa_2.md","ref":"MOFA/mofa_2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"themeIvoryhza":{"nav":[{"url":"http://...","target":"_blank","name":"HOME"}]}},"plugins":["expandable-chapters","-sharing","-fontsettings","back-to-top-button","copy-code-button","cuav-chapters","heading-anchors","theme-ivoryhza"],"pluginsConfig":{"search":{},"theme-ivoryhza":{"search-placeholder":"搜索","logo":"./logo.png","appleTouchIconPrecomposed152":"./logo.png","copyright":"版权所有 © Starlitnightly","modify_label":"最后修订时间：","modify_format":"2022-10-17"},"cuav-chapters":{"summaryMaxSize":20,"useLimitExpanded":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"heading-anchors":{},"highlight":{},"back-to-top-button":{},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"MOFA/mofa_3.md","mtime":"2022-10-18T19:07:56.583Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-18T19:40:25.819Z"},"basePath":"..","book":{"language":""}});
+		});
+	</script>
 </div>
 
         
@@ -807,6 +845,26 @@ rna_pair.write_h5ad(<span class="hljs-string">&apos;rna_mofa.h5ad&apos;</span>,c
     
         
         <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-cuav-chapters/cuav-chapters.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/1.2.1/anchor.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-heading-anchors/anchor-style.js"></script>
         
     
         
@@ -826,15 +884,7 @@ rna_pair.write_h5ad(<span class="hljs-string">&apos;rna_mofa.h5ad&apos;</span>,c
         
     
         
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        <script src="../gitbook/gitbook-plugin-theme-ivoryhza/ivory.js"></script>
         
     
 

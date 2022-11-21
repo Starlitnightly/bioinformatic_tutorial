@@ -21,6 +21,8 @@
 
 - [分析4: MOFA单细胞多组学因子分析]:https://starlitnightly.github.io/bioinformatic_tutorial/MOFA/
 
+- [绘图: Python数据可视化-生物信息学专栏]: https://starlitnightly.github.io/bioinformatic_tutorial/PLOT/
+
 ## License
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-lightgrey" /></a>
