@@ -768,7 +768,7 @@ computing UMAP
     finished: added
     &apos;X_umap&apos;, UMAP coordinates (adata.obsm) (0:00:05)
 </code></pre>
-<p><img src="../Users/fernandozeng/Desktop/brca_new/book/book-3.assets/image-20221019004245874.png" alt="image-20221019004245874" style="zoom:50%;"></p>
+<p><img src="book-3.assets/image-20221019004245874-6119960.png" alt="image-20221019004245874" style="zoom:50%;"></p>
 <p>&#x6211;&#x4EEC;&#x63A5;&#x7740;&#x6784;&#x5EFA;velocity&#x7684;&#x52A8;&#x6001;&#x8C03;&#x63A7;&#x8FC7;&#x7A0B;&#x7F51;</p>
 <pre><code class="lang-python">scv.tl.recover_dynamics(adata,n_jobs=<span class="hljs-number">6</span>)
 scv.tl.velocity(adata, mode=<span class="hljs-string">&apos;dynamical&apos;</span>)
@@ -791,7 +791,7 @@ computing velocity embedding
     finished (0:00:00) --&gt; added
     &apos;velocity_umap&apos;, embedded velocity vectors (adata.obsm)
 </code></pre>
-<p><img src="../Users/fernandozeng/Desktop/brca_new/book/book-3.assets/image-20221019004442469.png" alt="image-20221019004442469" style="zoom:50%;"></p>
+<p><img src="book-3.assets/image-20221019004442469-6119965.png" alt="image-20221019004442469" style="zoom:50%;"></p>
 <p>&#x6211;&#x4EEC;&#x63A5;&#x7740;&#x8BA1;&#x7B97;&#x62DF;&#x65F6;&#x5E8F;</p>
 <pre><code class="lang-python">scv.tl.latent_time(adata)
 scv.pl.scatter(adata, color=<span class="hljs-string">&apos;latent_time&apos;</span>, color_map=<span class="hljs-string">&apos;Reds&apos;</span>, size=<span class="hljs-number">80</span>)
@@ -806,7 +806,7 @@ computing latent time using root_cells as prior
     finished (0:00:00) --&gt; added 
     &apos;latent_time&apos;, shared time (adata.obs)
 </code></pre>
-<p><img src="../Users/fernandozeng/Desktop/brca_new/book/book-3.assets/image-20221019004556158.png" alt="image-20221019004556158" style="zoom:50%;"></p>
+<p><img src="book-3.assets/image-20221019004556158-6119968.png" alt="image-20221019004556158" style="zoom:50%;"></p>
 <p>&#x7136;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x4F7F;&#x7528;B&#x7EC6;&#x80DE;&#x7684;&#x5B57;&#x5178;&#xFF0C;&#x6765;&#x5BF9;B&#x7EC6;&#x80DE;&#x7684;&#x7EC6;&#x80DE;&#x7C7B;&#x578B;&#x8FDB;&#x884C;&#x6807;&#x6CE8;&#xFF0C;&#x5E76;&#x4E14;&#x4F7F;&#x7528;t-test&#x627E;&#x51FA;&#x6BCF;&#x4E00;&#x7C7B;leiden&#x7684;marker&#x57FA;&#x56E0;&#x7528;&#x4E8E;&#x8F85;&#x52A9;&#x6CE8;&#x91CA;</p>
 <pre><code class="lang-python"><span class="hljs-comment">#B&#x7EC6;&#x80DE;&#x5B57;&#x5178;</span>
 res_marker_dict={
@@ -831,7 +831,7 @@ WARNING: Groups are not reordered because the `groupby` categories and the `var_
 categories: 0, 1, 2, etc.
 var_group_labels: na&#xEF;ve B cell, memory B cell, Pre-B cell, etc.
 </code></pre>
-<p><img src="../Users/fernandozeng/Desktop/brca_new/book/book-3.assets/image-20221019004807328.png" alt="image-20221019004807328" style="zoom:50%;"></p>
+<p><img src="book-3.assets/image-20221019004807328-6119971.png" alt="image-20221019004807328" style="zoom:50%;"></p>
 <pre><code class="lang-python"><span class="hljs-comment">#&#x6CE8;&#x610F;&#xFF0C;&#x8FD9;&#x91CC;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;cosg&#x6765;&#x5BFB;&#x627E;marker&#x57FA;&#x56E0;</span>
 adata.uns[<span class="hljs-string">&apos;log1p&apos;</span>][<span class="hljs-string">&apos;base&apos;</span>]=<span class="hljs-keyword">None</span>
 sc.tl.rank_genes_groups(adata, <span class="hljs-string">&apos;leiden&apos;</span>, method=<span class="hljs-string">&apos;t-test&apos;</span>)
@@ -844,7 +844,7 @@ sc.pl.rank_genes_groups_dotplot(adata,groupby=<span class="hljs-string">&apos;le
 WARNING: It seems you use rank_genes_groups on the raw count data. Please logarithmize your data before calling rank_genes_groups.
     finished (0:00:00)
 </code></pre>
-<p><img src="../Users/fernandozeng/Desktop/brca_new/book/book-3.assets/image-20221019004930306.png" alt="image-20221019004930306" style="zoom:50%;"></p>
+<p><img src="book-3.assets/image-20221019004930306-6119974.png" alt="image-20221019004930306" style="zoom:50%;"></p>
 <p>&#x6700;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x6807;&#x6CE8;leiden&#x5BF9;&#x5E94;&#x7684;&#x7EC6;&#x80DE;&#x7C7B;&#x578B;&#xFF0C;&#x5E76;&#x4E0A;&#x8272;</p>
 <pre><code class="lang-python"><span class="hljs-comment">#leiden&#x5BF9;&#x5E94;&#x7684;&#x7EC6;&#x80DE;&#x7C7B;&#x578B;&#x6807;&#x6CE8;</span>
 cluster2annotation = {
@@ -884,7 +884,7 @@ ax=scv.pl.velocity_embedding_stream(adata, basis=<span class="hljs-string">&apos
                                 legend_align_text=<span class="hljs-string">&apos;y&apos;</span>,show=<span class="hljs-keyword">False</span>,)
 plt.savefig(<span class="hljs-string">&quot;prop/cell_type.png&quot;</span>,dpi=<span class="hljs-number">300</span>,bbox_inches = <span class="hljs-string">&apos;tight&apos;</span>)
 </code></pre>
-<p><img src="../Users/fernandozeng/Desktop/brca_new/book/book-3.assets/image-20221019005115998.png" alt="image-20221019005115998" style="zoom:50%;"></p>
+<p><img src="book-3.assets/image-20221019005115998-6119977.png" alt="image-20221019005115998" style="zoom:50%;"></p>
 <p>&#x7136;&#x540E;&#xFF0C;&#x4E3A;&#x4E86;&#x5206;&#x6790;&#x9634;&#x6027;&#x6DCB;&#x5DF4;&#x7ED3;&#x8DDF;&#x9633;&#x6027;&#x6DCB;&#x5DF4;&#x7ED3;&#x7684;&#x7EC6;&#x80DE;&#x6BD4;&#x4F8B;&#x5DEE;&#x5F02;&#xFF0C;&#x6211;&#x4EEC;&#x8BA1;&#x7B97;&#x4E86;&#x4E24;&#x79CD;&#x6DCB;&#x5DF4;&#x7ED3;&#x4E2D;&#x7684;&#x7EC6;&#x80DE;&#x6BD4;&#x4F8B;</p>
 <pre><code class="lang-python"><span class="hljs-comment">#&#x9633;&#x6027;&#x6DCB;&#x5DF4;&#x7ED3;</span>
 <span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
@@ -904,7 +904,7 @@ plt.pie(x=data,labels=labels,autopct=<span class="hljs-string">&quot;%0.1f%%&quo
 plt.title(<span class="hljs-string">&apos;Pos Lym&apos;</span>)
 plt.savefig(<span class="hljs-string">&quot;prop/pos_prop.png&quot;</span>,dpi=<span class="hljs-number">300</span>,bbox_inches = <span class="hljs-string">&apos;tight&apos;</span>)
 </code></pre>
-<p><img src="../Users/fernandozeng/Desktop/brca_new/book/book-3.assets/image-20221019005254018.png" alt="image-20221019005254018" style="zoom:50%;"></p>
+<p><img src="book-3.assets/image-20221019005254018-6119981.png" alt="image-20221019005254018" style="zoom:50%;"></p>
 <pre><code class="lang-python"><span class="hljs-comment">#&#x9634;&#x6027;&#x6DCB;&#x5DF4;&#x7ED3;</span>
 <span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
 <span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt
@@ -925,7 +925,7 @@ plt.grid(<span class="hljs-keyword">False</span>)
 plt.axis(<span class="hljs-string">&apos;off&apos;</span>)
 plt.savefig(<span class="hljs-string">&quot;prop/neg_prop.png&quot;</span>,dpi=<span class="hljs-number">300</span>,bbox_inches = <span class="hljs-string">&apos;tight&apos;</span>)
 </code></pre>
-<p><img src="../Users/fernandozeng/Desktop/brca_new/book/book-3.assets/image-20221019005328419.png" alt="image-20221019005328419" style="zoom:50%;"></p>
+<p><img src="book-3.assets/image-20221019005328419-6119984.png" alt="image-20221019005328419" style="zoom:50%;"></p>
 <p>&#x9664;&#x4E86;&#x4F7F;&#x7528;&#x6247;&#x5F62;&#x56FE;&#x5916;&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x80FD;&#x7528;&#x67F1;&#x72B6;&#x56FE;&#x66F4;&#x52A0;&#x76F4;&#x89C2;&#x7684;&#x611F;&#x53D7;&#x7EC6;&#x80DE;&#x7C7B;&#x578B;&#x7684;&#x6BD4;&#x4F8B;&#xFF0C;&#x6211;&#x4EEC;&#x5148;&#x6784;&#x5EFA;&#x4E00;&#x4E2A;pandas&#x8868;&#x683C;&#x7528;&#x4E8E;&#x7ED8;&#x5236;&#x67F1;&#x72B6;&#x56FE;</p>
 <pre><code class="lang-python">prop_pd1=pd.DataFrame(index=list(set(adata.obs[<span class="hljs-string">&apos;B_celltype&apos;</span>])))
 prop_pd1[<span class="hljs-string">&apos;Cell&apos;</span>]=prop_pd1.index.tolist()
@@ -1037,7 +1037,7 @@ sns.move_legend(ax, <span class="hljs-string">&quot;upper left&quot;</span>, bbo
 
 plt.savefig(<span class="hljs-string">&quot;prop/prop.png&quot;</span>,dpi=<span class="hljs-number">300</span>,bbox_inches = <span class="hljs-string">&apos;tight&apos;</span>)
 </code></pre>
-<p><img src="../Users/fernandozeng/Desktop/brca_new/book/book-3.assets/image-20221019005554337.png" alt="image-20221019005554337" style="zoom:50%;"></p>
+<p><img src="book-3.assets/image-20221019005554337-6119988.png" alt="image-20221019005554337" style="zoom:50%;"></p>
 <p>&#x9664;&#x6B64;&#x4E4B;&#x5916;&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x53EF;&#x4EE5;&#x5206;&#x6790;&#x7EC6;&#x80DE;&#x4E9A;&#x7FA4;&#x7684;&#x6F14;&#x53D8;&#x8FC7;&#x7A0B;</p>
 <pre><code class="lang-python">scv.tl.paga(adata, groups=<span class="hljs-string">&apos;B_celltype&apos;</span>,use_time_prior=<span class="hljs-keyword">False</span>)
 scv.pl.paga(adata, basis=<span class="hljs-string">&apos;umap&apos;</span>, size=<span class="hljs-number">50</span>, alpha=<span class="hljs-number">.1</span>,
@@ -1050,7 +1050,7 @@ scv.pl.paga(adata, basis=<span class="hljs-string">&apos;umap&apos;</span>, size
     &apos;paga/connectivities_tree&apos;, connectivities subtree (adata.uns)
     &apos;paga/transitions_confidence&apos;, velocity transitions (adata.uns)
 </code></pre>
-<p><img src="../Users/fernandozeng/Desktop/brca_new/book/book-3.assets/image-20221019005740026.png" alt="image-20221019005740026" style="zoom:50%;"></p>
+<p><img src="book-3.assets/image-20221019005740026-6119990.png" alt="image-20221019005740026" style="zoom:50%;"></p>
 <p>&#x5230;&#x6B64;&#xFF0C;&#x7EC6;&#x80DE;&#x4E9A;&#x7FA4;&#x6CE8;&#x91CA;&#x53CA;&#x76F8;&#x5173;&#x7684;&#x56FE;&#x8868;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x7ED8;&#x5236;&#x5B8C;&#x6210;&#x4E86;&#xFF0C;&#x6211;&#x4EEC;&#x4FDD;&#x5B58;&#x4E00;&#x4E0B;</p>
 <pre><code class="lang-python">adata.write_h5ad(<span class="hljs-string">&apos;B_cell_anno_new.h5ad&apos;</span>,compression=<span class="hljs-string">&apos;gzip&apos;</span>)
 </code></pre>
@@ -1097,7 +1097,7 @@ scv.pl.paga(adata, basis=<span class="hljs-string">&apos;umap&apos;</span>, size
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"6-3. 细胞亚群分析","level":"1.9.3","depth":2,"next":{"title":"6-4. 差异表达分析","level":"1.9.4","depth":2,"path":"MultiOMIC/book-4.md","ref":"MultiOMIC/book-4.md","articles":[]},"previous":{"title":"6-2. GLUE多组学整合","level":"1.9.2","depth":2,"path":"MultiOMIC/book-2.md","ref":"MultiOMIC/book-2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","theme-comscore"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"MultiOMIC/book-3.md","mtime":"2022-10-18T17:02:32.270Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-18T18:57:57.553Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"6-3. 细胞亚群分析","level":"1.9.3","depth":2,"next":{"title":"6-4. 差异表达分析","level":"1.9.4","depth":2,"path":"MultiOMIC/book-4.md","ref":"MultiOMIC/book-4.md","articles":[]},"previous":{"title":"6-2. GLUE多组学整合","level":"1.9.2","depth":2,"path":"MultiOMIC/book-2.md","ref":"MultiOMIC/book-2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","theme-comscore"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"MultiOMIC/book-3.md","mtime":"2022-10-18T19:06:32.073Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-18T19:11:08.078Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
