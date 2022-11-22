@@ -41,4 +41,5 @@
     * [6-7. 转录因子网络](MultiOMIC/book-7.md)
 * [绘图：Python可视化](PLOT/README.md)
     * [1-1. 火山图](PLOT/plot_1.md)
+    * [1-2. 箱线图](PLOT/plot_2.md)
 

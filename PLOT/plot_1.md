@@ -6,6 +6,8 @@
 
 首先带来的第一个图是火山图，为什么要叫火山图呢，实际上只是因为形状有一点像火山喷发，所以被人们这么命名，在本期的教程，我将Python中matplotlib的语法贯穿其中，不讲概念，希望大家能有所收获
 
+**数据下载地址：https://github.com/Starlitnightly/bioinformatic_tutorial/tree/main/PLOT/data/data_vol.csv**
+
 ### 1.1 画图配置
 
 我们首先配置一下jupyter的显示效果，这里用了retina作为显示的图片格式，其次导入了一些常见的包，并提供了一个色卡
@@ -251,7 +253,6 @@ fig, ax = plt.subplots(figsize=(3,3))
 
 
 ```python
-fig, ax = plt.subplots(figsize=(3,3))
 #绘制散点图,x轴为log2FC，y轴为-log10(padj)
 ax.scatter(x=data['log2FoldChange'],
             y=data['log(padj)'],)
@@ -259,7 +260,6 @@ ax.scatter(x=data['log2FoldChange'],
 
 
     <matplotlib.collections.PathCollection at 0x7efd73e1caf0>
-
 
 
 
@@ -311,25 +311,6 @@ ax.scatter(x=data[data['sig']=='down']['log2FoldChange'],
 
 
 ```python
-fig, ax = plt.subplots(figsize=(3,3))
-#首先绘制正常基因
-ax.scatter(x=data[data['sig']=='normal']['log2FoldChange'],
-           y=data[data['sig']=='normal']['log(padj)'],
-           color='#FFFFBF',#颜色
-           alpha=.5,#透明度
-           )
-#接着绘制上调基因
-ax.scatter(x=data[data['sig']=='up']['log2FoldChange'],
-           y=data[data['sig']=='up']['log(padj)'],
-           color='#FC8D59',#选择色卡第15个颜色
-           alpha=.5,#透明度
-           )
-#绘制下调基因
-ax.scatter(x=data[data['sig']=='down']['log2FoldChange'],
-           y=data[data['sig']=='down']['log(padj)'],
-           color='#91CF60',#颜色
-           alpha=.5,#透明度
-           )
 
 ax.plot([data['log2FoldChange'].min(),data['log2FoldChange'].max()],#辅助线的x值起点与终点
         [-np.log10(0.05),-np.log10(0.05)],#辅助线的y值起点与终点
@@ -370,45 +351,6 @@ data.loc[data['log(padj)']>10,'log(padj)']=10
 
 
 ```python
-fig, ax = plt.subplots(figsize=(3,3))
-#首先绘制正常基因
-ax.scatter(x=data[data['sig']=='normal']['log2FoldChange'],
-           y=data[data['sig']=='normal']['log(padj)'],
-           color='#FFFFBF',#颜色
-           alpha=.5,#透明度
-           )
-#接着绘制上调基因
-ax.scatter(x=data[data['sig']=='up']['log2FoldChange'],
-           y=data[data['sig']=='up']['log(padj)'],
-           color='#FC8D59',#选择色卡第15个颜色
-           alpha=.5,#透明度
-           )
-#绘制下调基因
-ax.scatter(x=data[data['sig']=='down']['log2FoldChange'],
-           y=data[data['sig']=='down']['log(padj)'],
-           color='#91CF60',#颜色
-           alpha=.5,#透明度
-           )
-#绘制辅助线p-value
-ax.plot([data['log2FoldChange'].min(),data['log2FoldChange'].max()],#辅助线的x值起点与终点
-        [-np.log10(0.05),-np.log10(0.05)],#辅助线的y值起点与终点
-        linewidth=2,#辅助线的宽度
-        linestyle="--",#辅助线类型：虚线
-        color='black'#辅助线的颜色
-        )
-#绘制辅助线log2FC>2
-ax.plot([2,2],
-        [data['log(padj)'].min(),300],
-        linewidth=2, 
-        linestyle="--",
-        color='black')
-#绘制辅助线log2FC<-2
-ax.plot([-2,-2],
-        [data['log(padj)'].min(),300],
-        linewidth=2, 
-        linestyle="--",
-        color='black')
-
 #更改y坐标轴内容，使其只显示到10，并且稍微延长一些
 ax.set_yticks([0,2,4,6,8,10,12],#要修改的y坐标轴目标
               ['0','2','4','6','8','>10',''],#要修改的y坐标轴内容
@@ -451,69 +393,6 @@ ax.set_title('DEseq2 Analysis',font1)
 
 
 ```python
-fig, ax = plt.subplots(figsize=(3,3))
-#首先绘制正常基因
-ax.scatter(x=data[data['sig']=='normal']['log2FoldChange'],
-           y=data[data['sig']=='normal']['log(padj)'],
-           color='#FFFFBF',#颜色
-           alpha=.5,#透明度
-           )
-#接着绘制上调基因
-ax.scatter(x=data[data['sig']=='up']['log2FoldChange'],
-           y=data[data['sig']=='up']['log(padj)'],
-           color='#FC8D59',#选择色卡第15个颜色
-           alpha=.5,#透明度
-           )
-#绘制下调基因
-ax.scatter(x=data[data['sig']=='down']['log2FoldChange'],
-           y=data[data['sig']=='down']['log(padj)'],
-           color='#91CF60',#颜色
-           alpha=.5,#透明度
-           )
-#绘制辅助线p-value
-ax.plot([data['log2FoldChange'].min(),data['log2FoldChange'].max()],#辅助线的x值起点与终点
-        [-np.log10(0.05),-np.log10(0.05)],#辅助线的y值起点与终点
-        linewidth=2,#辅助线的宽度
-        linestyle="--",#辅助线类型：虚线
-        color='black'#辅助线的颜色
-        )
-#绘制辅助线log2FC>2
-ax.plot([2,2],
-        [data['log(padj)'].min(),300],
-        linewidth=2, 
-        linestyle="--",
-        color='black')
-#绘制辅助线log2FC<-2
-ax.plot([-2,-2],
-        [data['log(padj)'].min(),300],
-        linewidth=2, 
-        linestyle="--",
-        color='black')
-
-#更改y坐标轴内容，使其只显示到10，并且稍微延长一些
-ax.set_yticks([0,2,4,6,8,10,12],#要修改的y坐标轴目标
-              ['0','2','4','6','8','>10',''],#要修改的y坐标轴内容
-              fontsize=10,
-              fontweight='bold'
-           )
-ax.set_ylim(0,12)
-#更改x坐标轴的字体
-ax.set_xticks(ax.get_xticks()[1:-1],#获取x坐标轴内容
-              ax.get_xticks()[1:-1],#更新x坐标轴内容
-              fontsize=10,
-              fontweight='bold'
-              )
-#字体类型定义
-font1={
-    'weight':'bold',
-    'size':10,
-}
-#设置横标签与纵标签
-ax.set_ylabel('-log(pvalue)',font1)                                    
-ax.set_xlabel('log2FC',font1)
-#设置标题
-ax.set_title('DEseq2 Analysis',font1)
-
 #绘制图注
 #legend标签列表，上面的color即是颜色列表
 labels = ['up:{0}'.format(len(data[data['sig']=='up'])),
@@ -545,83 +424,6 @@ ax.legend(handles=patches,
 
 
 ```python
-fig, ax = plt.subplots(figsize=(3,3))
-#首先绘制正常基因
-ax.scatter(x=data[data['sig']=='normal']['log2FoldChange'],
-           y=data[data['sig']=='normal']['log(padj)'],
-           color='#FFFFBF',#颜色
-           alpha=.5,#透明度
-           )
-#接着绘制上调基因
-ax.scatter(x=data[data['sig']=='up']['log2FoldChange'],
-           y=data[data['sig']=='up']['log(padj)'],
-           color='#FC8D59',#选择色卡第15个颜色
-           alpha=.5,#透明度
-           )
-#绘制下调基因
-ax.scatter(x=data[data['sig']=='down']['log2FoldChange'],
-           y=data[data['sig']=='down']['log(padj)'],
-           color='#91CF60',#颜色
-           alpha=.5,#透明度
-           )
-#绘制辅助线p-value
-ax.plot([data['log2FoldChange'].min(),data['log2FoldChange'].max()],#辅助线的x值起点与终点
-        [-np.log10(0.05),-np.log10(0.05)],#辅助线的y值起点与终点
-        linewidth=2,#辅助线的宽度
-        linestyle="--",#辅助线类型：虚线
-        color='black'#辅助线的颜色
-        )
-#绘制辅助线log2FC>2
-ax.plot([2,2],
-        [data['log(padj)'].min(),300],
-        linewidth=2, 
-        linestyle="--",
-        color='black')
-#绘制辅助线log2FC<-2
-ax.plot([-2,-2],
-        [data['log(padj)'].min(),300],
-        linewidth=2, 
-        linestyle="--",
-        color='black')
-
-#更改y坐标轴内容，使其只显示到10，并且稍微延长一些
-ax.set_yticks([0,2,4,6,8,10,12],#要修改的y坐标轴目标
-              ['0','2','4','6','8','>10',''],#要修改的y坐标轴内容
-              fontsize=10,
-              fontweight='bold'
-           )
-ax.set_ylim(0,12)
-#更改x坐标轴的字体
-ax.set_xticks(ax.get_xticks()[1:-1],#获取x坐标轴内容
-              ax.get_xticks()[1:-1],#更新x坐标轴内容
-              fontsize=10,
-              fontweight='bold'
-              )
-#字体类型定义
-font1={
-    'weight':'bold',
-    'size':10,
-}
-#设置横标签与纵标签
-ax.set_ylabel('-log(pvalue)',font1)                                    
-ax.set_xlabel('log2FC',font1)
-#设置标题
-ax.set_title('DEseq2 Analysis',font1)
-
-#绘制图注
-#legend标签列表，上面的color即是颜色列表
-labels = ['up:{0}'.format(len(data[data['sig']=='up'])),
-          'down:{0}'.format(len(data[data['sig']=='down']))]  
-#用label和color列表生成mpatches.Patch对象，它将作为句柄来生成legend
-color = ['#FC8D59','#91CF60']
-patches = [mpatches.Patch(color=color[i], label="{:s}".format(labels[i]) ) for i in range(len(color))] 
-
-ax.legend(handles=patches,
-      bbox_to_anchor=(1, -0.2), 
-      ncol=2,
-      fontsize=10)
-
-
 ax.spines['top'].set_visible(False)
 ax.spines['right'].set_visible(False)
 ax.spines['bottom'].set_visible(True)
@@ -647,92 +449,6 @@ ax.spines['top'].set_linewidth(2);####设置上部坐标轴的粗细
 
 ```python
 from adjustText import adjust_text
-
-fig, ax = plt.subplots(figsize=(3,3))
-#首先绘制正常基因
-ax.scatter(x=data[data['sig']=='normal']['log2FoldChange'],
-           y=data[data['sig']=='normal']['log(padj)'],
-           color='#FFFFBF',#颜色
-           alpha=.5,#透明度
-           )
-#接着绘制上调基因
-ax.scatter(x=data[data['sig']=='up']['log2FoldChange'],
-           y=data[data['sig']=='up']['log(padj)'],
-           color='#FC8D59',#选择色卡第15个颜色
-           alpha=.5,#透明度
-           )
-#绘制下调基因
-ax.scatter(x=data[data['sig']=='down']['log2FoldChange'],
-           y=data[data['sig']=='down']['log(padj)'],
-           color='#91CF60',#颜色
-           alpha=.5,#透明度
-           )
-#绘制辅助线p-value
-ax.plot([data['log2FoldChange'].min(),data['log2FoldChange'].max()],#辅助线的x值起点与终点
-        [-np.log10(0.05),-np.log10(0.05)],#辅助线的y值起点与终点
-        linewidth=1,#辅助线的宽度
-        linestyle="--",#辅助线类型：虚线
-        color='grey'#辅助线的颜色
-        )
-#绘制辅助线log2FC>2
-ax.plot([2,2],
-        [data['log(padj)'].min(),300],
-        linewidth=2, 
-        linestyle="--",
-        color='grey')
-#绘制辅助线log2FC<-2
-ax.plot([-2,-2],
-        [data['log(padj)'].min(),300],
-        linewidth=2, 
-        linestyle="--",
-        color='grey')
-
-#更改y坐标轴内容，使其只显示到10，并且稍微延长一些
-ax.set_yticks([0,2,4,6,8,10,12],#要修改的y坐标轴目标
-              ['0','2','4','6','8','>10',''],#要修改的y坐标轴内容
-              fontsize=10,
-              fontweight='bold'
-           )
-ax.set_ylim(0,12)
-#更改x坐标轴的字体
-ax.set_xticks(ax.get_xticks()[1:-1],#获取x坐标轴内容
-              ax.get_xticks()[1:-1],#更新x坐标轴内容
-              fontsize=10,
-              fontweight='bold'
-              )
-#字体类型定义
-font1={
-    'weight':'bold',
-    'size':10,
-}
-#设置横标签与纵标签
-ax.set_ylabel('-log(pvalue)',font1)                                    
-ax.set_xlabel('log2FC',font1)
-#设置标题
-ax.set_title('DEseq2 Analysis',fontdict={'size':11,'weight':'bold'})
-
-#绘制图注
-#legend标签列表，上面的color即是颜色列表
-labels = ['up:{0}'.format(len(data[data['sig']=='up'])),
-          'down:{0}'.format(len(data[data['sig']=='down']))]  
-#用label和color列表生成mpatches.Patch对象，它将作为句柄来生成legend
-color = ['#FC8D59','#91CF60']
-patches = [mpatches.Patch(color=color[i], label="{:s}".format(labels[i]) ) for i in range(len(color))] 
-
-ax.legend(handles=patches,
-      bbox_to_anchor=(1, -0.2), 
-      ncol=2,
-      fontsize=10)
-
-
-ax.spines['top'].set_visible(False)
-ax.spines['right'].set_visible(False)
-ax.spines['bottom'].set_visible(True)
-ax.spines['left'].set_visible(True)
-ax.spines['bottom'].set_linewidth(2);###设置底部坐标轴的粗细
-ax.spines['left'].set_linewidth(2);####设置左边坐标轴的粗细
-ax.spines['right'].set_linewidth(2);###设置右边坐标轴的粗细
-ax.spines['top'].set_linewidth(2);####设置上部坐标轴的粗细
 
 hub_gene=data['padj'].sort_values().index.tolist()
 texts=[ax.text(data.loc[i,'log2FoldChange'], 

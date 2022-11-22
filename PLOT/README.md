@@ -4,4 +4,6 @@
 
 这个教程拖了很久，今天被这个人这句话，刺激到了，其实Python能画的图不比R语言差，就是看你会不会画而已，在本期教程中，我主要讲讲在生物信息学中，常见的一些图以及画法，并且提供相应的数据供参考。
 
+数据下载地址：https://github.com/Starlitnightly/bioinformatic_tutorial/tree/main/PLOT/data
+
 ——by 星夜｜2022.11.22

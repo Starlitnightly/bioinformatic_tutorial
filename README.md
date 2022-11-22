@@ -11,17 +11,16 @@
 
 ## 目录
 
-- [配置]: https://starlitnightly.github.io/bioinformatic_tutorial/CONFIG/
+- 【配置】：https://starlitnightly.github.io/bioinformatic_tutorial/CONFIG/ 
+- 【分析1: RNA-seq上游】：https://starlitnightly.github.io/bioinformatic_tutorial/RNASEQUP/
+- 【分析2: RNA-seq下游】：https://starlitnightly.github.io/bioinformatic_tutorial/RNASEQ/
+- 【分析3: 单细胞样本对齐】：https://starlitnightly.github.io/bioinformatic_tutorial/SCGLUE/ 
+- 【分析4: MOFA单细胞多组学因子分析】：https://starlitnightly.github.io/bioinformatic_tutorial/MOFA/ 
+- 【绘图：Python数据可视化-生物信息学专栏】：https://starlitnightly.github.io/bioinformatic_tutorial/PLOT/ 
 
-- [分析1: RNA-seq上游]: https://starlitnightly.github.io/bioinformatic_tutorial/RNASEQUP/
+## 数据
 
-- [分析2: RNA-seq下游]: https://starlitnightly.github.io/bioinformatic_tutorial/RNASEQ/
-
-- [分析3: 单细胞样本对齐]:https://starlitnightly.github.io/bioinformatic_tutorial/SCGLUE/
-
-- [分析4: MOFA单细胞多组学因子分析]:https://starlitnightly.github.io/bioinformatic_tutorial/MOFA/
-
-- [绘图: Python数据可视化-生物信息学专栏]: https://starlitnightly.github.io/bioinformatic_tutorial/PLOT/
+【绘图：Python数据可视化-生物信息学专栏】：https://starlitnightly.github.io/bioinformatic_tutorial/PLOT/data 
 
 ## License
 
