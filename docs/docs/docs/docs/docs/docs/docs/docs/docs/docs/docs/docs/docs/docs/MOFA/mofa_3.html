@@ -448,7 +448,20 @@
                 <a href="mofa_6.html">
             
                     
-                    4-6. MOFA下游分析
+                    4-6. MOFA下游分析-R语言环节
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="mofa_7.html">
+            
+                <a href="mofa_7.html">
+            
+                    
+                    4-7. MOFA下游分析-Python环节
             
                 </a>
             
@@ -520,14 +533,19 @@
 <h3 id="12-&#x5BFC;&#x5165;&#x6570;&#x636E;">1.2 &#x5BFC;&#x5165;&#x6570;&#x636E;</h3>
 <pre><code class="lang-python">rna_pair = anndata.read_h5ad(<span class="hljs-string">&quot;rna_pair.h5ad&quot;</span>)
 <span class="hljs-comment">#atac_pair = anndata.read_h5ad(&quot;atac_pair.h5ad&quot;)</span>
-new_pair=pd.read_csv(<span class="hljs-string">&apos;new_pair.csv&apos;</span>)
+new_pair=pd.read_csv(<span class="hljs-string">&apos;mofa_pre_pair.csv&apos;</span>)
 </code></pre>
 <h3 id="13-&#x914D;&#x5BF9;&#x7EC6;&#x80DE;&#x91CD;&#x547D;&#x540D;">1.3 &#x914D;&#x5BF9;&#x7EC6;&#x80DE;&#x91CD;&#x547D;&#x540D;</h3>
-<pre><code class="lang-python">new_cell=[]
-<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> rna_pair.obs.index:
-  new_cell.append(new_pair[new_pair[<span class="hljs-string">&apos;scRNA&apos;</span>]==i][<span class="hljs-string">&apos;sample&apos;</span>].iloc[<span class="hljs-number">0</span>])
-rna_pair.obs.index=new_cell
-new_cell[:<span class="hljs-number">5</span>]
+<pre><code class="lang-python"><span class="hljs-comment">#new_cell=[]</span>
+<span class="hljs-comment">#for i in rna_pair.obs.index:</span>
+<span class="hljs-comment">#  new_cell.append(new_pair[new_pair[&apos;scRNA&apos;]==i][&apos;sample&apos;].iloc[0])</span>
+<span class="hljs-comment">#rna_pair.obs.index=new_cell</span>
+<span class="hljs-comment">#new_cell[:5]</span>
+
+r1=rna_pair[new_pair[<span class="hljs-string">&apos;scRNA&apos;</span>]]
+r1.obs.index=new_pair.index.values
+r1.write_h5ad(<span class="hljs-string">&apos;rna_mofa_pre1.h5ad&apos;</span>,compression=<span class="hljs-string">&quot;gzip&quot;</span>)<span class="hljs-comment">#&#x5FC5;&#x987B;&#x5148;&#x4FDD;&#x5B58;</span>
+rna_pair=anndata.read_h5ad(<span class="hljs-string">&quot;rna_mofa_pre1.h5ad&quot;</span>)
 </code></pre>
 <h2 id="2-&#x5355;&#x7EC6;&#x80DE;&#x6570;&#x636E;&#x8D28;&#x63A7;">2. &#x5355;&#x7EC6;&#x80DE;&#x6570;&#x636E;&#x8D28;&#x63A7;</h2>
 <h3 id="21-&#x8FC7;&#x6EE4;&#x7EC6;&#x80DE;&#x4E0E;&#x57FA;&#x56E0;">2.1 &#x8FC7;&#x6EE4;&#x7EC6;&#x80DE;&#x4E0E;&#x57FA;&#x56E0;</h3>
@@ -561,7 +579,7 @@ rna_pair = rna_pair[:, rna_pair.var.highly_variable]
 <h3 id="26-&#x56DE;&#x5F52;">2.6 &#x56DE;&#x5F52;</h3>
 <pre><code class="lang-python">sc.pp.regress_out(rna_pair, [<span class="hljs-string">&apos;total_counts&apos;</span>, <span class="hljs-string">&apos;pct_counts_mt&apos;</span>])
 sc.pp.scale(rna_pair, max_value=<span class="hljs-number">10</span>)
-rna_pair.write_h5ad(<span class="hljs-string">&apos;rna_pair_4.h5ad&apos;</span>,compression=<span class="hljs-string">&apos;gzip&apos;</span>)
+rna_pair.write_h5ad(<span class="hljs-string">&apos;rna_mofa.h5ad&apos;</span>,compression=<span class="hljs-string">&apos;gzip&apos;</span>)
 </code></pre>
 
                                 
@@ -606,7 +624,7 @@ rna_pair.write_h5ad(<span class="hljs-string">&apos;rna_pair_4.h5ad&apos;</span>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"4-3. scRNA-seq数据处理","level":"1.7.3","depth":2,"next":{"title":"4-4. scATAC-seq数据处理","level":"1.7.4","depth":2,"path":"MOFA/mofa_4.md","ref":"MOFA/mofa_4.md","articles":[]},"previous":{"title":"4-2. 单细胞样本对齐","level":"1.7.2","depth":2,"path":"MOFA/mofa_2.md","ref":"MOFA/mofa_2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"MOFA/mofa_3.md","mtime":"2021-11-04T05:53:32.234Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-11-04T05:59:16.797Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"4-3. scRNA-seq数据处理","level":"1.7.3","depth":2,"next":{"title":"4-4. scATAC-seq数据处理","level":"1.7.4","depth":2,"path":"MOFA/mofa_4.md","ref":"MOFA/mofa_4.md","articles":[]},"previous":{"title":"4-2. 单细胞样本对齐","level":"1.7.2","depth":2,"path":"MOFA/mofa_2.md","ref":"MOFA/mofa_2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"MOFA/mofa_3.md","mtime":"2021-12-07T03:03:39.174Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-07T08:49:01.522Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

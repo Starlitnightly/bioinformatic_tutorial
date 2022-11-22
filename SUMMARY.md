@@ -42,4 +42,5 @@
 * [绘图：Python可视化](PLOT/README.md)
     * [1-1. 火山图](PLOT/plot_1.md)
     * [1-2. 箱线图](PLOT/plot_2.md)
+    * [1-3. 热图(聚类)](PLOT/plot_3.md)
 
