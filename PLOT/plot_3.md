@@ -3,6 +3,8 @@
 带来的第三个图，是一个比较常见的热图，对于热图，网上的教程有很多了，但基本都只是浮于表面，没有真正讲清楚一个好的热图该怎么画出来，
 一个好的热图该呈递哪些信息，因此，在本期教程将教大家如何画一个信息丰富的热图
 
+**数据下载地址：https://github.com/Starlitnightly/bioinformatic_tutorial/tree/main/PLOT/data/data_heatmap.csv**
+
 ### 3.1 画图配置
 
 我们首先配置一下jupyter的显示效果，这里用了retina作为显示的图片格式，其次导入了一些常见的包，并提供了一个色卡
