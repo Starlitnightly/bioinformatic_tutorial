@@ -20,7 +20,7 @@
 
 ## 数据
 
-【绘图：Python数据可视化-生物信息学专栏】：https://starlitnightly.github.io/bioinformatic_tutorial/PLOT/data 
+【绘图：Python数据可视化-生物信息学专栏】：https://github.com/Starlitnightly/bioinformatic_tutorial/tree/main/PLOT/data
 
 ## License
 
