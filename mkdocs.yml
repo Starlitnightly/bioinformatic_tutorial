@@ -1,0 +1,107 @@
+site_name: Bioinformatic Tutorial (Daxing Research)
+repo_url: https://github.com/Starlitnightly/bioinformatic_tutorial
+edit_uri: edit/main/docs/
+
+nav:
+- 写在前面: index.md
+- 基础环境配置:
+    - 配置1. Python环境: CONFIG/config_1.md
+    - 配置2. Linux环境: CONFIG/config_2.md
+    - 配置3. R语言环境: CONFIG/config_3.md
+- RNA-seq上游分析:
+    - 1-1. 环境配置: RNASEQUP/rnasequp_1.md
+    - 1-2. 上游分析全教程: RNASEQUP/rnasequp_2.md
+- RNA-seq下游分析:
+    - 2-1. 环境配置: RNASEQ/rnaseq_1.md
+    - 2-2. 差异表达基因(DEG)分析: RNASEQ/rnaseq_2.md
+    - 2-3. 通路富集分析(GSEA): RNASEQ/rnaseq_3.md
+- 单细胞样本对齐:
+    - 3-1. 环境配置: SCGLUE/scglue_1.md
+    - 3-2. 数据预处理: SCGLUE/scglue_2.md
+    - 3-3. 模型准备: SCGLUE/scglue_3.md
+    - 3-4. 模型训练: SCGLUE/scglue_4.md
+    - 3-5. 对齐细胞: SCGLUE/scglue_5.md
+- MOFA单细胞多组学因子分析:
+    - 4-1. 环境配置: MOFA/mofa_1.md
+    - 4-2. 单细胞样本对齐: MOFA/mofa_2.md
+    - 4-3. scRNA-seq数据处理: MOFA/mofa_3.md
+    - 4-4. scATAC-seq数据处理: MOFA/mofa_4.md
+    - 4-5. MOFA模型构建: MOFA/mofa_5.md
+    - 4-6. MOFA下游分析-R语言环节: MOFA/mofa_6.md
+    - 4-7. MOFA下游分析-Python环节: MOFA/mofa_7.md
+- TMT蛋白组学分析:
+    - 5-1. 环境配置: TMT/tmt_1.md
+    - 5-2. TMT蛋白组学上游分析: TMT/tmt_2.md
+    - 5-3. TMT蛋白组学下游分析: TMT/tmt_3.md
+- 多组学分析:
+    - 6-1. 数据准备: MultiOMIC/book-1.md
+    - 6-2. GLUE多组学整合: MultiOMIC/book-2.md
+    - 6-3. 细胞亚群分析: MultiOMIC/book-3.md
+    - 6-4. 差异表达分析: MultiOMIC/book-4.md
+    - 6-5. 细胞通讯分析: MultiOMIC/book-5.md
+    - 6-6. 动态调控分析: MultiOMIC/book-6.md
+    - 6-7. 转录因子网络: MultiOMIC/book-7.md
+- Python可视化:
+    - 1-1. 火山图: PLOT/plot_1.md
+    - 1-2. 箱线图: PLOT/plot_2.md
+    - 1-3. 热图(聚类): PLOT/plot_3.md
+- 视网膜母细胞瘤分析教程:
+    - Base: rb_tutorial/rb_tutorial.md
+    - Tutorial_1: rb_tutorial/Tutorial_1_preprocess.ipynb
+    - Tutorial_2: rb_tutorial/Tutorial_2_filtered_qc.ipynb
+    - Tutorial_3: rb_tutorial/Tutorial_3_glue.ipynb
+    - Tutorial_4: rb_tutorial/Tutorial_4_scbasset.ipynb
+    - Tutorial_5: rb_tutorial/Tutorial_5_analysis1.ipynb
+    - Tutorial_6: rb_tutorial/Tutorial_6_analysis2.ipynb
+    - Tutorial_7: rb_tutorial/Tutorial_7_STER_cell.ipynb
+    - Tutorial_8: rb_tutorial/Tutorial_8_kineic_photo.ipynb
+    - Tutorial_9: rb_tutorial/Tutorial_9_cellphonedb.ipynb
+
+
+
+plugins:
+  - mkdocs-jupyter
+
+theme:
+  name: material
+  custom_dir: docs/overrides
+
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.indexes
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - attr_list
+  - md_in_html
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight:
+      linenums: true
+      linenums_style: pymdownx-inline
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.inlinehilite
+
+extra_javascript:
+  - javascripts/config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
